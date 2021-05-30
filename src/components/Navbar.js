@@ -1,31 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-scroll";
+import { FaFacebook, FaYoutube } from "react-icons/fa";
+import { GrInstagram } from "react-icons/gr";
+import Logo from "../images/Logo.png";
 
 const Navbar = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        width: "100%",
-        height: "50px",
-        backgroundColor: "#f1f1f1",
-        position: "fixed",
-      }}
-    >
-      <ul
-        style={{
-          display: "flex",
-          listStyle: "none",
-          justifyContent: "space-around",
-          alignItems: "center",
-          position: "fixed",
-          top: "0",
-          width: "800px",
-          margin: "0",
-          height: "50px",
-        }}
-      >
+    <nav className="navbar">
+      <Link to="start" spy={true} smooth={true}>
+        <img src={Logo} alt="Logo" className="logo" />
+      </Link>
+
+      <ul className="nav-titles">
         <li>
           <Link to="mieten" spy={true} smooth={true}>
             Mieten
@@ -41,8 +27,26 @@ const Navbar = () => {
             Kontakt
           </Link>
         </li>
+        <div className="animation"></div>
       </ul>
-    </div>
+      <ul className="social-icons">
+        <li>
+          <a href="#">
+            <FaFacebook />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <GrInstagram />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <FaYoutube />
+          </a>
+        </li>
+      </ul>
+    </nav>
   );
 };
 

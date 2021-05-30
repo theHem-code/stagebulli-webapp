@@ -5,8 +5,7 @@ import Home from "../pages/Home";
 import Artists from "../pages/Artists";
 import Story from "../pages/Story";
 import Impressions from "../pages/Impressions";
-// import components
-// import Navbar from "./Navbar";
+
 
 const App = () => {
   return (

@@ -1,0 +1,30 @@
+/*
+=============== 
+Variables SASS
+===============
+*/
+
+/* dark shades of primary color*/
+$clrPry1: #c1401e;
+$clrPry2: #913016;
+$clrPry3: #60200f;
+/* primary/main color */
+$clrPry4: #f15025;
+/* lighter shades of primary color */
+$clrPry5: #f47351;
+$clrPry6: #f7967c;
+$clrPry7: #f9b9a8;
+/* heading color */
+$clrHead: #212121;
+/* paragraph color */
+$clrPara: #212121;
+// main bg-color
+$mainBg: #f1f1f1;
+
+$transition: all 0.2s linear;
+$spacing: 0.1rem;
+$radius: 0.25rem;
+$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+$max-width: 1170px;
+$fixed-width: 620px;
