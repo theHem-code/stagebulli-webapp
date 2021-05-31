@@ -1,34 +1,70 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { FaFacebook, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import Logo from "../images/Logo.png";
 
+// service 808, mieten 545,  kontakt 1078
+
 const Navbar = () => {
+  const [pixelLeft, setPixelLeft] = useState(0);
+  const [visible, setVisible] = useState("hidden");
+
+  const clickMieten = () => {
+    setPixelLeft(-250);
+    setVisible("visible");
+  };
+  const clickService = () => {
+    setPixelLeft(12);
+    setVisible("visible");
+  };
+  const clickKontakt = () => {
+    setPixelLeft(280);
+    setVisible("visible");
+  };
+
   return (
     <nav className="navbar">
-      <Link to="start" spy={true} smooth={true}>
+      <Link activeClass="active" to="start" spy={true} smooth={true}>
         <img src={Logo} alt="Logo" className="logo" />
       </Link>
 
-      <ul className="nav-titles">
-        <li>
-          <Link to="mieten" spy={true} smooth={true}>
-            Mieten
-          </Link>
-        </li>
-        <li>
-          <Link to="service" spy={true} smooth={true}>
-            Service
-          </Link>
-        </li>
-        <li>
-          <Link to="kontakt" spy={true} smooth={true}>
-            Kontakt
-          </Link>
-        </li>
-        <div className="animation"></div>
-      </ul>
+      <div className="nav-titles">
+        <Link
+          activeClass="active"
+          to="mieten"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          onClick={clickMieten}
+        >
+          Mieten
+        </Link>
+        <Link
+          activeClass="active"
+          to="service"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          onClick={clickService}
+        >
+          Service
+        </Link>
+        <Link
+          activeClass="active"
+          to="kontakt"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          onClick={clickKontakt}
+        >
+          Kontakt
+        </Link>
+        {/* <div
+          className="animation"
+          style={{ transform: `translate(${pixelLeft}px)`, visibility: `${visible}` }}
+        ></div> */}
+      </div>
       <ul className="social-icons">
         <li>
           <a href="#">
@@ -42,7 +78,7 @@ const Navbar = () => {
         </li>
         <li>
           <a href="#">
-            <FaYoutube />
+            <FaLinkedin />
           </a>
         </li>
       </ul>

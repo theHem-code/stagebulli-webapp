@@ -5,7 +5,7 @@ import Video from "./Video";
 const Service = () => {
   return (
     <div>
-      <div id="service" style={{ height: "100vh", paddingTop: "100px" }}>
+      <div id="service" style={{ height: "100vh" }}>
         <h1>Service</h1>
         <p>
           <Link to="mieten" spy={true} smooth={true}>

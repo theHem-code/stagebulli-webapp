@@ -2,7 +2,7 @@ import React from "react";
 
 const Kontakt = () => {
   return (
-    <div id="kontakt" style={{ height: "100vh", paddingTop: "100px" }}>
+    <div id="kontakt" style={{ height: "100vh"}}>
       <h1>Kontakt</h1>
     </div>
   );
