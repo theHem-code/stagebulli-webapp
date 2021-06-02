@@ -1,9 +1,12 @@
 import React from "react";
+import video from "../video/birddogs_video.mp4";
 
 const Video = () => {
   return (
     <div>
-      <h3>This is the video page</h3>
+      <video autoPlay="autoplay" loop="loop" muted="muted" style={{objectFit: "cover", width: "100%", height: "100vh"}}>
+        <source src={video} type="video/mp4" />
+      </video>
     </div>
   );
 };

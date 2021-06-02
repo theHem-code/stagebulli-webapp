@@ -8,7 +8,7 @@
   position: relative;
   margin: 0 auto;
   width: 1000px;
-  background-image: url(../../images/Logo_ohneName.png);
+  background-image: url(../../images/bulliframe.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -35,4 +35,27 @@ article{
     position: absolute;
     top: 60px;
     left: 60px;
+}
+
+
+.button-artists {
+  margin: 0 auto;
+  width: max-content;
+  margin-top: 40px;
+}
+
+.button-line {
+  width: 50%;
+  height: 0.20rem;
+  margin-top: 0.5rem;
+  background: $clrHead;
+  margin-left: auto;
+  margin-right: auto;
+  transition: .4s cubic-bezier(.2,1.5,.2,1.5);
+}
+
+.button-artists:hover{
+    .button-line{
+        width: 80%;
+    }
 }

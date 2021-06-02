@@ -1,9 +1,10 @@
 .banner {
   background-size: cover;
-  margin: 0 auto;
-  width: 100vw;
-  height: 50vh;
   background-position: center;
+  margin: 0 auto;
+  // width: $max-width;
+  width: 100%;
+  height: 55vh;
   bottom: 0;
   position: absolute;
   a {
@@ -13,7 +14,7 @@
 
 .header-start {
   text-align: center;
-  margin: 40px 0;
+  margin: 20px 0;
   h1 {
       padding-bottom: 40px;
   }
@@ -23,7 +24,7 @@
   margin: 0 auto;
   width: max-content;
   position: relative;
-  bottom: -320px;
+  bottom: -300px;
 }
 
 .button-line-start {

@@ -19,7 +19,7 @@ const Navbar = () => {
           to="mieten"
           spy={true}
           smooth={true}
-          offset={-130}
+          offset={-140}
         >
           Mieten
         </Link>
@@ -28,7 +28,7 @@ const Navbar = () => {
           to="service"
           spy={true}
           smooth={true}
-          offset={-110}
+          offset={-140}
         >
           Service
         </Link>
@@ -37,7 +37,7 @@ const Navbar = () => {
           to="kontakt"
           spy={true}
           smooth={true}
-          offset={-110}
+          offset={-90}
         >
           Kontakt
         </Link>
