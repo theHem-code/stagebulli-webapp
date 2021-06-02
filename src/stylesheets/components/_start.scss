@@ -1,0 +1,42 @@
+.banner {
+  background-size: cover;
+  margin: 0 auto;
+  width: 100vw;
+  height: 50vh;
+  background-position: center;
+  bottom: 0;
+  position: absolute;
+  a {
+    color: $mainBg;
+  }
+}
+
+.header-start {
+  text-align: center;
+  margin: 40px 0;
+  h1 {
+      padding-bottom: 40px;
+  }
+}
+
+.button-story {
+  margin: 0 auto;
+  width: max-content;
+  position: relative;
+  bottom: -320px;
+}
+
+.button-line-start {
+  width: 50%;
+  height: 0.20rem;
+  margin-top: 0.5rem;
+  background: $mainBg;
+  margin-left: auto;
+  margin-right: auto;
+  transition: .3s cubic-bezier(.2,1.5,.2,1.5);
+}
+.button-story:hover{
+  .button-line-start{
+      width: 80%;
+  }
+}

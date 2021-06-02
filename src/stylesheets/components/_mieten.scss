@@ -1,0 +1,87 @@
+.container {
+  margin: 0 auto;
+  max-width: $max-width;
+  height: 100vh;
+}
+
+.header {
+  margin-top: 100px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: $max-width;
+  position: relative;
+  width: 1150px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  text-align: center;
+  height: 480px;
+  border-radius: $radius;
+  padding: 20px 20px;
+  transition: $transition;
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: $radius;
+    box-shadow: $light-shadow;
+    margin-bottom: 1rem;
+  }
+}
+.desc {
+  width: 300px;
+  margin: 0 auto;
+  background-color: $boxclr;
+  padding: 20px 10px;
+  //   box-shadow: $light-shadow;
+  transition: $transition;
+  p {
+    margin-top: 10px;
+    letter-spacing: 1.2px;
+    font-size: 0.8rem;
+  }
+}
+
+.card:hover {
+  background: $clrPry4;
+  transform: translateY(-3px);
+  p,
+  h3 {
+    color: white;
+  }
+  .desc {
+    background: $clrPry4;
+    box-shadow: none;
+  }
+}
+
+.button-impressionen {
+  margin: 0 auto;
+  width: max-content;
+  margin-top: 30px;
+}
+
+.button-line {
+  width: 50%;
+  height: 0.20rem;
+  margin-top: 0.5rem;
+  background: $clrHead;
+  margin-left: auto;
+  margin-right: auto;
+  transition: .4s cubic-bezier(.2,1.5,.2,1.5);
+}
+
+.button-impressionen:hover{
+    .button-line{
+        width: 80%;
+    }
+}

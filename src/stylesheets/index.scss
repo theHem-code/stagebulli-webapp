@@ -2,6 +2,9 @@
 
 @import "colors";
 @import "components/navbar";
+@import "components/start";
+@import "components/mieten";
+@import "components/service";
 
 /*
   =============== 
@@ -29,6 +32,10 @@ ul {
 a {
   text-decoration: none;
   color: $clrPara;
+  text-transform: uppercase;
+  letter-spacing: $spacing;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 h1,
 h2,
@@ -39,9 +46,10 @@ h4 {
   line-height: 1.25;
   margin-bottom: 0.75rem;
   color: $clrHead;
+  margin: 0;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 h2 {
   font-size: 2rem;
@@ -50,10 +58,10 @@ h3 {
   font-size: 1.25rem;
 }
 h4 {
-  font-size: 0.875rem;
+  font-size: 4rem;
 }
 p {
-  margin-bottom: 1.25rem;
+  margin: 0;
   color: $clrPara;
   font-family: "Open Sans", sans-serif;
 }

@@ -7,26 +7,10 @@ import Logo from "../images/Logo.png";
 // service 808, mieten 545,  kontakt 1078
 
 const Navbar = () => {
-  const [pixelLeft, setPixelLeft] = useState(0);
-  const [visible, setVisible] = useState("hidden");
-
-  const clickMieten = () => {
-    setPixelLeft(-250);
-    setVisible("visible");
-  };
-  const clickService = () => {
-    setPixelLeft(12);
-    setVisible("visible");
-  };
-  const clickKontakt = () => {
-    setPixelLeft(280);
-    setVisible("visible");
-  };
-
   return (
     <nav className="navbar">
-      <Link activeClass="active" to="start" spy={true} smooth={true}>
-        <img src={Logo} alt="Logo" className="logo" />
+      <Link activeClass="active" to="start" spy={true} smooth={true} className="logo-wrapper">
+        <img src={Logo} alt="Logo" className="logo"/>
       </Link>
 
       <div className="nav-titles">
@@ -35,8 +19,7 @@ const Navbar = () => {
           to="mieten"
           spy={true}
           smooth={true}
-          offset={-100}
-          onClick={clickMieten}
+          offset={-130}
         >
           Mieten
         </Link>
@@ -45,8 +28,7 @@ const Navbar = () => {
           to="service"
           spy={true}
           smooth={true}
-          offset={-100}
-          onClick={clickService}
+          offset={-110}
         >
           Service
         </Link>
@@ -55,8 +37,7 @@ const Navbar = () => {
           to="kontakt"
           spy={true}
           smooth={true}
-          offset={-100}
-          onClick={clickKontakt}
+          offset={-110}
         >
           Kontakt
         </Link>
