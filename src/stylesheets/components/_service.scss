@@ -42,10 +42,12 @@ article{
   margin: 0 auto;
   width: max-content;
   margin-top: 40px;
+  cursor: pointer;
+
 }
 
 .button-line {
-  width: 50%;
+  width: 90%;
   height: 0.20rem;
   margin-top: 0.5rem;
   background: $clrHead;
@@ -56,6 +58,6 @@ article{
 
 .button-artists:hover{
     .button-line{
-        width: 80%;
+        width: 40%;
     }
 }

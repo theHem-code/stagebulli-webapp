@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "../components/Navbar"
 
-const Story = () => {
+const Impressum = () => {
   return (
     <div>
       <Navbar />
-      Story
+      Impressum
     </div>
   );
 };
 
-export default Story;
+export default Impressum;

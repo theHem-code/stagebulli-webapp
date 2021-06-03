@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../components/Navbar";
 
 const Artists = () => {
-    return (
-        <div>
-            <h3>Unsere Kuenstlervorschlaege</h3>
-        </div>
-    )
-}
+  return (
+    <div>
+      <Navbar />
+      <h3>Unsere Kuenstlervorschlaege</h3>
+    </div>
+  );
+};
 
-export default Artists
+export default Artists;

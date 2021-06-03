@@ -6,6 +6,7 @@
   height: 100px;
   background-color: $mainBg;
   top: 0;
+  overflow: hidden;
   position: fixed;
   z-index: 1;
   // border-bottom: 5px solid $clrHead;
@@ -17,10 +18,20 @@
   align-items: center;
   // width: 126px;
   object-fit:scale-down;
+  cursor: pointer;
 }
 
 .logo-wrapper{
   height: 70px;
+  width: 126px;
+  display: flex;
+  align-items: center;
+  transition: 5s;
+}
+
+.btn-home{
+  cursor: pointer;
+  font-size: 25px;
 }
 
 .nav-titles {
@@ -28,7 +39,7 @@
   position: relative;
   justify-content: space-around;
   align-items: center;
-  width: 800px;
+  width: 600px;
   font-size: 0;
   font-weight: 600;
   letter-spacing: $spacing;
@@ -41,21 +52,15 @@
 
 
  
-  .active {
-    border-bottom: solid 3px black;
-    // position: absolute;
-    // display: flex;
-    // height: 100%;
-    // background-image: url(../../images/Logo_ohneName.png);
-    // background-position: left 17px bottom 0px;
-    // background-size: contain;
-    // // background-position: center;
-    // background-repeat: no-repeat;
-    // width: 126px;
-    // transition: $transition;
-    // justify-content: center;
-    // align-items: center;
-    
+  .animation {
+    position: absolute;
+    height: 100%;
+    background-image: url(../../images/Logo_ohneName.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 126px;
+    transition: .5s;
   }
   :hover {
     cursor: pointer;
@@ -76,3 +81,7 @@
     cursor: pointer;
   }
 }
+
+// .nav-titles > .active{
+//   border-bottom: solid 10px violet;
+// }

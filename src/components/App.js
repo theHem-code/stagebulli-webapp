@@ -5,6 +5,8 @@ import Home from "../pages/Home";
 import Artists from "../pages/Artists";
 import Story from "../pages/Story";
 import Impressions from "../pages/Impressions";
+import Datenschutz from "../pages/Datenschutz";
+import Impressum from "../pages/Impressum";
 
 
 const App = () => {
@@ -22,6 +24,12 @@ const App = () => {
         </Route>
         <Route exact path="/unserestory">
           <Story />
+        </Route>
+        <Route exact path="/impressum">
+          <Impressum />
+        </Route>
+        <Route exact path="/datenschutz">
+          <Datenschutz />
         </Route>
       </Switch>
     </Router>

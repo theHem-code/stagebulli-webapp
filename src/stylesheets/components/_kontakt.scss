@@ -1,5 +1,36 @@
-.formwrapper{
-    margin: 0 auto;
-    width: 1000px;
+.header-kontakt{
+    // padding-top: 100px;
     text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 100px;
 }
+
+.formwrapper{
+    margin: 50px auto;
+    width: 700px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.button-senden {
+    margin: 0 auto;
+    width: max-content;
+    margin-top: 40px;
+    cursor: pointer;
+  }
+  
+  .button-line {
+    width: 90%;
+    height: 0.20rem;
+    margin-top: 0.5rem;
+    background: $clrHead;
+    margin-left: auto;
+    margin-right: auto;
+    transition: .4s cubic-bezier(.2,1.5,.2,1.5);
+  }
+  
+  .button-senden:hover{
+      .button-line{
+          width: 50%;
+      }
+  }

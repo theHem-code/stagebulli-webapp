@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
+
 import { makeStyles } from "@material-ui/core/styles";
 import { withStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
@@ -30,12 +32,13 @@ const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
       margin: theme.spacing(1),
-      width: "50ch",
+      width: "80ch",
     },
   },
   formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
+    margin: theme.spacing(0),
+    // minWidth: 120,
+    width: "100%",
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
@@ -54,9 +57,6 @@ const CssTextField = withStyles({
       "& fieldset": {
         borderColor: "gray",
       },
-      "&:hover fieldset": {
-        borderColor: "#f15025",
-      },
       "&.Mui-focused fieldset": {
         borderColor: "#f15025",
       },
@@ -65,7 +65,6 @@ const CssTextField = withStyles({
 })(TextField);
 
 const Kontakt = () => {
-
   const [participans, setParticipans] = React.useState("");
   const [selectedDate, handleDateChange] = useState(new Date());
 
@@ -86,13 +85,16 @@ const Kontakt = () => {
   const classes = useStyles();
 
   return (
-    <main id="kontakt" style={{ height: "100vh", paddingTop: "100px" }}>
-      <section className="header-start">
-        <h4>Ruf mich an!</h4>
+    <main id="kontakt" style={{ height: "100%" }}>
+      <section className="header-kontakt">
+        <h4>
+          Hello, is it me <br />
+          you are looking for?
+        </h4>
       </section>
       <div className="formwrapper">
-        <Grid container spacing={3}>
-          <Grid item xs={4}>
+        <Grid container spacing={2}>
+          <Grid item xs={4} style={{ display: "flex", justifyContent: "flex-end" }}>
             <FormControlLabel
               label="Stage Bulli"
               control={
@@ -116,53 +118,67 @@ const Kontakt = () => {
               }
             />
           </Grid>
-          <FormControlLabel
-            label="+ Entertainmentpaket"
-            control={
-              <GreenCheckbox
-                checked={state.checkedC}
-                onChange={handleChange}
-                name="checkedC"
-              />
-            }
-          />
-
-          <form className={classes.root} noValidate autoComplete="off">
+          <Grid item xs={4} style={{ display: "flex", justifyContent: "flex-start" }}>
+            <FormControlLabel
+              label="+ Entertainmentpaket"
+              control={
+                <GreenCheckbox
+                  checked={state.checkedC}
+                  onChange={handleChange}
+                  name="checkedC"
+                />
+              }
+            />
+          </Grid>
+          {/* <form className={classes.root} noValidate autoComplete="off"> */}
+          <Grid item xs={6}>
             <CssTextField
               className={classes.margin}
               label="Vorname"
               variant="outlined"
               id="custom-css-outlined-input"
+              fullWidth
             />
+          </Grid>
+          <Grid item xs={6}>
             <CssTextField
               className={classes.margin}
               label="Nachname"
               variant="outlined"
               id="custom-css-outlined-input"
+              fullWidth
             />
+          </Grid>
+          <Grid item xs={12}>
             <CssTextField
               className={classes.margin}
               label="Firma"
               variant="outlined"
               id="custom-css-outlined-input"
+              fullWidth
             />
-
-
-
+          </Grid>
+          <Grid item xs={6}>
             <CssTextField
               className={classes.margin}
               label="Email"
               variant="outlined"
               id="custom-css-outlined-input"
+              fullWidth
             />{" "}
+          </Grid>
+          <Grid item xs={6}>
             <CssTextField
               className={classes.margin}
               label="Telefonnummer"
               variant="outlined"
               id="custom-css-outlined-input"
+              fullWidth
             />
-              {/* Teilnehmerzahl */}
-              <FormControl variant="outlined" className={classes.formControl}>
+          </Grid>
+          {/* Teilnehmerzahl */}
+          <Grid item xs={6}>
+            <FormControl variant="outlined" className={classes.formControl}>
               <InputLabel id="demo-simple-select-outlined-label">
                 Erwartete Teilnehmerzahl
               </InputLabel>
@@ -179,32 +195,40 @@ const Kontakt = () => {
                 <MenuItem value={30}>mehr als 500</MenuItem>
               </Select>
             </FormControl>
-
-            <CssTextField
-              className={classes.margin}
-              label="Was planst du fur ein Event?"
-              variant="outlined"
-              id="custom-css-outlined-input outlined-multiline-static outlined-full-width"
-              multiline
-              rows={4}
-              fullWidth
-            />
-          
-            {/* Veranstaltungsdatum */}
+          </Grid>
+          <Grid item xs={6}>
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
               <KeyboardDatePicker
                 autoOk
                 variant="inline"
                 inputVariant="outlined"
                 label="Veranstaltungsdatum"
+                fullWidth
                 format="dd/MM/yyyy"
                 value={selectedDate}
                 InputAdornmentProps={{ position: "start" }}
                 onChange={(date) => handleDateChange(date)}
               />
             </MuiPickersUtilsProvider>
-          </form>
+          </Grid>
+          <Grid item xs={12}>
+            <CssTextField
+              className={classes.margin}
+              label="Wie kann der Stage Bulli deinem Event zum Erfolg verhelfen?"
+              variant="outlined"
+              id="custom-css-outlined-input outlined-multiline-static outlined-full-width"
+              multiline
+              rows={4}
+              fullWidth
+            />
+          </Grid>
+          {/* Veranstaltungsdatum */}
+          {/* </form> */}
         </Grid>
+        <div className="button-senden">
+          <Link to="/kuenstlervorschlaege">Senden</Link>
+          <div className="button-line"></div>
+        </div>
       </div>
     </main>
   );
