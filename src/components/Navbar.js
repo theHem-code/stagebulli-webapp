@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import React, { useState } from "react";
+import { Link } from "react-scroll";
 import { FaFacebook, FaLinkedin, FaHome } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import Logo from "../images/Logo.png";
-import { useLocation, NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [pixelLeft, setPixelLeft] = useState(300);
@@ -32,7 +32,7 @@ const Navbar = () => {
   };
 
   window.onscroll = function () {
-    console.log(window.pageYOffset);
+    //console.log(window.pageYOffset);
     if (window.pageYOffset <= 788) {
       setLogoVisible("visible");
     } else {
@@ -71,7 +71,7 @@ const Navbar = () => {
           to="mieten"
           spy={true}
           smooth={true}
-          offset={-200}
+          offset={-160}
           onClick={clickMieten}
           onSetActive={clickMieten}
           style={{ visibility: `${renderVisibility}` }}
@@ -109,17 +109,17 @@ const Navbar = () => {
       </div>
       <ul className="social-icons">
         <li>
-          <a href="#">
+          <a href="https://www.facebook.com/stagebulli">
             <FaFacebook />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://www.instagram.com/stagebulli/">
             <GrInstagram />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://de.linkedin.com/in/felix-franke">
             <FaLinkedin />
           </a>
         </li>

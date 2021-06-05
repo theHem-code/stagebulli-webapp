@@ -48,17 +48,17 @@ const useStyles = makeStyles((theme) => ({
 const CssTextField = withStyles({
   root: {
     "& label.Mui-focused": {
-      color: "#f15025",
+      color: "primary",
     },
     "& .MuiInput-underline:after": {
-      borderBottomColor: "#f15025",
+      borderBottomColor: "primary",
     },
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
-        borderColor: "gray",
+        borderColor: "primary",
       },
       "&.Mui-focused fieldset": {
-        borderColor: "#f15025",
+        borderColor: "primary",
       },
     },
   },
@@ -94,7 +94,7 @@ const Kontakt = () => {
       </section>
       <div className="formwrapper">
         <Grid container spacing={2}>
-          <Grid item xs={4} style={{ display: "flex", justifyContent: "flex-end" }}>
+          <Grid item xs={4} >
             <FormControlLabel
               label="Stage Bulli"
               control={
@@ -118,7 +118,7 @@ const Kontakt = () => {
               }
             />
           </Grid>
-          <Grid item xs={4} style={{ display: "flex", justifyContent: "flex-start" }}>
+          <Grid item xs={4} >
             <FormControlLabel
               label="+ Entertainmentpaket"
               control={
@@ -158,6 +158,7 @@ const Kontakt = () => {
               fullWidth
             />
           </Grid>
+          <div style={{height: "100px"}}></div>
           <Grid item xs={6}>
             <CssTextField
               className={classes.margin}
@@ -196,6 +197,7 @@ const Kontakt = () => {
               </Select>
             </FormControl>
           </Grid>
+          <div style={{height: "100px"}}></div>
           <Grid item xs={6}>
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
               <KeyboardDatePicker
