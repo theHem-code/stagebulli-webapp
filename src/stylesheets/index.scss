@@ -1,5 +1,6 @@
 // My CSS partials
 
+// components
 @import "colors";
 @import "components/navbar";
 @import "components/start";
@@ -7,6 +8,10 @@
 @import "components/service";
 @import "components/kontakt";
 @import "components/footer";
+
+// pages
+@import "pages/artists";
+
 
 /*
   =============== 

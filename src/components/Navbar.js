@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import { FaFacebook, FaLinkedin, FaHome } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import Logo from "../images/Logo.png";
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [pixelLeft, setPixelLeft] = useState(300);
@@ -16,8 +16,8 @@ const Navbar = () => {
     setLogoVisible("hidden");
   };
   const clickService = () => {
-    setPixelLeft(250);
     setVisible("visible");
+    setPixelLeft(250);
     setLogoVisible("hidden");
   };
   const clickKontakt = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
 
   window.onscroll = function () {
     //console.log(window.pageYOffset);
-    if (window.pageYOffset <= 788) {
+    if (window.pageYOffset <= 930) {
       setLogoVisible("visible");
     } else {
       setLogoVisible("hidden");
@@ -43,28 +43,44 @@ const Navbar = () => {
   const location = useLocation();
   const renderVisibility = location.pathname === "/" ? "visibile" : "hidden";
 
+  const linkForLogo =
+    location.pathname === "/" ? (
+      <Link
+        activeClass="active"
+        to="start"
+        spy={true}
+        smooth={true}
+        className="logo-wrapper"
+        offset={-140}
+        onSetActive={hideFrame}
+      >
+        {logoVisible === "hidden" ? (
+          <FaHome className="btn-home" style={{ transition: "0.5s" }} />
+        ) : (
+          <img
+            src={Logo}
+            alt="Logo"
+            className="logo"
+            style={{ visibility: `${logoVisible}` }}
+          />
+        )}
+      </Link>
+    ) : (
+      <NavLink to="/">
+        <div className="logo-wrapper">
+          <img
+            src={Logo}
+            alt="Logo"
+            className="logo"
+            style={{ visibility: `${logoVisible}` }}
+          />
+        </div>
+      </NavLink>
+    );
+
   return (
     <nav className="navbar">
-        <Link
-          activeClass="active"
-          to="start"
-          spy={true}
-          smooth={true}
-          className="logo-wrapper"
-          offset={-140}
-          onSetActive={hideFrame}
-        >
-          {logoVisible === "hidden" ? (
-            <FaHome className="btn-home" />
-          ) : (
-            <img
-              src={Logo}
-              alt="Logo"
-              className="logo"
-              style={{ visibility: `${logoVisible}` }}
-            />
-          )}
-        </Link>
+      {linkForLogo}
       <div className="nav-titles">
         <Link
           activeClass="active"

@@ -86,7 +86,7 @@ const Kontakt = () => {
 
   return (
     <main id="kontakt" style={{ height: "100%" }}>
-      <section className="header-kontakt">
+      <section className="header">
         <h4>
           Hello, is it me <br />
           you are looking for?

@@ -9,7 +9,6 @@
   overflow: hidden;
   position: fixed;
   z-index: 1;
-  // border-bottom: 5px solid $clrHead;
 }
 
 .logo {
@@ -17,11 +16,13 @@
   height: 100%;
   align-items: center;
   // width: 126px;
-  object-fit:scale-down;
+  object-fit: scale-down;
   cursor: pointer;
 }
 
-.logo-wrapper{
+.logo-wrapper {
+  justify-content: flex-start;
+
   height: 70px;
   width: 126px;
   display: flex;
@@ -29,7 +30,7 @@
   transition: 5s;
 }
 
-.btn-home{
+.btn-home {
   cursor: pointer;
   font-size: 25px;
 }
@@ -50,8 +51,6 @@
     text-transform: uppercase;
   }
 
-
- 
   .animation {
     position: absolute;
     height: 100%;
@@ -60,7 +59,7 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 126px;
-    transition: .5s;
+    transition: 0.5s;
   }
   :hover {
     cursor: pointer;
@@ -74,14 +73,10 @@
   align-items: center;
   font-size: 20px;
   a {
-    transition: .1s;
+    transition: 0.1s;
   }
   a:hover {
     color: $clrPry4;
     cursor: pointer;
   }
 }
-
-// .nav-titles > .active{
-//   border-bottom: solid 10px violet;
-// }
