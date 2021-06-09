@@ -43,7 +43,6 @@ article{
   width: max-content;
   margin-top: 40px;
   cursor: pointer;
-
 }
 
 .button-line {
@@ -54,6 +53,14 @@ article{
   margin-left: auto;
   margin-right: auto;
   transition: .4s cubic-bezier(.2,1.5,.2,1.5);
+}
+
+.button-line-left{
+  border-left: 6px solid green;
+  height: 500px;
+  // left: 100%;
+  // margin-left: -3px;
+  top: 0;
 }
 
 .button-artists:hover{

@@ -1,36 +1,55 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import {
   Image,
   Video,
   // Transformation,
   CloudinaryContext,
 } from "cloudinary-react";
+import Navbar from "../components/Navbar";
 // import axios from "axios";
 
 const Impressions = () => {
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   const [gallery, setGallery] = useState("");
 
-  useEffect(() => {
-    fetch("https://res.cloudinary.com/dxkj8owwl/image/upload/v1623152849/stagebulli/")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      });
-    }, []);
-
-
+  // useEffect(() => {
+  //   fetch("https://api.cloudinary.com/v1_1/dxkj8owwl/image/stagebulli/helloworld")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //     });
+  // }, []);
 
   return (
     <div>
-      <h3> Here are all Bulli Live Impressions</h3>
-      <CloudinaryContext cloudName="dxkj8owwl">
-        <div>
-          <Image publicId="sample" width="50" crop="scale" />
+      <Navbar />
+      <main style={{ height: "100vh" }}>
+        <div className="artists-container">
+          <div className="header">
+            <h1>Live - Impressionen</h1>
+          </div>
         </div>
-      </CloudinaryContext>
+        <div className="container">
+          <CloudinaryContext cloudName="dxkj8owwl">
+            <div>
+              <Image
+                publicId="stagebulli/helloworld"
+                width="400"
+                crop="scale"
+              />
+            </div>
+          </CloudinaryContext>
+        </div>
+      </main>
     </div>
   );
 };
+
+
 
 export default Impressions;
 

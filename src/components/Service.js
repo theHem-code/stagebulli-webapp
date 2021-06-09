@@ -40,7 +40,8 @@ const Service = () => {
         </div>
         <div className="button-artists">
           <NavLink to="/kuenstlervorschlaege">Künstlervorschläge</NavLink>
-          <div className="button-line"></div>
+          <div className="button-line">
+          </div>
         </div>
       </div>
       <Video />
