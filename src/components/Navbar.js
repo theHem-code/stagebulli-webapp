@@ -33,7 +33,7 @@ const Navbar = () => {
 
   window.onscroll = function () {
     //console.log(window.pageYOffset);
-    if (window.pageYOffset <= 930) {
+    if (window.pageYOffset <= 0) {
       setLogoVisible("visible");
     } else {
       setLogoVisible("hidden");
@@ -51,7 +51,7 @@ const Navbar = () => {
         spy={true}
         smooth={true}
         className="logo-wrapper"
-        offset={-140}
+        offset={-150}
         onSetActive={hideFrame}
       >
         {logoVisible === "hidden" ? (
@@ -88,7 +88,6 @@ const Navbar = () => {
           spy={true}
           smooth={true}
           offset={-160}
-          onClick={clickMieten}
           onSetActive={clickMieten}
           style={{ visibility: `${renderVisibility}` }}
         >
@@ -100,7 +99,6 @@ const Navbar = () => {
           spy={true}
           smooth={true}
           offset={-160}
-          onClick={clickService}
           onSetActive={clickService}
           style={{ visibility: `${renderVisibility}` }}
         >
@@ -112,7 +110,6 @@ const Navbar = () => {
           spy={true}
           smooth={true}
           offset={-140}
-          onClick={clickKontakt}
           onSetActive={clickKontakt}
           style={{ visibility: `${renderVisibility}` }}
         >

@@ -2,17 +2,23 @@
   margin: 0 auto;
   height: 9rem;
   background-color: $clrHead;
-  a {
-    color: white;
-    font-weight: 500;
-    font-size: medium;
-  }
 }
-.footer {
+
+.footer{
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.footer-list {
   margin: 0 auto;
   padding-top: 50px;
-
-  width: 500px;
+  width: 90%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  a {
+    color: white;
+    font-weight: 400;
+    font-size: medium;
+    text-decoration: uppercase;
+  }
 }
