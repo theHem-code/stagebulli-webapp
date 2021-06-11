@@ -1,12 +1,11 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import {
   Image,
-  Video,
   // Transformation,
   CloudinaryContext,
 } from "cloudinary-react";
 import Navbar from "../components/Navbar";
-// import axios from "axios";
+import Footer from "../components/Footer";
 
 const Impressions = () => {
 
@@ -14,10 +13,8 @@ const Impressions = () => {
     window.scrollTo(0, 0);
   });
 
-  const [gallery, setGallery] = useState("");
-
   // useEffect(() => {
-  //   fetch("https://api.cloudinary.com/v1_1/dxkj8owwl/image/stagebulli/helloworld")
+  //   fetch("https://api.cloudinary.com/v1_1/dxkj8owwl/image/upload")
   //     .then((response) => response.json())
   //     .then((data) => {
   //       console.log(data);
@@ -45,6 +42,8 @@ const Impressions = () => {
           </CloudinaryContext>
         </div>
       </main>
+      <Footer />
+
     </div>
   );
 };
@@ -53,10 +52,10 @@ const Impressions = () => {
 
 export default Impressions;
 
-{
+// {
   /* <div className="gallery">
   <CloudinaryContext cloudName="dxkj8owwl">
-    {this.state.gallery.map((data) => {
+    {gallery.map((data) => {
       return (
         <div className="responsive" key={data.public_id}>
           <div className="img">
@@ -82,4 +81,4 @@ export default Impressions;
   </CloudinaryContext>
   <div className="clearfix"></div>
 </div>; */
-}
+// }

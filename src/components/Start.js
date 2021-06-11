@@ -3,17 +3,19 @@ import Banner from "../images/StartBanner.jpg";
 import { Link } from "react-router-dom";
 
 const Start = () => {
-
- 
   return (
-    <main id="start" className="container">
-      <section className="header-start">
-        <h4>
-          Vom PickUp
-          <br />
-          zur PopUp-Stage
-        </h4>
-      </section>
+    <main id="start" style={{ height: "100vh" }}>
+      <div className="container">
+        <section className="row header-start">
+          <div className="col-12">
+            <h4>
+              Vom PickUp
+              <br />
+              zur PopUp-Stage
+            </h4>
+          </div>
+        </section>
+      </div>
       <div
         className="banner"
         style={{

@@ -4,11 +4,7 @@
   margin: 0 auto;
   width: 100%;
   height: 55vh;
-  bottom: 0;
-  position: absolute;
-  a {
-    color: $mainBg;
-  }
+  position: relative;
 }
 
 .header-start {
@@ -26,11 +22,19 @@
 }
 
 .button-story {
-  margin: 0 auto;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+
   width: max-content;
-  position: relative;
-  bottom: -80%;
+  position: absolute;
+  bottom: 2rem;
   cursor: pointer;
+
+  a {
+    color: $mainBg;
+  }
 }
 
 .button-line-start {
@@ -43,6 +47,9 @@
   transition: 0.3s cubic-bezier(0.2, 1.5, 0.2, 1.5);
 }
 .button-story:hover {
+  a {
+    color: white;
+  }
   .button-line-start {
     width: 40%;
   }

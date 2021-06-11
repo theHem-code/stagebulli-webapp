@@ -65,7 +65,7 @@ const CssTextField = withStyles({
 })(TextField);
 
 const Kontakt = () => {
-  const [participans, setParticipans] = React.useState("");
+  const [participans, setParticipans] = useState("");
   const [selectedDate, handleDateChange] = useState(new Date());
 
   const [state, setState] = React.useState({
@@ -86,15 +86,19 @@ const Kontakt = () => {
 
   return (
     <main id="kontakt" style={{ height: "100%" }}>
-      <section className="header">
-        <h4>
-          Hello, is it me <br />
-          you are looking for?
-        </h4>
-      </section>
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <section className="header">
+            <h4>
+              Hello, is it me <br />
+              you are looking for?
+            </h4>
+          </section>
+        </Grid>
+      </Grid>
       <div className="formwrapper">
         <Grid container spacing={2}>
-          <Grid item xs={4} >
+          <Grid item xs={12} sm={4}>
             <FormControlLabel
               label="Stage Bulli"
               control={
@@ -106,7 +110,7 @@ const Kontakt = () => {
               }
             />
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} sm={4}>
             <FormControlLabel
               label="+ Technikpaket"
               control={
@@ -118,7 +122,7 @@ const Kontakt = () => {
               }
             />
           </Grid>
-          <Grid item xs={4} >
+          <Grid item xs={12} sm={4}>
             <FormControlLabel
               label="+ Entertainmentpaket"
               control={
@@ -131,21 +135,19 @@ const Kontakt = () => {
             />
           </Grid>
           {/* <form className={classes.root} noValidate autoComplete="off"> */}
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <CssTextField
               className={classes.margin}
               label="Vorname"
               variant="outlined"
-              id="custom-css-outlined-input"
               fullWidth
             />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <CssTextField
               className={classes.margin}
               label="Nachname"
               variant="outlined"
-              id="custom-css-outlined-input"
               fullWidth
             />
           </Grid>
@@ -154,31 +156,29 @@ const Kontakt = () => {
               className={classes.margin}
               label="Firma"
               variant="outlined"
-              id="custom-css-outlined-input"
+              // id="custom-css-outlined-input"
               fullWidth
             />
           </Grid>
-          <div style={{height: "100px"}}></div>
-          <Grid item xs={6}>
+          <div style={{ height: "100px" }}></div>
+          <Grid item xs={12} md={6}>
             <CssTextField
               className={classes.margin}
               label="Email"
               variant="outlined"
-              id="custom-css-outlined-input"
               fullWidth
             />{" "}
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <CssTextField
               className={classes.margin}
               label="Telefonnummer"
               variant="outlined"
-              id="custom-css-outlined-input"
               fullWidth
             />
           </Grid>
           {/* Teilnehmerzahl */}
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <FormControl variant="outlined" className={classes.formControl}>
               <InputLabel id="demo-simple-select-outlined-label">
                 Erwartete Teilnehmerzahl
@@ -197,8 +197,8 @@ const Kontakt = () => {
               </Select>
             </FormControl>
           </Grid>
-          <div style={{height: "100px"}}></div>
-          <Grid item xs={6}>
+          <div style={{ height: "100px" }}></div>
+          <Grid item xs={12} md={6}>
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
               <KeyboardDatePicker
                 autoOk

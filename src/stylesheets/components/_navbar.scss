@@ -11,24 +11,25 @@
   z-index: 1;
 }
 
-.logo {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  // width: 126px;
-  object-fit: scale-down;
-  cursor: pointer;
-}
+// .logo {
+//   height: 100%;
+//   align-items: center;
+//   object-fit: scale-down;
+//   cursor: pointer;
+//   justify-content: center;
+//   height: 70px;
+//   width: 126px;
+//   display: flex;
+// }
 
-.logo-wrapper {
-  justify-content: flex-start;
-
-  height: 70px;
-  width: 126px;
-  display: flex;
-  align-items: center;
-  transition: 5s;
-}
+// .logo-wrapper {
+//   justify-content: center;
+//   height: 70px;
+//   width: 126px;
+//   display: flex;
+//   align-items: center;
+//   transition: 5s;
+// }
 
 .btn-home {
   cursor: pointer;

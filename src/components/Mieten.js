@@ -12,14 +12,16 @@ const Mieten = () => {
   }, []);
 
   return (
-    <div id="mieten" className="container">
-      <section className="header">
-        <h4>Sahnehäubchen für...</h4>
-      </section>
+    <div id="mieten" className="container container-mieten">
+      <div className="row header">
+        <div className="col-12">
+          <h4>Sahnehäubchen für...</h4>
+        </div>
+      </div>
       <div className="wrapper">
-        <div className="cards">
-          <div data-aos="fade-right" className="card">
-            <img src={corporate} alt="" />
+        <div className="row cards">
+          <div className="col-12 col-lg-6 card">
+            <img src={corporate} alt="corporate_image"/>
             <div className="desc">
               <h3>Corporate</h3>
               <p>
@@ -27,7 +29,7 @@ const Mieten = () => {
               </p>
             </div>
           </div>
-          <div data-aos="zoom-in" className="card">
+          <div className="col-12 col-lg-6 card">
             <img src={events} alt="" />
             <div className="desc">
               <h3>Events</h3>
@@ -37,7 +39,7 @@ const Mieten = () => {
               </p>
             </div>
           </div>
-          <div data-aos="zoom-out-left" className="card">
+          <div className="col-12 col-lg-12 card">
             <img src={celebrations} alt="" />
             <div className="desc">
               <h3>Celebrations</h3>

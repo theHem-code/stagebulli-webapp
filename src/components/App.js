@@ -7,32 +7,36 @@ import Story from "../pages/Story";
 import Impressions from "../pages/Impressions";
 import Datenschutz from "../pages/Datenschutz";
 import Impressum from "../pages/Impressum";
+import NavbarNew from "./Navbar/NavbarNew"
 
 
 const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/kuenstlervorschlaege">
-          <Artists />
-        </Route>
-        <Route exact path="/impressionen">
-          <Impressions />
-        </Route>
-        <Route exact path="/unserestory">
-          <Story />
-        </Route>
-        <Route exact path="/impressum">
-          <Impressum />
-        </Route>
-        <Route exact path="/datenschutz">
-          <Datenschutz />
-        </Route>
-      </Switch>
-    </Router>
+    <div>
+      <NavbarNew />
+    </div>
+    // <Router>
+    //   <Switch>
+    //     <Route exact path="/">
+    //       <Home />
+    //     </Route>
+    //     <Route exact path="/kuenstlervorschlaege">
+    //       <Artists />
+    //     </Route>
+    //     <Route exact path="/impressionen">
+    //       <Impressions />
+    //     </Route>
+    //     <Route exact path="/unserestory">
+    //       <Story />
+    //     </Route>
+    //     <Route exact path="/impressum">
+    //       <Impressum />
+    //     </Route>
+    //     <Route exact path="/datenschutz">
+    //       <Datenschutz />
+    //     </Route>
+    //   </Switch>
+    // </Router>
   );
 }
 

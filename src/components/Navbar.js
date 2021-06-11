@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { FaFacebook, FaLinkedin, FaHome } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaLinkedin,
+  FaHome,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import Logo from "../images/Logo.png";
 import { NavLink, useLocation } from "react-router-dom";
@@ -9,6 +15,7 @@ const Navbar = () => {
   const [pixelLeft, setPixelLeft] = useState(300);
   const [visible, setVisible] = useState("hidden");
   const [logoVisible, setLogoVisible] = useState("visible");
+  const [clicked, setClicked] = useState(false);
 
   const clickMieten = () => {
     setPixelLeft(50);
@@ -31,9 +38,13 @@ const Navbar = () => {
     setPixelLeft(-416);
   };
 
+  const handleClick = () => {
+    setClicked(!clicked)
+  }
+
   window.onscroll = function () {
-    //console.log(window.pageYOffset);
-    if (window.pageYOffset <= 0) {
+    // console.log(window.pageYOffset);
+    if (window.pageYOffset <= 934) {
       setLogoVisible("visible");
     } else {
       setLogoVisible("hidden");
@@ -52,10 +63,11 @@ const Navbar = () => {
         smooth={true}
         className="logo-wrapper"
         offset={-150}
+        duration={150}
         onSetActive={hideFrame}
       >
         {logoVisible === "hidden" ? (
-          <FaHome className="btn-home" style={{ transition: "0.5s" }} />
+          <FaHome className="btn-home" style={{ transition: "1.5s" }} />
         ) : (
           <img
             src={Logo}
@@ -81,6 +93,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {linkForLogo}
+      <div className="menu-icon" onClick={handleClick}>{clicked ? <FaTimes /> : <FaBars />}</div>
       <div className="nav-titles">
         <Link
           activeClass="active"
@@ -89,7 +102,8 @@ const Navbar = () => {
           smooth={true}
           offset={-160}
           onSetActive={clickMieten}
-          style={{ visibility: `${renderVisibility}` }}
+          duration={150}
+          style={{ visibility: `${renderVisibility}`, color: "#212121" }}
         >
           Mieten
         </Link>
@@ -100,7 +114,8 @@ const Navbar = () => {
           smooth={true}
           offset={-160}
           onSetActive={clickService}
-          style={{ visibility: `${renderVisibility}` }}
+          duration={150}
+          style={{ visibility: `${renderVisibility}`, color: "#212121" }}
         >
           Service
         </Link>
@@ -110,8 +125,9 @@ const Navbar = () => {
           spy={true}
           smooth={true}
           offset={-140}
+          duration={150}
           onSetActive={clickKontakt}
-          style={{ visibility: `${renderVisibility}` }}
+          style={{ visibility: `${renderVisibility}`, color: "#212121" }}
         >
           Kontakt
         </Link>

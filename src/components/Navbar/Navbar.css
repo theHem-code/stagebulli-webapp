@@ -1,0 +1,95 @@
+.NavbarItems {
+  background: yellow;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-logo {
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  width: 126px;
+
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  width: 70vw;
+  justify-content: center;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  color: black;
+  padding: 0.5rem 4rem;
+  font-size: 1rem;
+}
+
+.nav-links:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 100px;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+      background: blue;
+      width: 100%;
+      left: 0;
+      opacity: 1;
+      transition: all 0.4s ease;
+      z-index: 2;
+  }
+
+  .nav-links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+  }
+
+  .nav-links:hover{
+      background: burlywood;
+      border-radius: 4px;
+  }
+
+  .navbar-logo{
+      /* position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(25%, 50%); */
+      margin-left: 0;
+  }
+
+  .menu-icon {
+      display: block;
+      position: absolute;
+      top: 20%;
+      right: 0;
+      transform: translate(-100%, 60%);
+  }
+}

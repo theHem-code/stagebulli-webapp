@@ -5,12 +5,20 @@
 
 .article {
   margin-bottom: 2rem;
-  p{
-      text-align: center;
+  p {
+    text-align: center;
   }
 }
 
+.cards-artists {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
 .card-artists {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
   text-align: center;
   height: 450px;
   width: 30rem;
