@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "../components/Navbar"
+import NavbarNew from "../components/Navbar/NavbarNew"
 
 
 const Impressum = () => {
   return (
     <div>
-      <Navbar />
+      <NavbarNew />
       Impressum
     </div>
   );

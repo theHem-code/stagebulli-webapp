@@ -4,7 +4,7 @@ import {
   // Transformation,
   CloudinaryContext,
 } from "cloudinary-react";
-import Navbar from "../components/Navbar";
+import NavbarNew from "../components/Navbar/NavbarNew";
 import Footer from "../components/Footer";
 
 const Impressions = () => {
@@ -23,7 +23,7 @@ const Impressions = () => {
 
   return (
     <div>
-      <Navbar />
+      <NavbarNew />
       <main style={{ height: "100vh" }}>
         <div className="artists-container">
           <div className="header">

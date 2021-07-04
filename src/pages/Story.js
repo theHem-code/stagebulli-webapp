@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "../components/Navbar"
+import NavbarNew from "../components/Navbar/NavbarNew"
 
 
 
 const Story = () => {
   return (
     <div>
-      <Navbar />
+      <NavbarNew />
       Story
     </div>
   );

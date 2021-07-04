@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Start = () => {
   return (
-    <main id="start" style={{ height: "100vh" }}>
+    <main id="start" className="start-block">
       <div className="container">
         <section className="row header-start">
           <div className="col-12">

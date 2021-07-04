@@ -7,9 +7,9 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Mieten = () => {
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
+  // useEffect(() => {
+  //   Aos.init({ duration: 1000 });
+  // }, []);
 
   return (
     <div id="mieten" className="container container-mieten">

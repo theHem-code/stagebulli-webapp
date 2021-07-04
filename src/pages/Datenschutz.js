@@ -1,12 +1,12 @@
 import React from "react";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import NavbarNew from "../components/Navbar/NavbarNew";
 
 
 const Datenschutz = () => {
   return (
     <div>
-      <Navbar />
+      <NavbarNew />
 
       <h1>hello</h1>
       <Footer />
