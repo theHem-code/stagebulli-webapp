@@ -1,6 +1,7 @@
 .artists-container {
   width: $max-width;
   margin: 0 auto;
+  height: 100vh;
 }
 
 .article {
@@ -8,6 +9,12 @@
   p {
     text-align: center;
   }
+}
+
+.artist-header{
+  margin-top: 150px;
+  margin-bottom: 2rem;
+  text-align: center; 
 }
 
 .cards-artists {

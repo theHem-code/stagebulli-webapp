@@ -10,69 +10,43 @@ import Bulliframe from "./components/Bulliframe";
 
 const NavbarNew = () => {
   const [clicked, setClicked] = useState(false);
-  const [pixelLeft, setPixelLeft] = useState(0);
-  const [visible, setVisible] = useState("visible");
-  const [logoVisible, setLogoVisible] = useState("visible");
+  const [visible, setVisible] = useState("hidden");
+  // const [logoVisible, setLogoVisible] = useState("visible");
   const [location, setLocation] = useState({});
 
-  // const clickMieten = () => {
-  //   setPixelLeft(21.5);
-  //   setVisible("visible");
-  //   setLogoVisible("hidden");
-  // };
-  // const clickService = () => {
-  //   setVisible("visible");
-  //   setPixelLeft(34.9);
-  //   setLogoVisible("hidden");
-  // };
-  // const clickKontakt = () => {
-  //   setPixelLeft(68.8);
-  //   setVisible("visible");
-  //   setLogoVisible("hidden");
-  // };
-
-  // const hideFrame = () => {
-  //   setVisible("hidden");
-  //   setPixelLeft(-416);
-  // };
-
-  const handleClick = () => {
-    setClicked(!clicked);
-  };
   const setFrame = (coordinates) => {
     setLocation(coordinates);
   };
-
+  
   const displayBulli = (e) => {
-    // const element = e.target;
-    const tempTag = e.target.getBoundingClientRect();
-    const center = (tempTag.left + tempTag.right) / 2;
-    setFrame({ center });
+    const menuElement = e.target.getBoundingClientRect();
+    const center = (menuElement.left + menuElement.right) / 2;
+    const left = menuElement.left;
+    setFrame({ center, left });
   };
 
-  //   window.onscroll = function () {
-  //     // console.log(window.pageYOffset);
-  //     if (window.pageYOffset <= 934) {
-  //       setLogoVisible("visible");
-  //     } else {
-  //       setLogoVisible("hidden");
-  //     }
-  //   };
+  const hideFrame = () => {
+    setVisible("hidden");
+  };
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
 
-  const uselocation = useLocation();
-  const renderVisibility = uselocation.pathname === "/" ? "visibile" : "hidden";
+  const mylocation = useLocation();
+
+  const renderVisibility = mylocation.pathname === "/" ? "visible" : "hidden";
 
   const linkForLogo =
-    uselocation.pathname === "/" ? (
+    mylocation.pathname === "/" ? (
       <Link
         activeClass="active"
         to="start"
         spy={true}
         smooth={true}
         className="logo-wrapper"
-        offset={-150}
+        offset={-130}
         duration={150}
-        // onSetActive={hideFrame}
+        onSetActive={hideFrame}
       >
         <img
           src={Logo}
@@ -88,14 +62,14 @@ const NavbarNew = () => {
             src={Logo}
             alt="Logo"
             className="logo"
-            style={{ visibility: `${logoVisible}` }}
+            // style={{ visibility: `${logoVisible}` }}
           />
         </div>
       </NavLink>
     );
 
   return (
-    <nav className="NavbarItems nav">
+    <nav className="NavbarItems">
       <IconContext.Provider value={{ color: "black", className: "menu-icon" }}>
         <div className="navbar-logo">{linkForLogo}</div>
         <div className="menu-icon" onClick={handleClick}>
@@ -109,8 +83,7 @@ const NavbarNew = () => {
             to="mieten"
             spy={true}
             smooth={true}
-            offset={-160}
-            // onSetActive={displayBulli}
+            offset={-130}
             duration={150}
             onClick={displayBulli}
             style={{ visibility: `${renderVisibility}`, color: "#212121" }}
@@ -125,11 +98,10 @@ const NavbarNew = () => {
             to="service"
             spy={true}
             smooth={true}
-            offset={-160}
+            offset={-130}
             duration={150}
             className="nav-links"
             onClick={displayBulli}
-            // onSetActive={clickService}
             duration={150}
             style={{ visibility: `${renderVisibility}`, color: "#212121" }}
           >
@@ -146,14 +118,13 @@ const NavbarNew = () => {
             duration={150}
             className="nav-links"
             onClick={displayBulli}
-            // onSetActive={clickKontakt}
             style={{ visibility: `${renderVisibility}`, color: "#212121" }}
           >
             Kontakt
           </Link>
           <Bulliframe
             displayBulli={displayBulli}
-            // pixelLeft={pixelLeft}
+            renderVisibility={renderVisibility}
             setFrame={setFrame}
             location={location}
           />

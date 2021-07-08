@@ -8,9 +8,11 @@
 @import "components/service";
 @import "components/kontakt";
 @import "components/footer";
+@import "components/youtube";
 
 // pages
 @import "pages/artists";
+@import "pages/story";
 
 
 /*
@@ -92,9 +94,9 @@ legend {
   h4 {
     font-size: 3rem;
   }
-  body {
-    font-size: 1rem;
-  }
+  // body {
+  //   font-size: 1rem;
+  // }
   h1,
   h2,
   h3,

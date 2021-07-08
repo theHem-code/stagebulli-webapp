@@ -1,43 +1,58 @@
 .bulliframe-wrapper {
-  max-width: $max-width;
+  max-width: 1000px;
   margin: 0 auto;
-  height: 100vh;
+  height: 40vw;
 }
 
 .bulliframe {
   position: relative;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  width: 1000px;
+  width: 100%;
   background-image: url(../../images/bulliframe.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 550px;
-  h3{
-      font-size: 2.6rem;
-      hyphens: auto;
-  }
-  p{
-      font-size: 2rem;
-      line-height: 2.3rem;
-      font-weight: 500;
-      font-family: "Jost";
-      letter-spacing: 1px;
-  }
-  :nth-child(2){
-    top: 210px;
-  }
-  :nth-child(3){
-    top: 360px;
-  }
+  height: 100%;
 }
 
-article{
-    position: absolute;
-    top: 60px;
-    left: 60px;
-}
+// article{
+//     position: absolute;
+//   }
 
+.frame-content {
+  position: absolute;
+  left: 60px;
+  h3 {
+    min-width: 100%;
+    font-size: 2.6rem;
+    // font-size: 2.3vw;
+    hyphens: auto;
+  }
+  p {
+    margin-bottom: 1vw;
+    line-height: 2.4rem;
+    font-size: 2rem;
+    // font-size: 1.9vw;
+    font-weight: 500;
+    font-family: "Jost";
+    letter-spacing: 0.1vw;
+  }
+  // :nth-child(1) {
+  //   top: 4vw;
+  //   left: 4vw;
+  // }
+  // :nth-child(2) {
+  //   top: 14vw;
+  //   left: 4vw;
+  // }
+  // :nth-child(3) {
+  //   top: 24vw;
+  //   left: 4vw;
+  // }
+}
 
 .button-artists {
   margin: 0 auto;
@@ -48,15 +63,15 @@ article{
 
 .button-line {
   width: 90%;
-  height: 0.20rem;
+  height: 0.2rem;
   margin-top: 0.5rem;
   background: $clrHead;
   margin-left: auto;
   margin-right: auto;
-  transition: .4s cubic-bezier(.2,1.5,.2,1.5);
+  transition: 0.4s cubic-bezier(0.2, 1.5, 0.2, 1.5);
 }
 
-.button-line-left{
+.button-line-left {
   border-left: 6px solid green;
   height: 500px;
   // left: 100%;
@@ -64,18 +79,23 @@ article{
   top: 0;
 }
 
-.button-artists:hover{
+.button-artists:hover {
   a {
     color: $clrHead;
   }
-    .button-line{
-        width: 40%;
-    }
+  .button-line {
+    width: 40%;
+  }
 }
 
-
-@media screen and (max-width: 960px) {
-  .bulliframe {
-    width: 700px;
-  }
+@media screen and (max-width: 1250px) {
+  .frame-content h3 {
+      font-size: 2.3vw;
+    }
+  .frame-content p {
+      margin-bottom: 1vw;
+      line-height: 2vw;
+      font-size: 1.9vw;
+      letter-spacing: 0.1vw;
+    }
 }

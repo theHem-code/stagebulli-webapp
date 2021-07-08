@@ -5,17 +5,17 @@ import birddogs from "../images/birddogs.png";
 import djs from "../images/djs.png";
 
 const Artists = () => {
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  });
+  // useLayoutEffect(() => {
+  //   window.scrollTo(0, 0);
+  // });
 
   return (
     <div>
       <NavbarNew />
       <div className="container artists-container">
-        <div className="row header">
+        <div className="row artist-header">
           <div className="col-12">
-            <h1>Kunstlervorschlage</h1>
+            <h1>Entertainmentvorschläge</h1>
           </div>
         </div>
         <div className="row">

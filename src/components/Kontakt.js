@@ -90,8 +90,7 @@ const Kontakt = () => {
         <Grid item xs={12}>
           <section className="header">
             <h4>
-              Hello, is it me <br />
-              you are looking for?
+              Was darf's sein?
             </h4>
           </section>
         </Grid>

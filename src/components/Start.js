@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Start = () => {
   return (
-    <main id="start" className="start-block">
+    <main id="start" className="container-start">
       <div className="container">
         <section className="row header-start">
           <div className="col-12">
