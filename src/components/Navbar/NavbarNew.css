@@ -26,7 +26,7 @@ ul {
   width: 127px;
 }
 
-.frame {
+#frame {
   position: absolute;
   height: 100%;
   top: 0px;
@@ -34,9 +34,29 @@ ul {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  /* transform: translateX(-172%); */
-  width: 200px;
-  transition: 0.5s;
+  transition: .5s;
+  width: 176px;
+  z-index: -2;
+}
+
+.hidden {
+	opacity: 0;
+  left: -17.9%;
+}
+
+.frame1 {
+	transition: left .5s;
+	left: 21.7%;
+}
+
+.frame2 {
+	transition: left .5s;
+	left: 42.7%;
+}
+
+.frame3 {
+	transition: left .5s;
+	left: 64.2%;
 }
 
 .logo-wrapper {
@@ -93,12 +113,24 @@ ul {
   cursor: pointer;
 }
 
+/*Styling Hamburger Icon*/
+.hamburger div{
+  width: 30px;
+  height:3px;
+  background: #212121;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.hamburger{
+  display: none;
+}
+
 
 
 /* MOBILE RESPONSIVE */
 
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 1050px) {
   .NavbarItems {
     position: relative;
   }
@@ -121,7 +153,7 @@ ul {
     width: 100%;
     right: 0;
     height: 100vh;
-    opacity: 2;
+    opacity: 1;
     transition: all 0.4s ease;
     z-index: 10;
     margin: 0;
@@ -166,5 +198,28 @@ ul {
     cursor: pointer;
     font-size: 1.5rem;
   }
+
+  .hamburger{
+    display:block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+}
+  
+  /*Animating Hamburger Icon on Click*/
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+  transition: all 0.1s ease;
+  width:0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
 
 }

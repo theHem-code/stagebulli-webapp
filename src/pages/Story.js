@@ -6,7 +6,7 @@ import YoutubeEmbed from "../components/YoutubeEmbed";
 const Story = () => {
   return (
     <div>
-      <NavbarNew />
+      {/* <NavbarNew /> */}
       <div className="container story-container">
         <div className="row header">
           <div className="col-12">

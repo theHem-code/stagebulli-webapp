@@ -1,5 +1,5 @@
 import React, { useLayoutEffect } from "react";
-import NavbarNew from "../components/Navbar/NavbarNew";
+// import NavbarNew from "../components/Navbar/NavbarNew";
 import Footer from "../components/Footer";
 import birddogs from "../images/birddogs.png";
 import djs from "../images/djs.png";
@@ -11,7 +11,7 @@ const Artists = () => {
 
   return (
     <div>
-      <NavbarNew />
+      {/* <NavbarNew /> */}
       <div className="container artists-container">
         <div className="row artist-header">
           <div className="col-12">
