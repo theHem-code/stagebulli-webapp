@@ -40,7 +40,7 @@ const sendEmail = (e) => {
   e.target.reset();
 };
 
-const GreenCheckbox = withStyles({
+const OrangeCheckbox = withStyles({
   root: {
     color: "#f15025",
     "&$checked": {
@@ -59,7 +59,6 @@ const useStyles = makeStyles((theme) => ({
   },
   formControl: {
     margin: theme.spacing(0),
-    // minWidth: 120,
     width: "100%",
   },
   selectEmpty: {
@@ -86,15 +85,29 @@ const CssTextField = withStyles({
   },
 })(TextField);
 
+const initialValues = {
+  vorname: "",
+  nachname: "",
+  firma: "test",
+  email: "",
+  telefonnumber: "",
+  teilnehmer: " - ",
+  datum: new Date(),
+  info: ""
+}
+
+
 const Kontakt = () => {
   const [participans, setParticipans] = useState("");
   const [selectedDate, handleDateChange] = useState(new Date());
+  const [values, setValues] = useState(initialValues)
 
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     checkedA: false,
     checkedB: false,
     checkedC: false,
   });
+
 
   const handleCount = (event) => {
     setParticipans(event.target.value);
@@ -103,6 +116,15 @@ const Kontakt = () => {
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
   };
+
+  const handleInput = (e) => {
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value
+    })
+  }
+
+
 
   const classes = useStyles();
 
@@ -122,7 +144,7 @@ const Kontakt = () => {
               <FormControlLabel
                 label="Stage Bulli"
                 control={
-                  <GreenCheckbox
+                  <OrangeCheckbox
                     checked={state.checkedA}
                     onChange={handleChange}
                     name="checkedA"
@@ -134,7 +156,7 @@ const Kontakt = () => {
               <FormControlLabel
                 label="+ Technikpaket"
                 control={
-                  <GreenCheckbox
+                  <OrangeCheckbox
                     checked={state.checkedB}
                     onChange={handleChange}
                     name="checkedB"
@@ -146,7 +168,7 @@ const Kontakt = () => {
               <FormControlLabel
                 label="+ Entertainmentpaket"
                 control={
-                  <GreenCheckbox
+                  <OrangeCheckbox
                     checked={state.checkedC}
                     onChange={handleChange}
                     name="checkedC"
@@ -159,14 +181,20 @@ const Kontakt = () => {
               <CssTextField
                 className={classes.margin}
                 label="Vorname"
+                value={values.vorname}
+                // name="vorname"
                 variant="outlined"
                 fullWidth
+                error
+                helperText="not correct"
+                onChange={handleInput}
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <CssTextField
                 className={classes.margin}
                 label="Nachname"
+                name="nachname"
                 variant="outlined"
                 fullWidth
               />
@@ -175,8 +203,8 @@ const Kontakt = () => {
               <CssTextField
                 className={classes.margin}
                 label="Firma"
+                name="firma"
                 variant="outlined"
-                // id="custom-css-outlined-input"
                 fullWidth
               />
             </Grid>
@@ -185,6 +213,7 @@ const Kontakt = () => {
               <CssTextField
                 className={classes.margin}
                 label="Email"
+                name="email"
                 variant="outlined"
                 fullWidth
               />{" "}
@@ -193,6 +222,7 @@ const Kontakt = () => {
               <CssTextField
                 className={classes.margin}
                 label="Telefonnummer"
+                name="telefon"
                 variant="outlined"
                 fullWidth
               />
@@ -244,8 +274,6 @@ const Kontakt = () => {
                 fullWidth
               />
             </Grid>
-            {/* Veranstaltungsdatum */}
-            {/* </form> */}
           </Grid>
           <div className="button-senden">
             <input type="submit" className="senden" value="Senden"></input>

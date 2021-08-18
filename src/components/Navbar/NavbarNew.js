@@ -14,7 +14,6 @@ const NavbarNew = () => {
   const [logoVisible, setLogoVisible] = useState("visible");
   const [bframe, setBframe] = useState(null);
   // const [location, setLocation] = useState({});
-  // test command
 
   const handleClick = () => {
     setClicked(!clicked);
