@@ -11,26 +11,49 @@ import { computeHeadingLevel } from "@testing-library/react";
 
 const NavbarNew = () => {
   const [clicked, setClicked] = useState(false);
-  const [visible, setVisible] = useState("hidden");
-  const [bframe, setFrame] = useState(null);
-  // const [logoVisible, setLogoVisible] = useState("visible");
+  const [logoVisible, setLogoVisible] = useState("visible");
+  const [bframe, setBframe] = useState(null);
   // const [location, setLocation] = useState({});
+  // test command
+
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
+
+  const hide = () => {
+    setClicked(false);
+  };
 
   // const setFrame = (coordinates) => {
   //   setLocation(coordinates);
   // };
 
   // const displayBulli = (e) => {
-  //   const menuElement = e.target.getBoundingClientRect();
-  //   const center = (menuElement.left + menuElement.right) / 2;
-  //   const left = menuElement.left;
-  //   setFrame({ center, left });
+  //   const navLink = e.target.getBoundingClientRect();
+  //   console.log(navLink)
+  //   // const center = (navLink.left + navLink.right) / 2;
+  //   const left = navLink.left;
+  //   setFrame({ left });
   // };
+
   const container = useRef(bframe);
 
   useEffect(() => {
     const frame = container.current;
-    setFrame(frame);
+    setBframe(frame);
+  }, []);
+
+  useEffect(() => {
+    const bulliElement = document.getElementById("frame");
+    if (bulliElement) {
+      window.addEventListener("resize", () =>
+        bulliElement.classList.add("hidden")
+      );
+    }
+    return () =>
+      window.removeEventListener("resize", () =>
+        bulliElement.classList.add("hidden")
+      );
   }, []);
 
   const handleFrame0 = () => {
@@ -38,6 +61,10 @@ const NavbarNew = () => {
     bframe.classList.remove("frame1");
     bframe.classList.remove("frame2");
     bframe.classList.add("hidden");
+    const offsetLeft = document.getElementById("link0").offsetLeft;
+    const frameSpacerToCenterBulli = -205;
+    bframe.style.left = `calc(${offsetLeft}px + ${frameSpacerToCenterBulli}px)`;
+    bframe.style.opacity = 0;
   };
 
   const handleFrame1 = () => {
@@ -45,6 +72,10 @@ const NavbarNew = () => {
     bframe.classList.remove("frame2");
     bframe.classList.remove("frame3");
     bframe.classList.add("frame1");
+    const offsetLeft = document.getElementById("link1").offsetLeft;
+    const frameSpacerToCenterBulli = -17;
+    bframe.style.left = `calc(${offsetLeft}px + ${frameSpacerToCenterBulli}px)`;
+    bframe.style.opacity = 1;
   };
 
   const handleFrame2 = () => {
@@ -52,6 +83,10 @@ const NavbarNew = () => {
     bframe.classList.remove("frame1");
     bframe.classList.remove("frame3");
     bframe.classList.add("frame2");
+    const offsetLeft = document.getElementById("link2").offsetLeft;
+    const frameSpacerToCenterBulli = -13;
+    bframe.style.left = `calc(${offsetLeft}px + ${frameSpacerToCenterBulli}px)`;
+    bframe.style.opacity = 1;
   };
 
   const handleFrame3 = () => {
@@ -59,17 +94,10 @@ const NavbarNew = () => {
     bframe.classList.remove("frame1");
     bframe.classList.remove("frame2");
     bframe.classList.add("frame3");
-  };
-
-  // const hideFrame = () => {
-  //   setVisible("hidden");
-  // };
-
-    
-    const handleClick = () => {
-      // const hamburger = document.querySelector(".hamburger");
-      // hamburger.classList.toggle("toggle");
-        setClicked(!clicked);
+    const offsetLeft = document.getElementById("link3").offsetLeft;
+    const frameSpacerToCenterBulli = -10;
+    bframe.style.left = `calc(${offsetLeft}px + ${frameSpacerToCenterBulli}px)`;
+    bframe.style.opacity = 1;
   };
 
   const mylocation = useLocation();
@@ -87,14 +115,14 @@ const NavbarNew = () => {
         className="logo-wrapper"
         offset={-130}
         duration={150}
-        onClick={handleFrame0}
-        // onSetActive={handleFrame0}
+        onClick={hide}
+        onSetActive={handleFrame0}
       >
         <img
           src={Logo}
           alt="Logo"
           className="logo"
-          // style={{ visibility: `${logoVisible}` }}
+          style={{ visibility: `${logoVisible}` }}
         />
       </Link>
     ) : (
@@ -117,80 +145,69 @@ const NavbarNew = () => {
         <div className="menu-icon" onClick={handleClick}>
           {clicked ? <FaTimes /> : <FaBars />}
         </div>
-        {/* <div className="hamburger" onClick={handleClick}>
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div> */}
       </IconContext.Provider>
-      <ul className={clicked ? "nav-menu active" : "nav-menu"}>
-        <li>
-          <Link
-            activeClass="active"
-            id="link1"
-            to="mieten"
-            spy={true}
-            smooth={true}
-            offset={-130}
-            duration={150}
-            // onSetActive={handleFrame1}
-            onClick={handleFrame1}
-            style={{ visibility: `${renderVisibility}`, color: "#212121" }}
-            className="nav-links"
-          >
-            Mieten
-          </Link>
-        </li>
-        <li>
-          <Link
-            activeClass="active"
-            id="link2"
-            to="service"
-            spy={true}
-            smooth={true}
-            offset={-130}
-            duration={150}
-            className="nav-links"
-            // onSetActive={handleFrame2}
-            onClick={handleFrame2}
-            duration={150}
-            style={{ visibility: `${renderVisibility}`, color: "#212121" }}
-          >
-            Service
-          </Link>
-        </li>
-        <li>
-          <Link
-            activeClass="active"
-            id="link3"
-            to="kontakt"
-            spy={true}
-            smooth={true}
-            offset={-30}
-            duration={150}
-            className="nav-links"
-            // onSetActive={handleFrame3}
-            onClick={handleFrame3}
-            style={{ visibility: `${renderVisibility}`, color: "#212121" }}
-          >
-            Kontakt
-          </Link>
-          {/* <Bulliframe
-            displayBulli={displayBulli}
-            renderVisibility={renderVisibility}
-            setFrame={setFrame}
-            location={location}
-          /> */}
-        </li>
+      <div className={clicked ? "nav-menu active" : "nav-menu"}>
+        <Link
+          activeClass="active"
+          to="mieten"
+          id="link1"
+          spy={true}
+          smooth={true}
+          offset={-130}
+          duration={150}
+          style={{ visibility: `${renderVisibility}` }}
+          className="nav-links"
+          onClick={hide}
+          onSetActive={handleFrame1}
+        >
+          Mieten
+        </Link>
+
+        <Link
+          activeClass="active"
+          to="service"
+          id="link2"
+          spy={true}
+          smooth={true}
+          offset={-130}
+          duration={150}
+          className="nav-links"
+          duration={150}
+          onClick={handleClick}
+          onSetActive={handleFrame2}
+          style={{ visibility: `${renderVisibility}` }}
+        >
+          Service
+        </Link>
+
+        <Link
+          activeClass="active"
+          to="kontakt"
+          id="link3"
+          spy={true}
+          smooth={true}
+          offset={-30}
+          duration={150}
+          className="nav-links"
+          onClick={handleClick}
+          onSetActive={handleFrame3}
+          style={{ visibility: `${renderVisibility}` }}
+        >
+          Kontakt
+        </Link>
+        {/* <Bulliframe
+          displayBulli={displayBulli}
+          renderVisibility={renderVisibility}
+          setFrame={setFrame}
+          location={location}
+        /> */}
         <div
           id="frame"
           className="hidden"
-          ref={container}
           style={{ visibility: `${renderVisibility}` }}
-        >
-          <div id="bulli"></div>
-        </div>
-      </ul>
+          ref={container}
+        ></div>
+      </div>
       <ul className="social-icons">
         <li>
           <a href="https://www.facebook.com/stagebulli">
@@ -213,3 +230,4 @@ const NavbarNew = () => {
 };
 
 export default NavbarNew;
+

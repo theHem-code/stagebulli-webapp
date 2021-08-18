@@ -5,28 +5,17 @@ import birddogs from "../images/birddogs.png";
 import djs from "../images/djs.png";
 
 const Artists = () => {
-  // useLayoutEffect(() => {
-  //   window.scrollTo(0, 0);
-  // });
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   return (
     <div>
-      {/* <NavbarNew /> */}
       <div className="container artists-container">
         <div className="row artist-header">
           <div className="col-12">
             <h1>Entertainmentvorschläge</h1>
           </div>
-        </div>
-        <div className="row">
-          <p className="col-12 article">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-            dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-            tempor invidunt ut labore et dolore.
-          </p>
         </div>
         <div className="row cards-artists">
           <div className="col-12 col-lg-6">
@@ -37,9 +26,43 @@ const Artists = () => {
             >
               <div className="card-artists">
                 <img src={birddogs} alt="" />
-                <div className="desc-artists">
-                  <h3>Birddogs</h3>
-                  <p>Von den Beatles bis Coldplay</p>
+                <div className="artist-all">
+                  <div className="desc-artists">
+                    <h3>Birddogs</h3>
+
+                    <p>
+                      „Endlich mal eine sexy Coverband.“
+                      <br />
+                      Pop-, Rock-, Soul- und Disco-Songs aus sechs Jahrzehnten.
+                      <br />
+                      Von den Beatles bis Coldplay
+                    </p>
+                  </div>
+                  <div className="line"></div>
+                  <div className="artist-details">
+                    <p>
+                      <span
+                        style={{
+                          fontWeight: "800",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        Location:
+                      </span>{" "}
+                      Berlin
+                    </p>
+                    <p>
+                      <span
+                        style={{
+                          fontWeight: "800",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        Budget:
+                      </span>{" "}
+                      ab 2.400€
+                    </p>
+                  </div>
                 </div>
               </div>
             </a>
@@ -53,7 +76,7 @@ const Artists = () => {
               <div className="card-artists">
                 <img src={djs} alt="" />
                 <div className="desc-artists">
-                  <h3>DJane / DJ</h3>
+                  <h3>DJ Plus Act</h3>
                   <p>Da bebt sogar der Bulli</p>
                 </div>
               </div>
@@ -67,3 +90,4 @@ const Artists = () => {
 };
 
 export default Artists;
+

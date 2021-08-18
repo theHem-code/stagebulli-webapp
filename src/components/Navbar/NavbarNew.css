@@ -1,20 +1,7 @@
+
 ul {
   padding-left: 0 !important;
 }
-
-.NavbarItems {
-  background: #f1f1f1;
-  height: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  overflow: hidden;
-  position: fixed;
-  z-index: 1;
-}
-
 .navbar-logo {
   display: flex;
   justify-content: center;
@@ -26,39 +13,6 @@ ul {
   width: 127px;
 }
 
-#frame {
-  position: absolute;
-  height: 100%;
-  top: 0px;
-  background-image: url(../../images/Logo_ohneName.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: .5s;
-  width: 176px;
-  z-index: -2;
-}
-
-.hidden {
-	opacity: 0;
-  left: -17.9%;
-}
-
-.frame1 {
-	transition: left .5s;
-	left: 21.7%;
-}
-
-.frame2 {
-	transition: left .5s;
-	left: 42.7%;
-}
-
-.frame3 {
-	transition: left .5s;
-	left: 64.2%;
-}
-
 .logo-wrapper {
   justify-content: center;
   height: 70px;
@@ -67,14 +21,23 @@ ul {
   align-items: center;
   transition: 5s;
 }
+.NavbarItems {
+  background: #f1f1f1;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+}
 
 .nav-menu {
-  display: grid;
+  display: flex;
   position: relative;
-  grid-template-columns: repeat(3, auto);
-  grid-gap: 30px;
-  width: 60vw;
-  justify-content: center;
+  justify-content: space-evenly;
+  width: 900px;
   margin-bottom: 0;
   height: 70px;
   align-items: center;
@@ -82,11 +45,79 @@ ul {
 
 .nav-links {
   color: black;
-  padding: 0.5rem 4rem;
   font-size: 0.8rem;
+  line-height: 70px;
   text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  text-align: center;
 
 }
+
+#frame{
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: -2;
+  opacity: 1;
+  background-image: url(../../images/Logo_ohneName.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 126px;
+  transition: all .5s ease 0s;
+}
+
+.hidden {
+  opacity: 0;
+  left: -17.9%;
+}
+
+.frame1 {
+  transition: left .5s;
+  /* left: 21.7%; */
+}
+
+.frame2 {
+  transition: left .5s;
+  left: 42.7%;
+}
+
+.frame3 {
+  transition: left .5s;
+  left: 64.2%;
+}
+/* 
+a:nth-child(1){
+  width: 300px;
+  
+}
+a:nth-child(1).active~.animation {
+  width: 126px;
+  left: 105px;
+  opacity: 1;
+}
+
+a:nth-child(2){
+  width: 300px;
+}
+a:nth-child(2).active~.animation {
+  width: 126px;
+  left: 405px;
+  opacity: 1;
+}
+
+a:nth-child(3){
+  width: 300px;
+}
+a:nth-child(3).active~.animation {
+  width: 126px;
+  left: 704px;
+  opacity: 1;
+} */
+
+
+
 
 .nav-links:hover {
   color: black;
@@ -100,20 +131,21 @@ ul {
 
 .social-icons {
   display: flex;
-  justify-content: space-evenly;
   width: 11rem;
   align-items: center;
+  justify-content: space-around;
   font-size: 20px;
 }
 .social-icons a {
   transition: 0.1s;
+  
 }
 .social-icons a:hover {
   color: #f15025;
   cursor: pointer;
 }
 
-/*Styling Hamburger Icon*/
+/* Styling Hamburger Icon
 .hamburger div{
   width: 30px;
   height:3px;
@@ -123,7 +155,7 @@ ul {
 }
 .hamburger{
   display: none;
-}
+} */
 
 
 
@@ -132,11 +164,12 @@ ul {
 
 @media screen and (max-width: 1050px) {
   .NavbarItems {
-    position: relative;
+    position: fixed;
   }
 
   .nav-menu {
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
     width: 100%;
     height: 100vh;
@@ -155,10 +188,12 @@ ul {
     height: 100vh;
     opacity: 1;
     transition: all 0.4s ease;
-    z-index: 10;
+    z-index: 1;
     margin: 0;
     padding-top: 20px;
+    position: absolute;
   }
+
 
   .nav-links {
     text-align: center;
@@ -173,6 +208,10 @@ ul {
     transform: translateY(-5px);
     color: #f1f1f1;
     transition: all 0.2s ease;
+  }
+
+  #frame {
+    opacity: 0;
   }
 
   .social-icons li {
@@ -199,7 +238,7 @@ ul {
     font-size: 1.5rem;
   }
 
-  .hamburger{
+  /* .hamburger{
     display:block;
     position: absolute;
     cursor: pointer;
@@ -208,10 +247,10 @@ ul {
     transform: translate(-5%, -50%);
     z-index: 2;
     transition: all 0.7s ease;
-}
+} */
   
   /*Animating Hamburger Icon on Click*/
-.toggle .line1{
+/* .toggle .line1{
   transform: rotate(-45deg) translate(-5px,6px);
 }
 .toggle .line2{
@@ -220,6 +259,7 @@ ul {
 }
 .toggle .line3{
   transform: rotate(45deg) translate(-5px,-6px);
-}
+} */
 
 }
+

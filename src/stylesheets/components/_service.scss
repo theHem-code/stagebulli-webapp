@@ -1,3 +1,5 @@
+
+
 .bulliframe-wrapper {
   max-width: 1000px;
   margin: 0 auto;
@@ -16,6 +18,11 @@
   background-size: contain;
   background-repeat: no-repeat;
   height: 100%;
+}
+
+.bulli-service{
+  width: 100%;
+  margin: 0 auto;
 }
 
 // article{
@@ -59,6 +66,7 @@
   width: max-content;
   margin-top: 40px;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .button-line {

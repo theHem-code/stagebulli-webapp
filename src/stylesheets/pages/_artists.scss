@@ -27,7 +27,7 @@
   float: none; /* Added */
   margin-bottom: 10px; /* Added */
   text-align: center;
-  height: 450px;
+  height: 550px;
   width: 30rem;
   border-radius: $radius;
   padding: 20px 20px;
@@ -48,33 +48,74 @@
   width: $max-width;
 }
 
+.artist-all {
+  padding: 20px 10px;
+  background-color: $boxclr;
+  transition: $transition !important;
+
+}
+
 .desc-artists {
   width: 100%;
   text-align: center;
   margin: 0 auto;
-  background-color: $boxclr;
-  padding: 20px 10px;
+  // background-color: $boxclr;
+  // padding: 20px 10px;
   // box-shadow: $light-shadow;
   transition: $transition !important;
   p {
     margin-top: 10px;
     letter-spacing: 1.2px;
     font-size: 0.8rem;
+    text-transform: none;
+    margin-bottom: 10px;
+  }
+}
+
+.line{
+  border-top: 1px solid black;
+  margin: 0 auto;
+  width: 20%;
+}
+
+.artist-details {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  transition: $transition !important;
+  p {
+    margin-top: 10px;
+    letter-spacing: 1.2px;
+    font-size: 0.8rem;
+    text-transform: none;
+    
   }
 }
 
 .card-artists:hover {
   background: $clrPry4 !important;
   transform: translateY(-3px) !important;
+  
   p,
   h3 {
     color: white;
   }
-  .desc-artists {
+  .line{
+    border-color: white;
+  }
+  // .desc-artists {
+  //   background: $clrPry4;
+  // }
+  // .artist-details{
+  //   background: $clrPry4;
+  // }
+  .artist-all{
     background: $clrPry4;
+
   }
 }
 
 .clearFloat{
   clear: both;
 }
+

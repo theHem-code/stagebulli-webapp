@@ -1,7 +1,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  margin: 0 auto;
+  // margin: 0 auto;
   width: 100%;
   height: 60vh;
   position: relative;
@@ -13,16 +13,8 @@
 
 .header-start {
   text-align: center;
-  margin-bottom: 2rem;
-  margin-top: 130px;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // margin: 130px 0;
-  // h4 {
-  //   text-align: center;
-  //   margin-bottom: 50px;
-  // }
+  // margin-bottom: 2rem;
+  margin-top: 110px;
 }
 
 .button-story {
@@ -59,8 +51,8 @@
   }
 }
 
-@media screen and (max-width: 960px) {
-    .header-start{
-      margin-top: 50px;
-    }
-  }
+// @media screen and (max-width: 960px) {
+//     .header-start{
+//       margin-top: 150px;
+//     }
+//   }
