@@ -55,6 +55,11 @@
     margin-top: 10px;
     letter-spacing: 1.2px;
     font-size: 0.8rem;
+    transition: $transition;
+  }
+  h3 {
+    transition: $transition;
+
   }
 }
 
@@ -75,6 +80,12 @@
   width: max-content;
   margin-top: 30px;
   cursor: pointer;
+  transition: $transition;
+  padding: 10px 20px;
+  a {
+    
+    transition: $transition;
+  }
 }
 
 .button-line {
@@ -88,11 +99,17 @@
 }
 
 .button-impressionen:hover {
+  background-color: $clrPry4;
+  border-radius: 5px;
+  box-shadow: $dark-shadow;
+  transform: translateY(-5px);
   a {
-    color: $clrHead;
+    // color: $clrHead;
+    color: white;
   }
   .button-line {
     width: 40%;
+    background: white;
   }
 }
 

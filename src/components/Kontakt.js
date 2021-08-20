@@ -14,38 +14,30 @@ import Select from "@material-ui/core/Select";
 import {
   KeyboardDatePicker,
   MuiPickersUtilsProvider,
-  validate,
 } from "@material-ui/pickers";
 import Grid from "@material-ui/core/Grid";
 import DateFnsUtils from "@date-io/date-fns";
 
 const sendEmail = (e) => {
   e.preventDefault();
-  if (validates()) {
-    window.alert("true...");
-  } else {
-    window.alert("false...");
-  }
+  emailjs
+    .sendForm(
+      "Gmail",
+      "template_565gdoy",
+      e.target,
+      "user_LkqF3nBSC3biR9i4iRxRm"
+    )
+    .then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
 
-  //   emailjs
-  //     .sendForm(
-  //       "Gmail",
-  //       "template_565gdoy",
-  //       e.target,
-  //       "user_LkqF3nBSC3biR9i4iRxRm"
-  //     )
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       }
-  //     );
-
-  // e.target.reset();
+  e.target.reset();
 };
-
 
 const OrangeCheckbox = withStyles({
   root: {
@@ -132,52 +124,32 @@ const Kontakt = (validatesOnChange = false) => {
     if (validatesOnChange) validates({ [name]: value });
   };
 
+  const handleSubmit = () => {
+    if (validates()) {
+      window.alert("true");
+      sendEmail()
+    } else {
+      window.alert("false");
+    }
+  };
+
   const validates = (fieldValues = values) => {
     const re =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const temp = { ...errors };
     if ("vorname" in fieldValues)
       temp.vorname = values.vorname ? "" : "This field is required.";
-    if ("nachname" in fieldValues)
-      temp.nachname = values.nachname ? "" : "This field is required.";
-    if ("email" in fieldValues)
-      temp.email = re.test(values.email) ? "" : "Email is invalid.";
-    //if ("telefon" in fieldValues)
-    // temp.telefon = values.telefon.length > 9 ? "" : "Minimum 10 numbers.";
-    if ("info" in fieldValues)
-      temp.info = values.info ? "" : "This field is required.";
+    // if ("nachname" in fieldValues)
+    //   temp.nachname = values.nachname ? "" : "This field is required.";
+    // if ("email" in fieldValues)
+    //   temp.email = re.test(values.email) ? "" : "Email is invalid.";
+    // if ("info" in fieldValues)
+    //   temp.info = values.info ? "" : "This field is required.";
     setErrors({
       ...temp,
     });
     if (fieldValues == values) return Object.values(temp).every((x) => x == "");
   };
-
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
-  //   if (validates()) {
-  //     window.alert("testing...");
-  //   } else {
-  //     window.alert("wrong...");
-  //   }
-
-  //   //   emailjs
-  //   //     .sendForm(
-  //   //       "Gmail",
-  //   //       "template_565gdoy",
-  //   //       e.target,
-  //   //       "user_LkqF3nBSC3biR9i4iRxRm"
-  //   //     )
-  //   //     .then(
-  //   //       (result) => {
-  //   //         console.log(result.text);
-  //   //       },
-  //   //       (error) => {
-  //   //         console.log(error.text);
-  //   //       }
-  //   //     );
-
-  //   // e.target.reset();
-  // };
 
   const classes = useStyles();
 
@@ -190,7 +162,7 @@ const Kontakt = (validatesOnChange = false) => {
           </section>
         </Grid>
       </Grid>
-      <form onSubmit={sendEmail}>
+      <form onSubmit={handleSubmit}>
         <div className="formwrapper">
           <Grid container spacing={2}>
             <Grid item xs={12} sm={4}>
