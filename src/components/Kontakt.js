@@ -19,26 +19,33 @@ import {
 import Grid from "@material-ui/core/Grid";
 import DateFnsUtils from "@date-io/date-fns";
 
-// const sendEmail = (e) => {
-//   e.preventDefault();
-//   if (validates())
-//     emailjs
-//       .sendForm(
-//         "Gmail",
-//         "template_565gdoy",
-//         e.target,
-//         "user_LkqF3nBSC3biR9i4iRxRm"
-//       )
-//       .then(
-//         (result) => {
-//           console.log(result.text);
-//         },
-//         (error) => {
-//           console.log(error.text);
-//         }
-//       );
-//   e.target.reset();
-// };
+const sendEmail = (e) => {
+  e.preventDefault();
+  if (validates()) {
+    window.alert("true...");
+  } else {
+    window.alert("false...");
+  }
+
+  //   emailjs
+  //     .sendForm(
+  //       "Gmail",
+  //       "template_565gdoy",
+  //       e.target,
+  //       "user_LkqF3nBSC3biR9i4iRxRm"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+
+  // e.target.reset();
+};
+
 
 const OrangeCheckbox = withStyles({
   root: {
@@ -96,7 +103,7 @@ const initialValues = {
   info: "",
 };
 
-const Kontakt = () => {
+const Kontakt = (validatesOnChange = false) => {
   const [participans, setParticipans] = useState("");
   const [selectedDate, handleDateChange] = useState(new Date());
   const [values, setValues] = useState(initialValues);
@@ -122,44 +129,55 @@ const Kontakt = () => {
       ...values,
       [name]: value,
     });
+    if (validatesOnChange) validates({ [name]: value });
   };
 
-  const validates = () => {
-    const temp = {};
-    temp.vorname = values.vorname ? "" : "This field is required.";
-    temp.nachname = values.nachname ? "" : "This field is required.";
-    temp.email = (/$|.+@.+..+/).test(values.email) ? "" : "Email is invalid.";
-    temp.telefon = values.telefon.lenght > 9 ? "" : "Minimum 10 numbers.";
-    temp.info = values.info ? "" : "This field is required.";
+  const validates = (fieldValues = values) => {
+    const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const temp = { ...errors };
+    if ("vorname" in fieldValues)
+      temp.vorname = values.vorname ? "" : "This field is required.";
+    if ("nachname" in fieldValues)
+      temp.nachname = values.nachname ? "" : "This field is required.";
+    if ("email" in fieldValues)
+      temp.email = re.test(values.email) ? "" : "Email is invalid.";
+    //if ("telefon" in fieldValues)
+    // temp.telefon = values.telefon.length > 9 ? "" : "Minimum 10 numbers.";
+    if ("info" in fieldValues)
+      temp.info = values.info ? "" : "This field is required.";
     setErrors({
       ...temp,
     });
-  
-    return Object.values(temp).every((x) => x == "");
+    if (fieldValues == values) return Object.values(temp).every((x) => x == "");
   };
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    if (validates())
-      window.alert("testing")
-    //   emailjs
-    //     .sendForm(
-    //       "Gmail",
-    //       "template_565gdoy",
-    //       e.target,
-    //       "user_LkqF3nBSC3biR9i4iRxRm"
-    //     )
-    //     .then(
-    //       (result) => {
-    //         console.log(result.text);
-    //       },
-    //       (error) => {
-    //         console.log(error.text);
-    //       }
-    //     );
-    
-    // e.target.reset();
-  };
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+  //   if (validates()) {
+  //     window.alert("testing...");
+  //   } else {
+  //     window.alert("wrong...");
+  //   }
+
+  //   //   emailjs
+  //   //     .sendForm(
+  //   //       "Gmail",
+  //   //       "template_565gdoy",
+  //   //       e.target,
+  //   //       "user_LkqF3nBSC3biR9i4iRxRm"
+  //   //     )
+  //   //     .then(
+  //   //       (result) => {
+  //   //         console.log(result.text);
+  //   //       },
+  //   //       (error) => {
+  //   //         console.log(error.text);
+  //   //       }
+  //   //     );
+
+  //   // e.target.reset();
+  // };
 
   const classes = useStyles();
 
@@ -234,8 +252,8 @@ const Kontakt = () => {
                 fullWidth
                 value={values.nachname}
                 onChange={handleInput}
-                error={errors.vorname}
-                helperText={errors.vorname}
+                error={errors.nachname}
+                helperText={errors.nachname}
               />
             </Grid>
             <Grid item xs={12}>
@@ -247,8 +265,8 @@ const Kontakt = () => {
                 fullWidth
                 value={values.firma}
                 onChange={handleInput}
-                error={errors.vorname}
-                helperText={errors.vorname}
+                error={errors.firma}
+                helperText={errors.firma}
               />
             </Grid>
             <div style={{ height: "100px" }}></div>
@@ -261,8 +279,8 @@ const Kontakt = () => {
                 fullWidth
                 value={values.email}
                 onChange={handleInput}
-                error={errors.vorname}
-                helperText={errors.vorname}
+                error={errors.email}
+                helperText={errors.email}
               />{" "}
             </Grid>
             <Grid item xs={12} md={6}>
@@ -274,14 +292,17 @@ const Kontakt = () => {
                 fullWidth
                 value={values.telefon}
                 onChange={handleInput}
-                error={errors.vorname}
-                helperText={errors.vorname}
+                error={errors.telefon}
+                helperText={errors.telefon}
               />
             </Grid>
             {/* Teilnehmerzahl */}
             <Grid item xs={12} md={6}>
               <FormControl variant="outlined" className={classes.formControl}>
-                <InputLabel id="demo-simple-select-outlined-label">
+                <InputLabel
+                  id="demo-simple-select-outlined-label"
+                  name="teilnehmer"
+                >
                   Erwartete Teilnehmerzahl
                 </InputLabel>
                 <Select
@@ -290,11 +311,14 @@ const Kontakt = () => {
                   value={participans}
                   onChange={handleCount}
                   label="Erwartete Teilnehmerzahl"
+                  name="teilnehmer"
                 >
-                  <MenuItem value={10}>bis zu 100</MenuItem>
-                  <MenuItem value={20}>100 - 200</MenuItem>
-                  <MenuItem value={30}>200 - 500</MenuItem>
-                  <MenuItem value={30}>mehr als 500</MenuItem>
+                  <MenuItem value={10}> </MenuItem>
+                  <MenuItem value={20}> – </MenuItem>
+                  <MenuItem value={30}>bis zu 100</MenuItem>
+                  <MenuItem value={40}>100 - 200</MenuItem>
+                  <MenuItem value={50}>200 - 500</MenuItem>
+                  <MenuItem value={60}>mehr als 500</MenuItem>
                 </Select>
               </FormControl>
             </Grid>
@@ -311,6 +335,7 @@ const Kontakt = () => {
                   value={selectedDate}
                   InputAdornmentProps={{ position: "start" }}
                   onChange={(date) => handleDateChange(date)}
+                  name="datum"
                 />
               </MuiPickersUtilsProvider>
             </Grid>
@@ -323,6 +348,7 @@ const Kontakt = () => {
                 multiline
                 rows={4}
                 fullWidth
+                name="info"
               />
             </Grid>
           </Grid>
