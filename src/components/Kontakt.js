@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
@@ -15,30 +14,31 @@ import Select from "@material-ui/core/Select";
 import {
   KeyboardDatePicker,
   MuiPickersUtilsProvider,
+  validate,
 } from "@material-ui/pickers";
 import Grid from "@material-ui/core/Grid";
 import DateFnsUtils from "@date-io/date-fns";
 
-const sendEmail = (e) => {
-  e.preventDefault();
-
-  emailjs
-    .sendForm(
-      "Gmail",
-      "template_565gdoy",
-      e.target,
-      "user_LkqF3nBSC3biR9i4iRxRm"
-    )
-    .then(
-      (result) => {
-        console.log(result.text);
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
-  e.target.reset();
-};
+// const sendEmail = (e) => {
+//   e.preventDefault();
+//   if (validates())
+//     emailjs
+//       .sendForm(
+//         "Gmail",
+//         "template_565gdoy",
+//         e.target,
+//         "user_LkqF3nBSC3biR9i4iRxRm"
+//       )
+//       .then(
+//         (result) => {
+//           console.log(result.text);
+//         },
+//         (error) => {
+//           console.log(error.text);
+//         }
+//       );
+//   e.target.reset();
+// };
 
 const OrangeCheckbox = withStyles({
   root: {
@@ -88,26 +88,25 @@ const CssTextField = withStyles({
 const initialValues = {
   vorname: "",
   nachname: "",
-  firma: "test",
+  firma: "",
   email: "",
-  telefonnumber: "",
+  telefon: "",
   teilnehmer: " - ",
   datum: new Date(),
-  info: ""
-}
-
+  info: "",
+};
 
 const Kontakt = () => {
   const [participans, setParticipans] = useState("");
   const [selectedDate, handleDateChange] = useState(new Date());
-  const [values, setValues] = useState(initialValues)
+  const [values, setValues] = useState(initialValues);
+  const [errors, setErrors] = useState({});
 
   const [state, setState] = useState({
     checkedA: false,
     checkedB: false,
     checkedC: false,
   });
-
 
   const handleCount = (event) => {
     setParticipans(event.target.value);
@@ -118,13 +117,49 @@ const Kontakt = () => {
   };
 
   const handleInput = (e) => {
+    const { name, value } = e.target;
     setValues({
       ...values,
-      [e.target.name]: e.target.value
-    })
-  }
+      [name]: value,
+    });
+  };
 
+  const validates = () => {
+    const temp = {};
+    temp.vorname = values.vorname ? "" : "This field is required.";
+    temp.nachname = values.nachname ? "" : "This field is required.";
+    temp.email = (/$|.+@.+..+/).test(values.email) ? "" : "Email is invalid.";
+    temp.telefon = values.telefon.lenght > 9 ? "" : "Minimum 10 numbers.";
+    temp.info = values.info ? "" : "This field is required.";
+    setErrors({
+      ...temp,
+    });
+  
+    return Object.values(temp).every((x) => x == "");
+  };
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (validates())
+      window.alert("testing")
+    //   emailjs
+    //     .sendForm(
+    //       "Gmail",
+    //       "template_565gdoy",
+    //       e.target,
+    //       "user_LkqF3nBSC3biR9i4iRxRm"
+    //     )
+    //     .then(
+    //       (result) => {
+    //         console.log(result.text);
+    //       },
+    //       (error) => {
+    //         console.log(error.text);
+    //       }
+    //     );
+    
+    // e.target.reset();
+  };
 
   const classes = useStyles();
 
@@ -179,15 +214,15 @@ const Kontakt = () => {
             {/* <form className={classes.root} noValidate autoComplete="off"> */}
             <Grid item xs={12} md={6}>
               <CssTextField
-                className={classes.margin}
-                label="Vorname"
-                value={values.vorname}
-                // name="vorname"
-                variant="outlined"
                 fullWidth
-                error
-                helperText="not correct"
+                className={classes.margin}
+                variant="outlined"
+                label="Vorname"
+                name="vorname"
+                value={values.vorname}
                 onChange={handleInput}
+                error={errors.vorname}
+                helperText={errors.vorname}
               />
             </Grid>
             <Grid item xs={12} md={6}>
@@ -197,6 +232,10 @@ const Kontakt = () => {
                 name="nachname"
                 variant="outlined"
                 fullWidth
+                value={values.nachname}
+                onChange={handleInput}
+                error={errors.vorname}
+                helperText={errors.vorname}
               />
             </Grid>
             <Grid item xs={12}>
@@ -206,6 +245,10 @@ const Kontakt = () => {
                 name="firma"
                 variant="outlined"
                 fullWidth
+                value={values.firma}
+                onChange={handleInput}
+                error={errors.vorname}
+                helperText={errors.vorname}
               />
             </Grid>
             <div style={{ height: "100px" }}></div>
@@ -216,6 +259,10 @@ const Kontakt = () => {
                 name="email"
                 variant="outlined"
                 fullWidth
+                value={values.email}
+                onChange={handleInput}
+                error={errors.vorname}
+                helperText={errors.vorname}
               />{" "}
             </Grid>
             <Grid item xs={12} md={6}>
@@ -225,6 +272,10 @@ const Kontakt = () => {
                 name="telefon"
                 variant="outlined"
                 fullWidth
+                value={values.telefon}
+                onChange={handleInput}
+                error={errors.vorname}
+                helperText={errors.vorname}
               />
             </Grid>
             {/* Teilnehmerzahl */}
@@ -286,4 +337,3 @@ const Kontakt = () => {
 };
 
 export default Kontakt;
-
