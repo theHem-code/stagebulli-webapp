@@ -1,13 +1,12 @@
 import React, { useLayoutEffect } from "react";
 // import NavbarNew from "../components/Navbar/NavbarNew";
-import Footer from "../components/Footer";
 import birddogs from "../images/birddogs.png";
 import djs from "../images/djs.png";
 
 const Artists = () => {
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  });
+  // useLayoutEffect(() => {
+  //   window.scrollTo(0, 0);
+  // });
 
   return (
     <div>
@@ -84,10 +83,8 @@ const Artists = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
 
 export default Artists;
-

@@ -1,6 +1,4 @@
 import React, { useLayoutEffect } from "react";
-import NavbarNew from "../components/Navbar/NavbarNew";
-import Footer from "../components/Footer";
 import YoutubeEmbed from "../components/YoutubeEmbed";
 import image from "../images/Story_Felix.jpg";
 import birddogsLogo from "../images/Logo_Birddogs.png";
@@ -37,11 +35,14 @@ const Story = () => {
           </p>
           <img src={image} alt="" className="col-12 col-lg-6 mt-5 story-img" />
         </div>
+        <div className="row">
           <div className="col-12">
             <YoutubeEmbed embedId="Wpli5-YRj6o" />
           </div>
-          <hr />
-          <div>
+        </div>
+        <hr />
+        <div className="row">
+          <div className="col-12">
             <h2 style={{ textAlign: "center" }}>Unsere Partner</h2>
             <div className="partner-logos">
               <img
@@ -56,11 +57,10 @@ const Story = () => {
               />
             </div>
           </div>
+        </div>
       </div>
-      <Footer />
     </div>
   );
 };
 
 export default Story;
-

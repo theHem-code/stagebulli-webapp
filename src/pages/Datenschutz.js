@@ -1,11 +1,8 @@
 import React from "react";
-import Footer from "../components/Footer";
-import NavbarNew from "../components/Navbar/NavbarNew";
 
 const Datenschutz = () => {
   return (
     <div>
-      <NavbarNew />
       <div className="container">
         <div className="row section">
           <h4>DATENSCHUTZERKLÄRUNG</h4>
@@ -139,9 +136,10 @@ const Datenschutz = () => {
               zukünftigen Besuchen dieser Website verhindert: Google Analytics
               deaktivieren. Mehr Informationen zum Umgang mit Nutzerdaten bei
               Google Analytics finden Sie in der Datenschutzerklärung von
-              Google:<br/>
+              Google:
+              <br />
               <a href="https://support.google.com/analytics/answer/6004245?hl=de">
-                 https://support.google.com/analytics/answer/6004245?hl=de
+                https://support.google.com/analytics/answer/6004245?hl=de
               </a>
             </p>
             <br />
@@ -193,4 +191,3 @@ const Datenschutz = () => {
 };
 
 export default Datenschutz;
-

@@ -57,9 +57,6 @@ const NavbarNew = () => {
       );
   }, []);
 
-  useEffect(() => {
-    bframe.current.classList.add("hidden");
-  }, [bframe, bframe.current])
 
   const handleFrame0 = () => {
     if (bframe && bframe.current) {

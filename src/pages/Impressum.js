@@ -1,10 +1,8 @@
 import React from "react";
-import NavbarNew from "../components/Navbar/NavbarNew";
 
 const Impressum = () => {
   return (
     <div>
-      <NavbarNew />
       <div className="container">
         <div className="row section">
           <h4>IMPRESSUM</h4>
@@ -56,4 +54,3 @@ const Impressum = () => {
 };
 
 export default Impressum;
-

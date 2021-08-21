@@ -7,6 +7,7 @@ import Impressions from "../pages/Impressions";
 import Datenschutz from "../pages/Datenschutz";
 import Impressum from "../pages/Impressum";
 import NavbarNew from "./Navbar/NavbarNew";
+import Footer from "./Footer";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
             <Datenschutz />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </div>
   );

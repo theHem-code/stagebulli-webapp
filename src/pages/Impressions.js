@@ -4,24 +4,11 @@ import {
   // Transformation,
   CloudinaryContext,
 } from "cloudinary-react";
-import NavbarNew from "../components/Navbar/NavbarNew";
-import Footer from "../components/Footer";
 
 const Impressions = () => {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   });
-//comment
-
-  // useEffect(() => {
-  //   fetch("https://api.cloudinary.com/v1_1/dxkj8owwl/image/upload")
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //     });
-  // }, []);
-  
-  // commen
 
   return (
     <div>
@@ -43,7 +30,6 @@ const Impressions = () => {
           </CloudinaryContext>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
