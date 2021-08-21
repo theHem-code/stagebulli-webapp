@@ -12,7 +12,7 @@ import { computeHeadingLevel } from "@testing-library/react";
 const NavbarNew = () => {
   const [clicked, setClicked] = useState(false);
   const [logoVisible, setLogoVisible] = useState("visible");
-  const [bframe, setBframe] = useState(null);
+  // const [bframe, setBframe] = useState(null);
   // const [location, setLocation] = useState({});
 
   const handleClick = () => {
@@ -35,12 +35,14 @@ const NavbarNew = () => {
   //   setFrame({ left });
   // };
 
-  const container = useRef(bframe);
+  // const container = useRef(bframe);
 
-  useEffect(() => {
-    const frame = container.current;
-    setBframe(frame);
-  }, []);
+  // useEffect(() => {
+  //   const frame = container.current;
+  //   setBframe(frame);
+  // }, []);
+
+  const bframe = useRef(null);
 
   useEffect(() => {
     const bulliElement = document.getElementById("frame");
@@ -55,48 +57,59 @@ const NavbarNew = () => {
       );
   }, []);
 
+  useEffect(() => {
+    bframe.current.classList.add("hidden");
+  }, [bframe, bframe.current])
+
   const handleFrame0 = () => {
-    bframe.classList.remove("frame3");
-    bframe.classList.remove("frame1");
-    bframe.classList.remove("frame2");
-    bframe.classList.add("hidden");
-    const offsetLeft = document.getElementById("link0").offsetLeft;
-    const frameSpacerToCenterBulli = -205;
-    bframe.style.left = `calc(${offsetLeft}px + ${frameSpacerToCenterBulli}px)`;
-    bframe.style.opacity = 0;
+    if (bframe && bframe.current) {
+      bframe.current.classList.remove("frame3");
+      bframe.current.classList.remove("frame1");
+      bframe.current.classList.remove("frame2");
+      bframe.current.classList.add("hidden");
+      const offsetLeft = document.getElementById("link0").offsetLeft;
+      const frameSpacerToCenterBulli = -205;
+      bframe.current.style.left = `calc(${offsetLeft}px + ${frameSpacerToCenterBulli}px)`;
+      bframe.current.style.opacity = 0;
+    }
   };
 
   const handleFrame1 = () => {
-    bframe.classList.remove("hidden");
-    bframe.classList.remove("frame2");
-    bframe.classList.remove("frame3");
-    bframe.classList.add("frame1");
-    const offsetLeft = document.getElementById("link1").offsetLeft;
-    const frameSpacerToCenterBulli = -17;
-    bframe.style.left = `calc(${offsetLeft}px + ${frameSpacerToCenterBulli}px)`;
-    bframe.style.opacity = 1;
+    if (bframe && bframe.current) {
+      bframe.current.classList.remove("hidden");
+      bframe.current.classList.remove("frame2");
+      bframe.current.classList.remove("frame3");
+      bframe.current.classList.add("frame1");
+      const offsetLeft = document.getElementById("link1").offsetLeft;
+      const frameSpacerToCenterBulli = -17;
+      bframe.current.style.left = `calc(${offsetLeft}px + ${frameSpacerToCenterBulli}px)`;
+      bframe.current.style.opacity = 1;
+    }
   };
 
   const handleFrame2 = () => {
-    bframe.classList.remove("hidden");
-    bframe.classList.remove("frame1");
-    bframe.classList.remove("frame3");
-    bframe.classList.add("frame2");
-    const offsetLeft = document.getElementById("link2").offsetLeft;
-    const frameSpacerToCenterBulli = -13;
-    bframe.style.left = `calc(${offsetLeft}px + ${frameSpacerToCenterBulli}px)`;
-    bframe.style.opacity = 1;
+    if (bframe && bframe.current) {
+      bframe.current.classList.remove("hidden");
+      bframe.current.classList.remove("frame1");
+      bframe.current.classList.remove("frame3");
+      bframe.current.classList.add("frame2");
+      const offsetLeft = document.getElementById("link2").offsetLeft;
+      const frameSpacerToCenterBulli = -13;
+      bframe.current.style.left = `calc(${offsetLeft}px + ${frameSpacerToCenterBulli}px)`;
+      bframe.current.style.opacity = 1;
+    }
   };
 
   const handleFrame3 = () => {
-    bframe.classList.remove("hidden");
-    bframe.classList.remove("frame1");
-    bframe.classList.remove("frame2");
-    bframe.classList.add("frame3");
+    bframe && bframe.current &&
+    bframe.current.classList.remove("hidden");
+    bframe.current.classList.remove("frame1");
+    bframe.current.classList.remove("frame2");
+    bframe.current.classList.add("frame3");
     const offsetLeft = document.getElementById("link3").offsetLeft;
     const frameSpacerToCenterBulli = -10;
-    bframe.style.left = `calc(${offsetLeft}px + ${frameSpacerToCenterBulli}px)`;
-    bframe.style.opacity = 1;
+    bframe.current.style.left = `calc(${offsetLeft}px + ${frameSpacerToCenterBulli}px)`;
+    bframe.current.style.opacity = 1;
   };
 
   const mylocation = useLocation();
@@ -204,7 +217,7 @@ const NavbarNew = () => {
           id="frame"
           className="hidden"
           style={{ visibility: `${renderVisibility}` }}
-          ref={container}
+          ref={bframe}
         ></div>
       </div>
       <ul className="social-icons">
@@ -229,4 +242,3 @@ const NavbarNew = () => {
 };
 
 export default NavbarNew;
-
