@@ -1,0 +1,14 @@
+.image {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    margin: 20px;
+    cursor:pointer;
+}
+
+.image-grid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

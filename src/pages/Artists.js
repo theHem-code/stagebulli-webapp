@@ -1,12 +1,11 @@
 import React, { useLayoutEffect } from "react";
-// import NavbarNew from "../components/Navbar/NavbarNew";
 import birddogs from "../images/birddogs.png";
 import djs from "../images/djs.png";
 
 const Artists = () => {
-  // useLayoutEffect(() => {
-  //   window.scrollTo(0, 0);
-  // });
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   return (
     <div>
