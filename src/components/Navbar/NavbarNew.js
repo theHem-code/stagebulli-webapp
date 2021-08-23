@@ -104,7 +104,7 @@ const NavbarNew = () => {
     bframe.current.classList.remove("frame2");
     bframe.current.classList.add("frame3");
     const offsetLeft = document.getElementById("link3").offsetLeft;
-    const frameSpacerToCenterBulli = -10;
+    const frameSpacerToCenterBulli = -11;
     bframe.current.style.left = `calc(${offsetLeft}px + ${frameSpacerToCenterBulli}px)`;
     bframe.current.style.opacity = 1;
   };

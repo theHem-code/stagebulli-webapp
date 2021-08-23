@@ -3,9 +3,19 @@ import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 
 const images = [
-  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1623152849/stagebulli/img_8493_ob4qhs.jpg",
-  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1623152853/stagebulli/helloworld.jpg"
-]
+  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_6.jpg",
+  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_2.jpg",
+  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_4.jpg",
+  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_7.jpg",
+  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_1.jpg",
+  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_5.jpg",
+  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_3.jpg",
+  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_3.jpg",
+  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_6.jpg",
+  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_2.jpg",
+  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_4.jpg",
+  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_7.jpg",
+];
 
 const Impressions = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,67 +33,17 @@ const Impressions = () => {
             <h1 className="col-12">Live - Impressionen</h1>
           </div>
           <div className="image-grid">
-            <img
-              src="https://res.cloudinary.com/dxkj8owwl/image/upload/v1623152849/stagebulli/img_8493_ob4qhs.jpg"
-              alt=""
-              className="image"
-              onClick={() => setIsOpen(true)}
-            />
-            <img
-              src="https://res.cloudinary.com/dxkj8owwl/image/upload/v1623152849/stagebulli/img_8493_ob4qhs.jpg"
-              alt=""
-              className="image"
-            />
-            <img
-              src="https://res.cloudinary.com/dxkj8owwl/image/upload/v1623152849/stagebulli/img_8493_ob4qhs.jpg"
-              alt=""
-              className="image"
-            />
-            <img
-              src="https://res.cloudinary.com/dxkj8owwl/image/upload/v1623152849/stagebulli/img_8493_ob4qhs.jpg"
-              alt=""
-              className="image"
-            />
-            <img
-              src="https://res.cloudinary.com/dxkj8owwl/image/upload/v1623152849/stagebulli/img_8493_ob4qhs.jpg"
-              alt=""
-              className="image"
-            />
-            <img
-              src="https://res.cloudinary.com/dxkj8owwl/image/upload/v1623152849/stagebulli/img_8493_ob4qhs.jpg"
-              alt=""
-              className="image"
-            />
-            <img
-              src="https://res.cloudinary.com/dxkj8owwl/image/upload/v1623152849/stagebulli/img_8493_ob4qhs.jpg"
-              alt=""
-              className="image"
-            />
-            <img
-              src="https://res.cloudinary.com/dxkj8owwl/image/upload/v1623152849/stagebulli/img_8493_ob4qhs.jpg"
-              alt=""
-              className="image"
-            />
-            <img
-              src="https://res.cloudinary.com/dxkj8owwl/image/upload/v1623152849/stagebulli/img_8493_ob4qhs.jpg"
-              alt=""
-              className="image"
-            />
-            <img
-              src="https://res.cloudinary.com/dxkj8owwl/image/upload/v1623152849/stagebulli/img_8493_ob4qhs.jpg"
-              alt=""
-              className="image"
-            />
-            <img
-              src="https://res.cloudinary.com/dxkj8owwl/image/upload/v1623152849/stagebulli/img_8493_ob4qhs.jpg"
-              alt=""
-              className="image"
-            />
-            <img
-              src="https://res.cloudinary.com/dxkj8owwl/image/upload/v1623152849/stagebulli/img_8493_ob4qhs.jpg"
-              alt=""
-              className="image"
-            />
+            {images.map((image) => {
+              return (
+                <img
+                  src={image}
+                  alt="Stage_Bulli_Image"
+                  className="image"
+                  onClick={() => setIsOpen(true)}
+                />
+              );
+            })}
+
 
             {isOpen && (
               <Lightbox
@@ -92,9 +52,10 @@ const Impressions = () => {
                 prevSrc={
                   images[(photoIndex + images.length - 1) % images.length]
                 }
-                onCloseRequest={() => setIsOpen(false )}
+                onCloseRequest={() => setIsOpen(false)}
                 onMovePrevRequest={() =>
-                  setPhotoIndex((photoIndex + images.length - 1) % images.length,
+                  setPhotoIndex(
+                    (photoIndex + images.length - 1) % images.length
                   )
                 }
                 onMoveNextRequest={() =>
