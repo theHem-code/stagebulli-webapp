@@ -1,13 +1,14 @@
 import React, { useLayoutEffect } from "react";
-import YoutubeEmbed from "../components/YoutubeEmbed";
 import image from "../images/Story_Felix.jpg";
 import birddogsLogo from "../images/Logo_Birddogs.png";
 import hildebrandtLogo from "../images/Hildebrandt_Logo.png";
+import YouTube from 'react-youtube'
 
 const Story = () => {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   });
+
   return (
     <div>
       <div className="container story-container">
@@ -35,14 +36,15 @@ const Story = () => {
           </p>
           <img src={image} alt="" className="col-12 col-lg-6 mt-5 story-img" />
         </div>
+        <hr/>
         <div className="row">
-          <div className="col-12">
-            <YoutubeEmbed embedId="Wpli5-YRj6o" />
+          <div className="col-12 video-wrapper">
+            <YouTube videoId="Wpli5-YRj6o" className="story-video"/>
           </div>
         </div>
         <hr />
         <div className="row">
-          <div className="col-12">
+          <div className="col-12 partner">
             <h2 style={{ textAlign: "center" }}>Unsere Partner</h2>
             <div className="partner-logos">
               <img

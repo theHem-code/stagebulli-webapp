@@ -27,7 +27,7 @@ const Impressions = () => {
 
   return (
     <div>
-      <main style={{ height: "100vh" }}>
+      <main>
         <div className="container artists-container">
           <div className="row header">
             <h1 className="col-12">Live - Impressionen</h1>
