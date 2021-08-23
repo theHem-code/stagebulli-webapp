@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 
@@ -21,7 +21,7 @@ const Impressions = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
   });
 
@@ -33,7 +33,7 @@ const Impressions = () => {
             <h1 className="col-12">Live - Impressionen</h1>
           </div>
           <div className="image-grid">
-            {images.map((image) => {
+            {images.map((image, index) => {
               return (
                 <img
                   src={image}

@@ -1,4 +1,9 @@
-
+.service-container {
+  margin: 0 auto;
+  max-width: $max-width;
+  height: 100%;
+  margin-bottom: 200px;
+}
 
 .bulliframe-wrapper {
   max-width: 1000px;
@@ -94,7 +99,7 @@
 
 .button-artists:hover {
   background-color: $clrPry4;
-  border-radius: 5px;
+  border-radius: 4px;
   box-shadow: $dark-shadow;
   transform: translateY(-5px);
   a {

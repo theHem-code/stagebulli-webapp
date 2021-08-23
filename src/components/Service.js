@@ -8,8 +8,8 @@ const Service = () => {
     <div>
       <main
         id="service"
-        className="container"
-        style={{ height: "100vh", marginBottom: "100px" }}
+        className="container service-container"
+        // style={{ marginBottom: "200px" }}
       >
         <section className="row header">
           <h4>Deine Wahl. Wir liefern.</h4>
