@@ -15,6 +15,8 @@ const Artists = () => {
             <h1>Entertainmentvorschläge</h1>
           </div>
         </div>
+        <hr></hr>
+
         <div className="row cards-artists">
           <div className="col-12 col-lg-6">
             <a

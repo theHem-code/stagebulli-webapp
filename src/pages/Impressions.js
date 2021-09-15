@@ -25,6 +25,7 @@ const Impressions = () => {
     window.scrollTo(0, 0);
   });
 
+
   return (
     <div>
       <main>
@@ -32,14 +33,20 @@ const Impressions = () => {
           <div className="row header">
             <h1 className="col-12">Live - Impressionen</h1>
           </div>
+          <hr></hr>
+
           <div className="image-grid">
             {images.map((image, index) => {
+              const handleImageIndex = () => {
+                setIsOpen(true)
+                setPhotoIndex(index)
+              }
               return (
                 <img
                   src={image}
                   alt="Stage_Bulli_Image"
                   className="image"
-                  onClick={() => setIsOpen(true)}
+                  onClick={handleImageIndex}
                 />
               );
             })}

@@ -2,7 +2,7 @@ import React, { useLayoutEffect } from "react";
 import image from "../images/Story_Felix.jpg";
 import birddogsLogo from "../images/Logo_Birddogs.png";
 import hildebrandtLogo from "../images/Hildebrandt_Logo.png";
-import YouTube from 'react-youtube'
+import YouTube from "react-youtube";
 
 const Story = () => {
   useLayoutEffect(() => {
@@ -17,6 +17,7 @@ const Story = () => {
             <h1>Unsere Story</h1>
           </div>
         </div>
+        <hr></hr>
         <div className="row story-article">
           <p className="col-12 col-lg-6">
             Hey Ihr, <br />
@@ -36,10 +37,10 @@ const Story = () => {
           </p>
           <img src={image} alt="" className="col-12 col-lg-6 mt-5 story-img" />
         </div>
-        <hr/>
+        <hr />
         <div className="row">
           <div className="col-12 video-wrapper">
-            <YouTube videoId="Wpli5-YRj6o" className="story-video"/>
+            <YouTube videoId="Wpli5-YRj6o" className="story-video" />
           </div>
         </div>
         <hr />
