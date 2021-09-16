@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 import { makeStyles } from "@material-ui/core/styles";
 import { withStyles } from "@material-ui/core/styles";
@@ -18,26 +18,26 @@ import {
 import Grid from "@material-ui/core/Grid";
 import DateFnsUtils from "@date-io/date-fns";
 
-const sendEmail = (e) => {
-  e.preventDefault();
-  emailjs
-    .sendForm(
-      "Gmail",
-      "template_565gdoy",
-      e.target,
-      "user_LkqF3nBSC3biR9i4iRxRm"
-    )
-    .then(
-      (result) => {
-        console.log(result.text);
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+// const sendEmail = (e) => {
+//   e.preventDefault();
+//   emailjs
+//     .sendForm(
+//       "Gmail",
+//       "template_565gdoy",
+//       e.target,
+//       "user_LkqF3nBSC3biR9i4iRxRm"
+//     )
+//     .then(
+//       (result) => {
+//         console.log(result.text);
+//       },
+//       (error) => {
+//         console.log(error.text);
+//       }
+//     );
 
-  e.target.reset();
-};
+//   e.target.reset();
+// };
 
 const OrangeCheckbox = withStyles({
   root: {
@@ -107,6 +107,27 @@ const Kontakt = (validatesOnChange = false) => {
     checkedC: false,
   });
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "Gmail",
+        "template_565gdoy",
+        e.target,
+        "user_LkqF3nBSC3biR9i4iRxRm"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  
+    e.target.reset();
+  };
+
   const handleCount = (event) => {
     setParticipans(event.target.value);
   };
@@ -126,29 +147,24 @@ const Kontakt = (validatesOnChange = false) => {
 
   const handleSubmit = () => {
     if (validates()) {
+      sendEmail();
       window.alert("true");
-      sendEmail()
     } else {
       window.alert("false");
     }
   };
 
   const validates = (fieldValues = values) => {
-    const re =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const re = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
     const temp = { ...errors };
     if ("vorname" in fieldValues)
       temp.vorname = values.vorname ? "" : "This field is required.";
-    // if ("nachname" in fieldValues)
-    //   temp.nachname = values.nachname ? "" : "This field is required.";
-    // if ("email" in fieldValues)
-    //   temp.email = re.test(values.email) ? "" : "Email is invalid.";
-    // if ("info" in fieldValues)
-    //   temp.info = values.info ? "" : "This field is required.";
+    if ("email" in fieldValues)
+      temp.email = re.test(values.email) ? "" : "Email is invalid.";
     setErrors({
       ...temp,
     });
-    if (fieldValues == values) return Object.values(temp).every((x) => x == "");
+    if (fieldValues === values) return Object.values(temp).every((x) => x === "");
   };
 
   const classes = useStyles();

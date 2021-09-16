@@ -6,12 +6,11 @@ import Logo from "../../images/Logo.png";
 import { NavLink, useLocation } from "react-router-dom";
 import { IconContext } from "react-icons";
 import "./NavbarNew.css";
-import { computeHeadingLevel } from "@testing-library/react";
 // import Bulliframe from "./components/Bulliframe";
 
 const NavbarNew = () => {
   const [clicked, setClicked] = useState(false);
-  const [logoVisible, setLogoVisible] = useState("visible");
+  // const [logoVisible, setLogoVisible] = useState("visible");
   // const [bframe, setBframe] = useState(null);
   // const [location, setLocation] = useState({});
 
@@ -22,25 +21,6 @@ const NavbarNew = () => {
   const hide = () => {
     setClicked(false);
   };
-
-  // const setFrame = (coordinates) => {
-  //   setLocation(coordinates);
-  // };
-
-  // const displayBulli = (e) => {
-  //   const navLink = e.target.getBoundingClientRect();
-  //   console.log(navLink)
-  //   // const center = (navLink.left + navLink.right) / 2;
-  //   const left = navLink.left;
-  //   setFrame({ left });
-  // };
-
-  // const container = useRef(bframe);
-
-  // useEffect(() => {
-  //   const frame = container.current;
-  //   setBframe(frame);
-  // }, []);
 
   const bframe = useRef(null);
 
@@ -131,7 +111,7 @@ const NavbarNew = () => {
           src={Logo}
           alt="Logo"
           className="logo"
-          style={{ visibility: `${logoVisible}` }}
+          // style={{ visibility: `${logoVisible}` }}
         />
       </Link>
     ) : (
@@ -181,7 +161,6 @@ const NavbarNew = () => {
           offset={-130}
           duration={150}
           className="nav-links"
-          duration={150}
           onClick={handleClick}
           onSetActive={handleFrame2}
           style={{ visibility: `${renderVisibility}` }}

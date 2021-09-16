@@ -98,16 +98,19 @@
 // }
 
 .button-artists:hover {
-  background-color: $clrPry4;
+  // background-color: $clrPry4;
   border-radius: 4px;
-  box-shadow: $dark-shadow;
+  // box-shadow: $dark-shadow;
   transform: translateY(-5px);
   a {
-    color: white;
+    color: black;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);    
+    
   }
   .button-line {
+    box-shadow: $dark-shadow;
     width: 40%;
-    background: white;
+    // background: white;
   }
 }
 
