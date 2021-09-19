@@ -107,6 +107,23 @@ const Kontakt = (validatesOnChange = false) => {
     checkedC: false,
   });
 
+  const handleCount = (event) => {
+    setParticipans(event.target.value);
+  };
+
+  const handleChange = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+  };
+
+  const handleInput = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
+    if (validatesOnChange) validates({ [name]: value });
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
@@ -124,25 +141,8 @@ const Kontakt = (validatesOnChange = false) => {
           console.log(error.text);
         }
       );
-  
+
     e.target.reset();
-  };
-
-  const handleCount = (event) => {
-    setParticipans(event.target.value);
-  };
-
-  const handleChange = (event) => {
-    setState({ ...state, [event.target.name]: event.target.checked });
-  };
-
-  const handleInput = (e) => {
-    const { name, value } = e.target;
-    setValues({
-      ...values,
-      [name]: value,
-    });
-    if (validatesOnChange) validates({ [name]: value });
   };
 
   const handleSubmit = () => {
@@ -164,7 +164,8 @@ const Kontakt = (validatesOnChange = false) => {
     setErrors({
       ...temp,
     });
-    if (fieldValues === values) return Object.values(temp).every((x) => x === "");
+    if (fieldValues === values)
+      return Object.values(temp).every((x) => x === "");
   };
 
   const classes = useStyles();
@@ -189,6 +190,7 @@ const Kontakt = (validatesOnChange = false) => {
                     checked={state.checkedA}
                     onChange={handleChange}
                     name="checkedA"
+                    value={state.checkedA ? "✅" : "🚫"}
                   />
                 }
               />
@@ -201,6 +203,7 @@ const Kontakt = (validatesOnChange = false) => {
                     checked={state.checkedB}
                     onChange={handleChange}
                     name="checkedB"
+                    value={state.checkedB ? "✅" : "🚫"}
                   />
                 }
               />
@@ -213,6 +216,7 @@ const Kontakt = (validatesOnChange = false) => {
                     checked={state.checkedC}
                     onChange={handleChange}
                     name="checkedC"
+                    value={state.checkedC ? "✅" : "🚫"}
                   />
                 }
               />

@@ -17,7 +17,7 @@ const Start = () => {
         </section>
       </div>
       <div
-        className=" col-12 banner"
+        className="col-12 banner"
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(${Banner})`,
         }}
