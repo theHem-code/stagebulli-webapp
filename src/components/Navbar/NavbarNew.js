@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import { FaFacebook, FaLinkedin, FaBars, FaTimes } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import Logo from "../../images/Logo.png";
@@ -103,7 +103,7 @@ const NavbarNew = () => {
         smooth={true}
         className="logo-wrapper"
         offset={-130}
-        duration={150}
+        duration={1150}
         onClick={hide}
         onSetActive={handleFrame0}
       >

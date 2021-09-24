@@ -1,8 +1,8 @@
 .service-container {
   margin: 0 auto;
   max-width: $max-width;
-  height: 100%;
-  margin-bottom: 200px;
+  height: 100vh;
+  // margin-bottom: 200px;
 }
 
 .bulliframe-wrapper {
@@ -29,10 +29,6 @@
   width: 100%;
   margin: 0 auto;
 }
-
-// article{
-//     position: absolute;
-//   }
 
 .frame-content {
   position: absolute;

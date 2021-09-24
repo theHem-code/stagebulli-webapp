@@ -12,9 +12,9 @@ const Mieten = () => {
   return (
     <div id="mieten" className="container container-mieten">
       <div className="row mieten-header">
-        <div className="col-12">
+        <section className="col-12">
           <h4>Sahnehäubchen für...</h4>
-        </div>
+        </section>
       </div>
       <div className="row cards">
         <div className="col-sm-12 col-md-4 card">

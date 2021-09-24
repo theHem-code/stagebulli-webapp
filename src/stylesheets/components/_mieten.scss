@@ -25,7 +25,7 @@
 
 .card {
   width: 22rem;
-  width: 350px;
+  // width: 350px;
   text-align: center;
   height: 480px;
   border-radius: $radius;
@@ -82,6 +82,8 @@
   cursor: pointer;
   transition: $transition;
   padding: 10px 20px;
+  border-radius: 4px;
+
   a {
     
     transition: $transition;
@@ -100,7 +102,7 @@
 
 .button-impressionen:hover {
   background-color: $clrPry4;
-  border-radius: 5px;
+  border-radius: 4px;
   box-shadow: $dark-shadow;
   transform: translateY(-5px);
   a {

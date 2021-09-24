@@ -9,7 +9,6 @@ const Service = () => {
       <main
         id="service"
         className="container service-container"
-        // style={{ marginBottom: "200px" }}
       >
         <section className="row header">
           <h4>Deine Wahl. Wir liefern.</h4>
