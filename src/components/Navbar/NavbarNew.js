@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import { FaFacebook, FaLinkedin, FaBars, FaTimes } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import Logo from "../../images/Logo.png";
