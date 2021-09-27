@@ -143,7 +143,7 @@ const NavbarNew = () => {
           id="link1"
           spy={true}
           smooth={true}
-          offset={-130}
+          offset={-100}
           duration={150}
           style={{ visibility: `${renderVisibility}` }}
           className="nav-links"
@@ -159,7 +159,7 @@ const NavbarNew = () => {
           id="link2"
           spy={true}
           smooth={true}
-          offset={-130}
+          offset={-100}
           duration={150}
           className="nav-links"
           onClick={handleClick}

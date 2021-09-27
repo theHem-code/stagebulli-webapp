@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -17,27 +17,6 @@ import {
 } from "@material-ui/pickers";
 import Grid from "@material-ui/core/Grid";
 import DateFnsUtils from "@date-io/date-fns";
-
-// const sendEmail = (e) => {
-//   e.preventDefault();
-//   emailjs
-//     .sendForm(
-//       "Gmail",
-//       "template_565gdoy",
-//       e.target,
-//       "user_LkqF3nBSC3biR9i4iRxRm"
-//     )
-//     .then(
-//       (result) => {
-//         console.log(result.text);
-//       },
-//       (error) => {
-//         console.log(error.text);
-//       }
-//     );
-
-//   e.target.reset();
-// };
 
 const OrangeCheckbox = withStyles({
   root: {
@@ -107,6 +86,8 @@ const Kontakt = (validatesOnChange = false) => {
     checkedC: false,
   });
 
+  const form = useRef();
+
   const handleCount = (event) => {
     setParticipans(event.target.value);
   };
@@ -130,7 +111,7 @@ const Kontakt = (validatesOnChange = false) => {
       .sendForm(
         "Gmail",
         "template_565gdoy",
-        e.target,
+        form.current,
         "user_LkqF3nBSC3biR9i4iRxRm"
       )
       .then(
@@ -146,12 +127,13 @@ const Kontakt = (validatesOnChange = false) => {
   };
 
   const handleSubmit = () => {
-    if (validates()) {
-      sendEmail();
-      window.alert("true");
-    } else {
-      window.alert("false");
-    }
+    validates() && sendEmail();
+    window.alert(
+      "Vielen Dank fuer Ihre Nachricht. Wir werden uns schnellstmoeglich bei Ihnen melden"
+    );
+    // } else {
+    //   window.alert("Leider konnte Ihre Anfrage nicht verarbeitet werden. Versuchen Sie es erneut.");
+    // }
   };
 
   const validates = (fieldValues = values) => {
@@ -172,14 +154,11 @@ const Kontakt = (validatesOnChange = false) => {
 
   return (
     <main id="kontakt" style={{ height: "100%" }} className="container">
-      {/* <Grid container spacing={2}>
-        <Grid item xs={12}> */}
-          <section className="row header">
-            <h4 className="col-12">Was darf's sein?</h4>
-          </section>
-        {/* </Grid>
-      </Grid> */}
-      <form onSubmit={handleSubmit}>
+      <section className="row header">
+        <h4 className="col-12">Was darf's sein?</h4>
+      </section>
+
+      <form ref={form} onSubmit={handleSubmit}>
         <div className="formwrapper">
           <Grid container spacing={2}>
             <Grid item xs={12} sm={4}>

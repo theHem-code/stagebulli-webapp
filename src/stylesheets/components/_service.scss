@@ -1,15 +1,15 @@
 .service-container {
   margin: 0 auto;
   max-width: $max-width;
-  height: 100vh;
+  height: 100%;
   // margin-bottom: 200px;
 }
 
-.bulliframe-wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
-  height: 40vw;
-}
+// .bulliframe-wrapper {
+//   max-width: 1000px;
+//   margin: 0 auto;
+//   height: 550px;
+// }
 
 .bulliframe {
   position: relative;
@@ -78,6 +78,18 @@
   width: 90%;
   height: 0.2rem;
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: $clrHead;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.4s cubic-bezier(0.2, 1.5, 0.2, 1.5);
+}
+
+.button-line-top {
+  width: 60%;
+  height: 0.2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   background: $clrHead;
   margin-left: auto;
   margin-right: auto;
@@ -93,18 +105,16 @@
 // }
 
 .button-artists:hover {
-  // background-color: $clrPry4;
   border-radius: 4px;
-  // box-shadow: $dark-shadow;
   transform: translateY(-5px);
   a {
     color: black;
-    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
   .button-line {
-    box-shadow: $dark-shadow;
     width: 40%;
-    // background: white;
+  }
+  .button-line-top {
+    width: 70%;
   }
 }
 

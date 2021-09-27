@@ -9,7 +9,7 @@ const Video = () => {
         autoPlay="autoplay"
         loop="loop"
         muted="muted"
-        style={{ objectFit: "cover", width: "100%", height: "100%", marginTop: "50px" }}
+        style={{ objectFit: "cover", width: "100%", height: "100%", marginTop: "150px" }}
       >
         <source src={video} type="video/mp4" />
       </video>

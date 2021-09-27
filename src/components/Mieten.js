@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import events from "../images/events.jpg";
 import celebrations from "../images/celebrations.jpg";
 import corporate from "../images/corporate.jpg";
@@ -7,8 +7,6 @@ import corporate from "../images/corporate.jpg";
 import "aos/dist/aos.css";
 
 const Mieten = () => {
-
-
   return (
     <div id="mieten" className="container container-mieten">
       <div className="row mieten-header">
@@ -48,7 +46,7 @@ const Mieten = () => {
         </div>
       </div>
       <div className="button-impressionen">
-        <Link to="/impressionen">Live-Impressionen</Link>
+        <NavLink to="/impressionen">Live-Impressionen</NavLink>
         <div className="button-line bounce"></div>
       </div>
     </div>
@@ -56,4 +54,3 @@ const Mieten = () => {
 };
 
 export default Mieten;
-
