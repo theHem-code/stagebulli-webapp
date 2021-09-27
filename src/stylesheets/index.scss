@@ -60,6 +60,7 @@ h4 {
   color: $clrHead;
   margin: 0;
   font-weight: 600;
+  hyphens: auto;
 }
 h1 {
   font-size: 4rem;
@@ -95,10 +96,12 @@ legend {
   }
 }
 
-@media screen and (max-width: 960px) {
-  // h1 {
-  //   font-size: 1rem;
-  // }
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 2.2rem;
+    // hyphens: auto
+  }
+
   h2 {
     font-size: 2.5rem;
   }
@@ -106,15 +109,14 @@ legend {
   //   font-size: 1.75rem;
   // }
   h4 {
-    font-size: 3rem;
+    font-size: 2.2rem;
+    hyphens: auto
   }
-  // body {
-  //   font-size: 1rem;
-  // }
+
   h1,
   h2,
   h3,
   h4 {
-    line-height: 1;
+    line-height: 1.25;
   }
 }

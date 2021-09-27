@@ -93,6 +93,7 @@ const NavbarNew = () => {
 
   const renderVisibility = mylocation.pathname === "/" ? "visible" : "hidden";
 
+
   const linkForLogo =
     mylocation.pathname === "/" ? (
       <Link

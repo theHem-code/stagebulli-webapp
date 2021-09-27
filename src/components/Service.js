@@ -6,12 +6,9 @@ import Bulli from "../images/Bulli-Service.png";
 const Service = () => {
   return (
     <div>
-      <main
-        id="service"
-        className="container service-container"
-      >
+      <main id="service" className="container service-container">
         <section className="row header">
-          <h4>Deine Wahl. Wir liefern.</h4>
+          <h4>Deine Wahl.Wir liefern.</h4>
         </section>
         <div className="bulliframe-wrapper">
           <img src={Bulli} alt="bulliframe" className="bulli-service" />
@@ -30,4 +27,3 @@ const Service = () => {
 };
 
 export default Service;
-

@@ -1,3 +1,8 @@
+.impressions-container {
+  width: $max-width;
+  margin: 0 auto;
+}
+
 .image {
     width: 250px;
     height: 250px;
@@ -14,3 +19,10 @@
     flex-wrap: wrap;
     margin-bottom: 100px;
 }
+
+@media screen and (max-width: 700px) {
+    .impressions-container {
+      width: 400px;
+      margin: 0 auto;
+    }
+  }

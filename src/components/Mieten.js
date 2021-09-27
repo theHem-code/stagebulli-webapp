@@ -17,7 +17,7 @@ const Mieten = () => {
         </section>
       </div>
       <div className="row cards">
-        <div className="col-sm-12 col-md-4 card">
+        <div className="col-lg card">
           <img src={corporate} alt="corporate_image" />
           <div className="desc">
             <h3>Corporate</h3>
@@ -26,7 +26,7 @@ const Mieten = () => {
             </p>
           </div>
         </div>
-        <div className="col-sm-12 col-md-4 card">
+        <div className="col-lg card">
           <img src={events} alt="events" />
           <div className="desc">
             <h3>Events</h3>
@@ -36,7 +36,7 @@ const Mieten = () => {
             </p>
           </div>
         </div>
-        <div className="col-sm-12 col-md-4 card">
+        <div className="col-lg card">
           <img src={celebrations} alt="celebrations" />
           <div className="desc">
             <h3>Celebrations</h3>

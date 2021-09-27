@@ -171,14 +171,14 @@ const Kontakt = (validatesOnChange = false) => {
   const classes = useStyles();
 
   return (
-    <main id="kontakt" style={{ height: "100%" }}>
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <section className="header">
-            <h4>Was darf's sein?</h4>
+    <main id="kontakt" style={{ height: "100%" }} className="container">
+      {/* <Grid container spacing={2}>
+        <Grid item xs={12}> */}
+          <section className="row header">
+            <h4 className="col-12">Was darf's sein?</h4>
           </section>
-        </Grid>
-      </Grid>
+        {/* </Grid>
+      </Grid> */}
       <form onSubmit={handleSubmit}>
         <div className="formwrapper">
           <Grid container spacing={2}>

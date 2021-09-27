@@ -29,7 +29,7 @@ const Impressions = () => {
   return (
     <div>
       <main>
-        <div className="container artists-container">
+        <div className="container impressions-container">
           <div className="row header">
             <h1 className="col-12">Live - Impressionen</h1>
           </div>

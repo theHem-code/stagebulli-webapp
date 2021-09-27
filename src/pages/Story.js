@@ -45,18 +45,18 @@ const Story = () => {
         </div>
         <hr />
         <div className="row">
-          <div className="col-12 partner">
-            <h2 style={{ textAlign: "center" }}>Unsere Partner</h2>
-            <div className="partner-logos">
+          <div className="partner">
+            <h2 className="col-12" style={{ textAlign: "center" }}>Unsere Partner</h2>
+            <div className="row partner-logos">
               <img
                 src={birddogsLogo}
                 alt=""
-                className="col-12 col-md-6 partner-logo"
+                className="col-12 col-lg-6 partner-logo"
               />
               <img
                 src={hildebrandtLogo}
                 alt=""
-                className="col-12 col-md-6 partner-logo"
+                className="col-12 col-lg-6 partner-logo"
               />
             </div>
           </div>
