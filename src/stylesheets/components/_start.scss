@@ -23,14 +23,14 @@
   margin-left: auto;
   margin-right: auto;
   transition: $transition;
-
   width: max-content;
   position: absolute;
   bottom: 2rem;
   cursor: pointer;
 
   a {
-    color: $mainBg;
+    color: white;
+    transition: $transition;
   }
 }
 
@@ -38,7 +38,7 @@
   width: 90%;
   height: 0.2rem;
   margin-top: 0.5rem;
-  background: $mainBg;
+  background: white;
   margin-left: auto;
   margin-right: auto;
   transition: 0.3s cubic-bezier(0.2, 1.5, 0.2, 1.5);
@@ -46,11 +46,12 @@
 .button-story:hover {
   transform: translateY(-5px);
 
-  a {
-    color: white;
-  }
+  // a {
+  //   color: $clrPry4;
+  // }
   .button-line-start {
     width: 40%;
+    // background-color: $clrPry4;
   }
 }
 

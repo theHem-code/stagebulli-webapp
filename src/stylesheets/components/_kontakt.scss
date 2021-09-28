@@ -20,6 +20,7 @@
   margin: 0 auto;
   width: max-content;
   margin-top: 40px;
+  margin-bottom: 290px;
   cursor: pointer;
   text-decoration: none;
   color: $clrPara;
@@ -28,6 +29,41 @@
   font-weight: 600;
   font-size: 1.2rem;
   transition: $transition;
+  input {
+    transition: 0.2s;
+  }
+}
+
+.button-modal {
+  margin: 0 auto;
+  width: max-content;
+  margin-top: 40px;
+  // margin-bottom: 290px;
+  cursor: pointer;
+  text-decoration: none;
+  // color: $clrPara;
+  color: $clrPara;
+  text-transform: uppercase;
+  letter-spacing: $spacing;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: $transition;
+  p {
+    color: $clrPara;
+    font-family: "Jost", "Open Sans", sans-serif;
+    transition: $transition;
+  }
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.modal-header {
+  justify-content: center !important;
+}
+.modal-content {
+  background-color: $mainBg;
 }
 
 .senden {
@@ -42,7 +78,7 @@
 }
 
 .button-line {
-  width: 90%;
+  width: 80%;
   height: 0.2rem;
   margin-top: 0.5rem;
   background: $clrHead;
@@ -53,9 +89,24 @@
 
 .button-senden:hover {
   transform: translateY(-5px);
+  input {
+    color: $clrPry4;
+  }
+  .button-line {
+    width: 40%;
+    background-color: $clrPry4;
+  }
+}
+
+.button-modal:hover {
+  transform: translateY(-5px);
+  p {
+    color: $clrPry4;
+  }
 
   .button-line {
-    width: 50%;
+    width: 40%;
+    background-color: $clrPry4;
   }
 }
 

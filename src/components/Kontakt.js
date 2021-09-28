@@ -17,6 +17,7 @@ import {
 } from "@material-ui/pickers";
 import Grid from "@material-ui/core/Grid";
 import DateFnsUtils from "@date-io/date-fns";
+import BasicModal from "./Modal";
 
 const OrangeCheckbox = withStyles({
   root: {
@@ -80,6 +81,8 @@ const Kontakt = (validatesOnChange = false) => {
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState({});
 
+  const [showModal, setShowModal] = useState(false);
+
   const [state, setState] = useState({
     checkedA: false,
     checkedB: false,
@@ -107,33 +110,32 @@ const Kontakt = (validatesOnChange = false) => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "Gmail",
-        "template_565gdoy",
-        form.current,
-        "user_LkqF3nBSC3biR9i4iRxRm"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
+    if (validates()) {
+      emailjs
+        .sendForm(
+          "Gmail",
+          "template_565gdoy",
+          form.current,
+          "user_LkqF3nBSC3biR9i4iRxRm"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    } else {
+      window.alert(
+        "Leider konnte Ihre Anfrage nicht verarbeitet werden. Versuchen Sie es erneut."
       );
-
+    }
     e.target.reset();
   };
 
-  const handleSubmit = () => {
-    validates() && sendEmail();
-    window.alert(
-      "Vielen Dank fuer Ihre Nachricht. Wir werden uns schnellstmoeglich bei Ihnen melden"
-    );
-    // } else {
-    //   window.alert("Leider konnte Ihre Anfrage nicht verarbeitet werden. Versuchen Sie es erneut.");
-    // }
+  const handleModal = () => {
+    validates() && setShowModal(true);
   };
 
   const validates = (fieldValues = values) => {
@@ -158,7 +160,7 @@ const Kontakt = (validatesOnChange = false) => {
         <h4 className="col-12">Was darf's sein?</h4>
       </section>
 
-      <form ref={form} onSubmit={handleSubmit}>
+      <form ref={form} onSubmit={sendEmail}>
         <div className="formwrapper">
           <Grid container spacing={2}>
             <Grid item xs={12} sm={4}>
@@ -324,7 +326,13 @@ const Kontakt = (validatesOnChange = false) => {
             </Grid>
           </Grid>
           <div className="button-senden">
-            <input type="submit" className="senden" value="Senden"></input>
+            <input
+              type="submit"
+              className="senden"
+              value="Senden"
+              onClick={handleModal}
+            ></input>
+            {showModal && <BasicModal />}
             <div className="button-line"></div>
           </div>
         </div>

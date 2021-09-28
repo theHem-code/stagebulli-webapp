@@ -6,13 +6,10 @@ import Logo from "../../images/Logo.png";
 import { NavLink, useLocation } from "react-router-dom";
 import { IconContext } from "react-icons";
 import "./NavbarNew.css";
-// import Bulliframe from "./components/Bulliframe";
 
 const NavbarNew = () => {
   const [clicked, setClicked] = useState(false);
   // const [logoVisible, setLogoVisible] = useState("visible");
-  // const [bframe, setBframe] = useState(null);
-  // const [location, setLocation] = useState({});
 
   const handleClick = () => {
     setClicked(!clicked);
@@ -175,7 +172,7 @@ const NavbarNew = () => {
           id="link3"
           spy={true}
           smooth={true}
-          offset={-30}
+          offset={-100}
           duration={150}
           className="nav-links"
           onClick={handleClick}
