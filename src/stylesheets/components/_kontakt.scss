@@ -110,6 +110,22 @@
   }
 }
 
+/////////////////// Color Correction Form
+.MuiPickersDay-daySelected {
+  background-color: $clrPry4 !important;
+}
+.MuiPickersToolbar-toolbar {
+  background-color: $clrPry4 !important;
+}
+.MuiFormLabel-root.Mui-focused {
+  color: $clrPry4 !important;
+}
+.MuiOutlinedInput-root.Mui-focused
+.MuiOutlinedInput-notchedOutline {
+  border-color: $clrPry4 !important;
+}
+////////////////////////////////
+
 @media screen and (max-width: 860px) {
   .formwrapper {
     margin: 50px auto;

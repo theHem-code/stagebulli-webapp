@@ -39,26 +39,38 @@ const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(0),
     width: "100%",
+    "&:focus-visible": {
+      borderColor: "#f15025"
+    }
+  },
+  // inputLabel: {
+  //   color: "red"
+  // },
+  select: {
+    "&:Mui-focused": {
+      borderColor: "#f15025"
+    }
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
 }));
 
+
 const CssTextField = withStyles({
   root: {
     "& label.Mui-focused": {
-      color: "primary",
+      color: "#f15025",
     },
     "& .MuiInput-underline:after": {
-      borderBottomColor: "primary",
+      borderBottomColor: "#f15025",
     },
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
         borderColor: "primary",
       },
       "&.Mui-focused fieldset": {
-        borderColor: "primary",
+        borderColor: "#f15025",
       },
     },
   },
@@ -275,6 +287,7 @@ const Kontakt = (validatesOnChange = false) => {
                 <InputLabel
                   id="demo-simple-select-outlined-label"
                   name="teilnehmer"
+                  className={classes.inputLabel}
                 >
                   Erwartete Teilnehmerzahl
                 </InputLabel>
@@ -285,6 +298,7 @@ const Kontakt = (validatesOnChange = false) => {
                   onChange={handleCount}
                   label="Erwartete Teilnehmerzahl"
                   name="teilnehmer"
+                  className={classes.select}
                 >
                   <MenuItem value={10}> </MenuItem>
                   <MenuItem value={20}> – </MenuItem>
