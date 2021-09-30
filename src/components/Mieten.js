@@ -47,7 +47,7 @@ const Mieten = () => {
       </div>
       <div className="button-impressionen">
         <NavLink to="/impressionen">Live-Impressionen</NavLink>
-        <div className="button-line bounce"></div>
+        <div className="button-line-mieten"></div>
       </div>
     </div>
   );

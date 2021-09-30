@@ -31,12 +31,13 @@
   a {
     color: white;
     transition: $transition;
+    font-weight: 600;
   }
 }
 
 .button-line-start {
   width: 90%;
-  height: 0.2rem;
+  height: 4px;
   margin-top: 0.5rem;
   background: white;
   margin-left: auto;

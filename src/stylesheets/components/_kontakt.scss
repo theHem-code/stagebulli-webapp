@@ -31,6 +31,8 @@
   transition: $transition;
   input {
     transition: 0.2s;
+    font-weight: 700;
+    letter-spacing: $spacing;
   }
 }
 
@@ -79,7 +81,7 @@
 
 .button-line {
   width: 80%;
-  height: 0.2rem;
+  height: 4px;
   margin-top: 0.5rem;
   background: $clrHead;
   margin-left: auto;

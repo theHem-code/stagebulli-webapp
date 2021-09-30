@@ -80,10 +80,11 @@
   padding: 10px 20px;
   a {
     transition: $transition;
+    font-weight: 700;
   }
 }
 
-.button-line {
+.button-line-mieten {
   width: 90%;
   height: 0.2rem;
   margin-top: 0.5rem;
@@ -98,7 +99,7 @@
   a {
     color: $clrPry4;
   }
-  .button-line {
+  .button-line-mieten {
     width: 40%;
     background:$clrPry4;
   }

@@ -40,22 +40,21 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(0),
     width: "100%",
     "&:focus-visible": {
-      borderColor: "#f15025"
-    }
+      borderColor: "#f15025",
+    },
   },
   // inputLabel: {
   //   color: "red"
   // },
   select: {
     "&:Mui-focused": {
-      borderColor: "#f15025"
-    }
+      borderColor: "#f15025",
+    },
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
 }));
-
 
 const CssTextField = withStyles({
   root: {
@@ -154,9 +153,11 @@ const Kontakt = (validatesOnChange = false) => {
     const re = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
     const temp = { ...errors };
     if ("vorname" in fieldValues)
-      temp.vorname = values.vorname ? "" : "This field is required.";
+      temp.vorname = values.vorname ? "" : "Pflichtfeld.";
+    if ("nachname" in fieldValues)
+      temp.nachname = values.nachname ? "" : "Pflichtfeld.";
     if ("email" in fieldValues)
-      temp.email = re.test(values.email) ? "" : "Email is invalid.";
+      temp.email = re.test(values.email) ? "" : "Email ist ungültig.";
     setErrors({
       ...temp,
     });
@@ -329,7 +330,7 @@ const Kontakt = (validatesOnChange = false) => {
             <Grid item xs={12}>
               <CssTextField
                 className={classes.margin}
-                label="Wie kann der Stage Bulli deinem Event zum Erfolg verhelfen?"
+                label="Wie kann der Stage Bulli dir helfen?"
                 variant="outlined"
                 id="custom-css-outlined-input outlined-multiline-static outlined-full-width"
                 multiline

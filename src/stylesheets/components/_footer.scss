@@ -2,9 +2,36 @@
   margin: 0 auto;
   height: 9rem;
   background-color: $clrHead;
+  bottom: 0;
 }
 
-.footer{
+.social{
+  display: flex;
+  justify-content: center;
+}
+
+.icons {
+  display: flex;
+  width: 11rem;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 30px;
+}
+.icons li a {
+  transition: 0.1s;
+  font-size: 20px;
+  color: white;
+}
+.icons a:hover {
+  color: #f15025;
+  cursor: pointer;
+}
+
+.copyright {
+    color: rgb(130, 130, 130) !important;
+}
+
+.footer {
   margin-right: 1.5rem;
   margin-left: 1.5rem;
 }
@@ -20,12 +47,16 @@
     font-weight: 500;
     font-size: medium;
     text-decoration: uppercase;
+    transition: .2s;
+  }
+  a:hover{
+    color: rgb(130, 130, 130);
   }
 }
 
 @media screen and (max-width: 960px) {
-    .footer-list {
-      flex-direction: column;
-      align-items: center;
-    }
+  .footer-list {
+    flex-direction: column;
+    align-items: center;
   }
+}
