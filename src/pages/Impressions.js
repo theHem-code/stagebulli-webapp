@@ -17,6 +17,12 @@ const images = [
   "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_7.jpg",
 ];
 
+const desc = [
+  "STAGE BULLI - Weltpremiere in der Kulturbrauerei",
+  "test 2",
+  "test 3",
+]
+
 const Impressions = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
@@ -24,7 +30,6 @@ const Impressions = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
-
 
   return (
     <div>
@@ -38,9 +43,9 @@ const Impressions = () => {
           <div className="image-grid">
             {images.map((image, index) => {
               const handleImageIndex = () => {
-                setIsOpen(true)
-                setPhotoIndex(index)
-              }
+                setIsOpen(true);
+                setPhotoIndex(index);
+              };
               return (
                 <img
                   src={image}
@@ -51,9 +56,9 @@ const Impressions = () => {
               );
             })}
 
-
             {isOpen && (
               <Lightbox
+                imageTitle={desc[photoIndex]}
                 mainSrc={images[photoIndex]}
                 nextSrc={images[(photoIndex + 1) % images.length]}
                 prevSrc={

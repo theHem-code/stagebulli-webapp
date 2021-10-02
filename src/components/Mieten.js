@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import events from "../images/events.jpg";
-import celebrations from "../images/celebrations.jpg";
+import celebrations from "../images/wedding.jpg";
 import corporate from "../images/corporate.jpg";
 // import Aos from "aos";
 import "aos/dist/aos.css";
@@ -30,7 +30,7 @@ const Mieten = () => {
             <h3>Events</h3>
             <p>
               Publikumsmagnet auf Festivals,
-              <br /> Messen & Roadshows
+              <br /> Messen & Roadshows.
             </p>
           </div>
         </div>
@@ -40,7 +40,7 @@ const Mieten = () => {
             <h3>Celebrations</h3>
             <p>
               Entertainment für <br />
-              besondere Momente
+              besondere Momente.
             </p>
           </div>
         </div>

@@ -9,6 +9,7 @@
 @import "components/kontakt";
 @import "components/footer";
 @import "components/youtube";
+@import "components/modal";
 
 // pages
 @import "pages/artists";
@@ -16,6 +17,8 @@
 @import "pages/impressum";
 @import "pages/datenschutz";
 @import "pages/impressions";
+
+@import 'node_modules/react-modal-video/scss/modal-video.scss';
 
 /*
   =============== 

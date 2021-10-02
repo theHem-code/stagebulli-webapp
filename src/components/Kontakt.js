@@ -150,7 +150,7 @@ const Kontakt = (validatesOnChange = false) => {
   };
 
   const validates = (fieldValues = values) => {
-    const re = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
+    const re = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
     const temp = { ...errors };
     if ("vorname" in fieldValues)
       temp.vorname = values.vorname ? "" : "Pflichtfeld.";
@@ -303,10 +303,10 @@ const Kontakt = (validatesOnChange = false) => {
                 >
                   <MenuItem value={10}> </MenuItem>
                   <MenuItem value={20}> – </MenuItem>
-                  <MenuItem value={30}>bis zu 100</MenuItem>
-                  <MenuItem value={40}>100 - 200</MenuItem>
-                  <MenuItem value={50}>200 - 500</MenuItem>
-                  <MenuItem value={60}>mehr als 500</MenuItem>
+                  <MenuItem value={"bis zu 100"}>bis zu 100</MenuItem>
+                  <MenuItem value={"100 - 200"}>100 - 200</MenuItem>
+                  <MenuItem value={"200 - 500"}>200 - 500</MenuItem>
+                  <MenuItem value={"mehr als 500"}>mehr als 500</MenuItem>
                 </Select>
               </FormControl>
             </Grid>

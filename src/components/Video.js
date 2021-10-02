@@ -10,6 +10,7 @@ const Video = () => {
         loop="loop"
         muted="muted"
         style={{ objectFit: "cover", width: "100%", height: "100%", marginTop: "150px" }}
+        poster="https://cdn.photographylife.com/wp-content/uploads/2014/06/Nikon-D810-Image-Sample-6.jpg"
       >
         <source src={video} type="video/mp4" />
       </video>

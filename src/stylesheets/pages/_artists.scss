@@ -10,10 +10,10 @@
   }
 }
 
-.artist-header{
+.artist-header {
   margin-top: 150px;
   margin-bottom: 2rem;
-  text-align: center; 
+  text-align: center;
 }
 
 .cards-artists {
@@ -51,7 +51,6 @@
   padding: 20px 10px;
   background-color: $boxclr;
   transition: $transition !important;
-
 }
 
 .desc-artists {
@@ -71,7 +70,7 @@
   }
 }
 
-.line{
+.line {
   border-top: 1px solid black;
   margin: 0 auto;
   width: 20%;
@@ -87,34 +86,91 @@
     letter-spacing: 1.2px;
     font-size: 0.8rem;
     text-transform: none;
-    
   }
 }
 
 .card-artists:hover {
   background: $clrPry4 !important;
   transform: translateY(-3px) !important;
-  
+
   p,
   h3 {
     color: white;
   }
-  .line{
+  .line {
     border-color: white;
   }
-  // .desc-artists {
-  //   background: $clrPry4;
-  // }
-  // .artist-details{
-  //   background: $clrPry4;
-  // }
-  .artist-all{
+  .artist-all {
     background: $clrPry4;
-
   }
 }
 
-.clearFloat{
+.notification {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.button-line-btn {
+  width: 90%;
+  height: 4px;
+  // margin-top: 0.5rem;
+  background: black;
+  // background: white;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s cubic-bezier(0.2, 1.5, 0.2, 1.5);
+}
+.button-line-btn:hover {
+  width: 40%;
+}
+
+.btn-video {
+  position: absolute;
+  border: none;
+  top: 100px;
+  // margin-top: 50px;
+  cursor: pointer;
+  transition: $transition;
+  padding: 15px 20px;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 4px;
+  letter-spacing: $spacing;
+  z-index: 1;
+  // color: white;
+}
+
+.btn-video:hover {
+  opacity: 1;
+}
+
+.notification .btn-video {
+  background: white;
+  // background:none;
+  opacity: 0;
+  transition: $transition;
+}
+
+.notification:hover .btn-video {
+  opacity: 0.7;
+  transition: $transition;
+  transform: translateY(-3px) !important;
+  
+}
+
+.notification .btn-video:hover {
+  transition: $transition;
+  background: white;
+  // background: none;
+  opacity: 0.9;
+  transform: translateY(0px) !important;
+  .button-line-btn {
+    width: 40%;
+  }
+}
+
+.clearFloat {
   clear: both;
 }
 
@@ -124,7 +180,7 @@
     margin: 0 auto;
   }
 
-  .card-artists{
+  .card-artists {
     height: 42rem;
   }
 }
@@ -135,7 +191,7 @@
     margin: 0 auto;
   }
 
-  .card-artists{
+  .card-artists {
     height: 30rem;
   }
 }

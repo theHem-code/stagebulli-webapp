@@ -46,18 +46,36 @@ const Story = () => {
         <hr />
         <div className="row">
           <div className="partner">
-            <h2 className="col-12" style={{ textAlign: "center" }}>Unsere Partner</h2>
+            <h2 className="col-12" style={{ textAlign: "center" }}>
+              Unsere Partner
+            </h2>
             <div className="row partner-logos">
-              <img
-                src={birddogsLogo}
-                alt=""
-                className="col-12 col-lg-6 partner-logo"
-              />
-              <img
-                src={hildebrandtLogo}
-                alt=""
-                className="col-12 col-lg-6 partner-logo"
-              />
+              
+                <a
+                  href="https://www.birddogs-music.de/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="col-12 col-lg-6 partner-logo"
+                >
+                  <img
+                    src={birddogsLogo}
+                    alt=""
+                    className="col-12 col-lg-6 partner-logo"
+                  />
+                </a>
+                <a
+                  href="https://hildebrandt-veranstaltungstechnik.de/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="col-12 col-lg-6 partner-logo"
+                >
+                  <img
+                    src={hildebrandtLogo}
+                    alt=""
+                    className="col-12 col-lg-6 partner-logo"
+                  />
+                </a>
+            
             </div>
           </div>
         </div>

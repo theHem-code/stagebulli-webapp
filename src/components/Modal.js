@@ -12,15 +12,15 @@ export default function BasicModal() {
       <Modal show={show} onHide={handleClose}>
         <Modal.Header>
           <Modal.Title>
-            <h3 style={{textAlign: "center"}}>Vielen Dank für Ihre Nachricht!</h3>
+            <h3 style={{textAlign: "center"}}>Thanx for your message!</h3>
             </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>Wir werden uns schnellstmöglich bei Ihnen zurückmelden.</p>
+          <p>Wir melden uns schnellstmöglich bei Dir.</p>
           </Modal.Body>
         <Modal.Footer>
           <div className="button-modal" onClick={handleClose}>
-            <p>Danke</p>
+            <p>Cheerio!</p>
           <div className="button-line"></div>
           </div>
           {/* <Button variant="primary" onClick={handleClose}>
