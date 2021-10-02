@@ -11,7 +11,7 @@ const Start = () => {
         location="bottom"
         buttonText="Einverstanden"
         cookieName="myAwesomeCookieName2"
-        style={{ width: "350px", background: "#212121", margin: "20px", letterSpacing: "1px", borderRadius: "4px" }}
+        style={{ width: "350px", background: "#212121", margin: "30px", letterSpacing: "1px", borderRadius: "4px" }}
         buttonStyle={{ color: "white", fontSize: "17px", fontWeight: "600", backgroundColor: "#212121", textTransform: "uppercase", borderBottom: "3px solid white", letterSpacing: "2px" }}
         expires={150}
         overlay={true}
@@ -31,7 +31,7 @@ const Start = () => {
         </section>
       </div>
       <div
-        className="col-12 banner"
+        className="banner"
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(${Banner})`,
         }}
