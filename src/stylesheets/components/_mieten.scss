@@ -22,9 +22,20 @@
   max-width: 100%;
 }
 
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .card {
+      width: 22rem !important;
+      img {
+        height: 330px !important;
+      }
+    }
+  }
+}
+
 .card {
-  width: 22rem;
   text-align: center;
+  width: 22rem;
   height: 500px;
   border-radius: $radius;
   padding: 20px 20px;
@@ -101,7 +112,6 @@
   }
   .button-line-mieten {
     width: 40%;
-    background:$clrPry4;
+    background: $clrPry4;
   }
 }
-
