@@ -46,7 +46,7 @@ const Mieten = () => {
         </div>
       </div>
       <div className="button-impressionen">
-        <NavLink to="/impressionen">Live-Impressionen</NavLink>
+        <NavLink to="/impressionen">Impressionen</NavLink>
         <div className="button-line-mieten"></div>
       </div>
     </div>

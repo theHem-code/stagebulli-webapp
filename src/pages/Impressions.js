@@ -36,7 +36,7 @@ const Impressions = () => {
       <main>
         <div className="container impressions-container">
           <div className="row header">
-            <h1 className="col-12">Live - Impressionen</h1>
+            <h1 className="col-12">Impressionen</h1>
           </div>
           <hr></hr>
 
