@@ -34,7 +34,6 @@ const NavbarNew = () => {
       );
   }, []);
 
-
   const handleFrame0 = () => {
     if (bframe && bframe.current) {
       bframe.current.classList.remove("frame3");
@@ -75,8 +74,7 @@ const NavbarNew = () => {
   };
 
   const handleFrame3 = () => {
-    bframe && bframe.current &&
-    bframe.current.classList.remove("hidden");
+    bframe && bframe.current && bframe.current.classList.remove("hidden");
     bframe.current.classList.remove("frame1");
     bframe.current.classList.remove("frame2");
     bframe.current.classList.add("frame3");
@@ -90,6 +88,7 @@ const NavbarNew = () => {
 
   const renderVisibility = mylocation.pathname === "/" ? "visible" : "hidden";
 
+  const iconForMobile = mylocation.pathname === "/" ? "block" : "none";
 
   const linkForLogo =
     mylocation.pathname === "/" ? (
@@ -129,7 +128,11 @@ const NavbarNew = () => {
     <nav className="NavbarItems">
       <IconContext.Provider value={{ color: "black", className: "menu-icon" }}>
         <div className="navbar-logo">{linkForLogo}</div>
-        <div className="menu-icon" onClick={handleClick}>
+        <div
+          className="menu-icon"
+          style={{ display: `${iconForMobile}` }}
+          onClick={handleClick}
+        >
           {clicked ? <FaTimes /> : <FaBars />}
         </div>
       </IconContext.Provider>
