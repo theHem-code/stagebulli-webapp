@@ -348,6 +348,8 @@ const Kontakt = (validatesOnChange = false) => {
                 rows={4}
                 fullWidth
                 name="info"
+                value={values.info}
+                onChange={handleInput}
               />
             </Grid>
           </Grid>
