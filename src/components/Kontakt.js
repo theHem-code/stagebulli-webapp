@@ -119,6 +119,17 @@ const Kontakt = (validatesOnChange = false) => {
     if (validatesOnChange) validates({ [name]: value });
   };
 
+  const resetForm = () => {
+    setValues(initialValues);
+    setState({
+      checkedA: false,
+      checkedB: false,
+      checkedC: false,
+    });
+    setParticipans("");
+    handleDateChange(new Date());
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
     if (validates()) {
@@ -142,7 +153,7 @@ const Kontakt = (validatesOnChange = false) => {
         "Leider konnte Ihre Anfrage nicht verarbeitet werden. Versuchen Sie es erneut."
       );
     }
-    e.target.reset();
+    resetForm();
   };
 
   const handleModal = () => {
