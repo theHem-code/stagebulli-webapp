@@ -5,7 +5,7 @@ const Video = () => {
 const [isMobile, setIsMobile] = useState(false)
  
 const handleRezise = () => {
-  if (window.innerwidth < 720) {
+  if (window.innerWidth < 720) {
     setIsMobile(true)
   } else {
     setIsMobile(false)
