@@ -9,6 +9,7 @@ const handleRezise = () => {
     setIsMobile(true)
   } else {
     setIsMobile(false)
+    console.log("big")
   }
 }
 
@@ -20,7 +21,7 @@ useEffect(() => {
   return (
     <div>
       <video
-        autoPlay={isMobile ? "autoplay" : "none"}
+        autoPlay={isMobile ? "none" : "autoplay"}
         loop="loop"
         muted="muted"
         playsInline

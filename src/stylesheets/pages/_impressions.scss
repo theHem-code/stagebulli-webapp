@@ -4,25 +4,33 @@
 }
 
 .image {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    margin: 10px;
-    cursor: pointer;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
 
+// .img-wrapper {
+//   width: 250px;
+//   height: 250px;
+//   overflow: hidden;
+//   display: inline-block;
+// }
+
 .image-grid {
-    margin-top: 100px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 100px;
+  margin: 100px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  // margin-bottom: 100px;
 }
 
 @media screen and (max-width: 700px) {
-    .impressions-container {
-      width: 400px;
-      margin: 0 auto;
-    }
+  .impressions-container {
+    width: 400px;
+    margin: 0 auto;
   }
+}

@@ -1,5 +1,6 @@
 import React, { useLayoutEffect } from "react";
 import image from "../images/Story_Felix.jpg";
+import bullistory from "../images/bullistory.jpg"
 import birddogsLogo from "../images/Logo_Birddogs.png";
 import hildebrandtLogo from "../images/Hildebrandt_Logo.png";
 import YouTube from "react-youtube";
@@ -44,38 +45,56 @@ const Story = () => {
           </div>
         </div>
         <hr />
+        <div className="row story-article">
+          <img src={bullistory} alt="" className="col-12 col-lg-6 mt-5 story-img" />
+          <p className="col-12 col-lg-6">
+            Moin zusammen, <br />
+            <br />
+            ich bin der Stage Bulli aka Bond Bulli :-) <br />
+            <br />
+            1979 als einer der letzten T2 Breitpritschen in Hannover vom Band
+            gelaufen und nach Südafrika verschifft. Hier haben sich Sonne und
+            Good Vibes tief in meine DNA eingebrannt bis es dann vor ca. 10
+            Jahren wieder zurück nach Deutschland ging.
+            <br />
+            <br />
+            Hier war ich u.a. als Filmauto im Einsatz, meiner größter Erfolg das
+            Mitwirken beim letzten James Bond Film „Keine Zeit zu Sterben“. 2020
+            ging es dann vom schönen Bayern nach Berlin, wo ich nun endlich
+            meine wahre Bestimmung gefunden habe ;-)
+          </p>
+        </div>
+        <hr />
         <div className="row">
           <div className="partner">
             <h2 className="col-12" style={{ textAlign: "center" }}>
-              Unsere Partner
+              Partner In Crime
             </h2>
             <div className="row partner-logos">
-              
-                <a
-                  href="https://www.birddogs-music.de/"
-                  target="_blank"
-                  rel="noreferrer"
+              <a
+                href="https://www.birddogs-music.de/"
+                target="_blank"
+                rel="noreferrer"
+                className="col-12 col-lg-6 partner-logo"
+              >
+                <img
+                  src={birddogsLogo}
+                  alt=""
                   className="col-12 col-lg-6 partner-logo"
-                >
-                  <img
-                    src={birddogsLogo}
-                    alt=""
-                    className="col-12 col-lg-6 partner-logo"
-                  />
-                </a>
-                <a
-                  href="https://hildebrandt-veranstaltungstechnik.de/"
-                  target="_blank"
-                  rel="noreferrer"
+                />
+              </a>
+              <a
+                href="https://hildebrandt-veranstaltungstechnik.de/"
+                target="_blank"
+                rel="noreferrer"
+                className="col-12 col-lg-6 partner-logo"
+              >
+                <img
+                  src={hildebrandtLogo}
+                  alt=""
                   className="col-12 col-lg-6 partner-logo"
-                >
-                  <img
-                    src={hildebrandtLogo}
-                    alt=""
-                    className="col-12 col-lg-6 partner-logo"
-                  />
-                </a>
-            
+                />
+              </a>
             </div>
           </div>
         </div>

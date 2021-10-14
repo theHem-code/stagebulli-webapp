@@ -19,7 +19,7 @@
 .cards {
   display: flex;
   justify-content: space-around;
-  max-width: 100%;
+  // max-width: 100%;
 }
 
 @media not all and (min-resolution: 0.001dpcm) {
@@ -97,11 +97,12 @@
 
 .button-line-mieten {
   width: 90%;
-  height: 0.2rem;
+  height: 4px;
   margin-top: 0.5rem;
   background: $clrHead;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 4px;
   transition: 0.4s cubic-bezier(0.2, 1.5, 0.2, 1.5);
 }
 
@@ -113,5 +114,6 @@
   .button-line-mieten {
     width: 40%;
     background: $clrPry4;
+
   }
 }

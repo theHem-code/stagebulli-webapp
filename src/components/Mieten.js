@@ -20,7 +20,7 @@ const Mieten = () => {
           <div className="desc">
             <h3>Corporate</h3>
             <p>
-              Mini-Festival mit Kunden <br />& Mitarbeitern feiern.
+              Gemeinsam mit Kunden <br />& Mitarbeitern feiern.
             </p>
           </div>
         </div>

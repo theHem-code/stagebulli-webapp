@@ -85,6 +85,8 @@
   margin-top: 0.5rem;
   background: $clrHead;
   margin-left: auto;
+  border-radius: 4px;
+
   margin-right: auto;
   transition: 0.4s cubic-bezier(0.2, 1.5, 0.2, 1.5);
 }
@@ -114,17 +116,17 @@
 
 /////////////////// Color Correction Form
 .MuiPickersDay-daySelected {
-  background-color: $clrPry4 !important;
+  background-color: $clrPara !important;
 }
 .MuiPickersToolbar-toolbar {
-  background-color: $clrPry4 !important;
+  background-color: $clrPara !important;
 }
 .MuiFormLabel-root.Mui-focused {
-  color: $clrPry4 !important;
+  color: $clrPara !important;
 }
 .MuiOutlinedInput-root.Mui-focused
 .MuiOutlinedInput-notchedOutline {
-  border-color: $clrPry4 !important;
+  border-color: $clrPara !important;
 }
 ////////////////////////////////
 

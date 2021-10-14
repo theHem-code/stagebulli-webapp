@@ -27,7 +27,8 @@ const Impressum = () => {
           </p>
           <p>
             Für diese Internetpräsenz verantwortlich: <br />
-            Felix Franke, Berlin Peter Hemsing, Berlin
+            Felix Franke, Berlin <br/>
+            Peter Hemsing, Berlin
           </p>
         </div>
         <div className="row mt-5 mb-3">
@@ -50,6 +51,20 @@ const Impressum = () => {
             dass es sich um Inhalte der Website von unserer Website handelt und
             diese Inhalte nicht in Verbindung mit Inhalten Dritter gebracht
             werden, die unseren Interessen widersprechen.
+          </p>
+        </div>
+        <div className="row mt-5 mb-3">
+          <h3>MEDIA CREDITS:</h3>
+        </div>
+        <div className="row mb-5">
+          <p>
+           Photos by Alexander Mundt, David Ziems, Marko Dietrich, Dominik Wilzok, Marc Vorwerk & Markus Werner
+          </p>
+          <p>
+           Video by Alexander Mundt
+          </p>
+          <p>
+           Stage Bulli Logo designed by Ojala Werke.
           </p>
         </div>
       </div>

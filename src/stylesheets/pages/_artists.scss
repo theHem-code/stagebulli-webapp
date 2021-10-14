@@ -27,14 +27,14 @@
   margin-bottom: 20px; /* Added */
   text-align: center;
   height: 37rem;
-  // width: 30rem;
+  width: 25rem;
   border-radius: $radius;
   padding: 20px 20px;
   transition: $transition !important;
 
   img {
     width: 100%;
-    // height: 300px;
+    height: 220px;
     object-fit: cover;
     border-radius: $radius;
     box-shadow: $light-shadow;
@@ -48,18 +48,16 @@
 }
 
 .artist-all {
-  padding: 20px 10px;
+  padding: 20px 30px;
   background-color: $boxclr;
   transition: $transition !important;
 }
 
 .desc-artists {
   width: 100%;
+  height: 12rem;
   text-align: center;
   margin: 0 auto;
-  // background-color: $boxclr;
-  // padding: 20px 10px;
-  // box-shadow: $light-shadow;
   transition: $transition !important;
   p {
     margin-top: 10px;
@@ -72,7 +70,7 @@
 
 .line {
   border-top: 1px solid black;
-  margin: 0 auto;
+  margin: 20px auto;
   width: 20%;
 }
 
@@ -114,9 +112,8 @@
 .button-line-btn {
   width: 90%;
   height: 4px;
-  // margin-top: 0.5rem;
+  border-radius: 4px;
   background: $clrHead;
-  // background: white;
   margin-left: auto;
   margin-right: auto;
   transition: 0.3s cubic-bezier(0.2, 1.5, 0.2, 1.5);
@@ -129,7 +126,6 @@
   position: absolute;
   border: none;
   top: 100px;
-  // margin-top: 50px;
   cursor: pointer;
   transition: $transition;
   padding: 15px 20px;
@@ -147,7 +143,6 @@
 
 .notification .btn-video {
   background: white;
-  // background:none;
   opacity: 0;
   transition: $transition;
 }
@@ -162,7 +157,6 @@
 .notification .btn-video:hover {
   transition: $transition;
   background: white;
-  // background: none;
   opacity: 0.9;
   transform: translateY(0px) !important;
   .button-line-btn {
@@ -174,6 +168,14 @@
   clear: both;
 }
 
+@media screen and (max-width: 1200px) {
+
+  .card-artists {
+    height: 37.8rem;
+  }
+}
+
+
 @media screen and (max-width: 991px) {
   .artists-container {
     width: 700px;
@@ -181,7 +183,7 @@
   }
 
   .card-artists {
-    height: 42rem;
+    height: 37rem;
   }
 }
 
@@ -192,6 +194,6 @@
   }
 
   .card-artists {
-    height: 30rem;
+    height: 37rem;
   }
 }

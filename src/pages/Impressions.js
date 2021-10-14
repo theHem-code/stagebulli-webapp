@@ -3,25 +3,34 @@ import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 
 const images = [
-  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_6.jpg",
-  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_2.jpg",
-  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_4.jpg",
-  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_7.jpg",
-  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_1.jpg",
-  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_5.jpg",
-  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_3.jpg",
-  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_3.jpg",
-  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_6.jpg",
-  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_2.jpg",
-  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_4.jpg",
-  "https://res.cloudinary.com/dxkj8owwl/image/upload/v1629742127/stagebulli/Stage%20Bulli_7.jpg",
+  "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_1_o_WOFjQV2.jpg?updatedAt=1634249437629",
+  "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_2_xp2i4M-ef.jpg?updatedAt=1634249428579",
+  "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_3_WEA6ODJSS.jpg?updatedAt=1634249432221",
+  "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_5_KMIaz4vHC.jpg?updatedAt=1634249438643",
+  "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_6_AmKkoMinq.jpg?updatedAt=1634249433306",
+  "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_7_6nfjfNwQs.jpg?updatedAt=1634249435490",
+  "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_8_D1E0UT_up.jpg?updatedAt=1634249425924",
+  "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_9_ddnYtxZTW.jpg?updatedAt=1634249427393",
+  "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_10_O1ajKDI4y.jpg?updatedAt=1634249418300",
+  "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_11_mpCkYPRTo.jpg?updatedAt=1634249439489",
+  "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_12_4Y1i_4OCem.jpg?updatedAt=1634249429629",
+  "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_13_7-PqP5rEO.jpg?updatedAt=1634249434749"
 ];
 
 const desc = [
-  "STAGE BULLI - Weltpremiere in der Kulturbrauerei",
-  "test 2",
-  "test 3",
-]
+  "STAGE BULLI Weltpremiere @KulturBrauerei, Artist: Birddogs, Photo by Alexander Mundt",
+  "STAGE BULLI Weltpremiere @KulturBrauerei, Artist: Birddogs, Photo by Alexander Mundt",
+  "Tag der Deutschen Einheit @Potsdam, Artist: Birddogs, Photo by Carsten Franke",
+  "AWO Teamevent @Jagdhaus Spandau, Artist: Sweet Music Collective, Photo by Marko Dietrich",
+  "Intermate Teamevent @VON GREIFSWALD, Artist: Sweet Music Collective, Photo by Dominik Wilzok",
+  "STAGE BULLI Shooting, Photo by Alexander Mundt",
+  "STAGE BULLI Shooting, Photo by Alexander Mundt",
+  "STAGE BULLI Shooting, Photo by Alexander Mundt",
+  "radioeins Kunstprojekt #KEINBERLINOHNEKULTUR @Tegel Airport, Artist: Min t, Photo by Marc Vorwerk",
+  "radioeins Kunstprojekt #KEINBERLINOHNEKULTUR @Tegel Airport, Artist: Min t, Photo by Marc Vorwerk",
+  "radioeins Kunstprojekt #KEINBERLINOHNEKULTUR @Tegel Airport, Artist: Min t, Photo by Marc Vorwerk",
+  "radioeins Kunstprojekt #KEINBERLINOHNEKULTUR @Tegel Airport, Artist: Min t, Photo by Marc Vorwerk"
+];
 
 const Impressions = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,12 +56,14 @@ const Impressions = () => {
                 setPhotoIndex(index);
               };
               return (
-                <img
-                  src={image}
-                  alt="Stage_Bulli_Image"
-                  className="image"
-                  onClick={handleImageIndex}
-                />
+                <div className="img-wrapper">
+                  <img
+                    src={image}
+                    alt="Stage_Bulli_Image"
+                    className="image"
+                    onClick={handleImageIndex}
+                  />
+                </div>
               );
             })}
 
