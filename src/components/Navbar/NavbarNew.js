@@ -6,6 +6,7 @@ import Logo from "../../images/Logo.png";
 import { NavLink, useLocation } from "react-router-dom";
 import { IconContext } from "react-icons";
 import "./NavbarNew.css";
+import minutesToSeconds from "date-fns/minutesToSeconds";
 
 const NavbarNew = () => {
   const [clicked, setClicked] = useState(false);
@@ -124,6 +125,52 @@ const NavbarNew = () => {
       </NavLink>
     );
 
+  const linkForMenuMieten =
+    mylocation.pathname === "/" ? (
+      <Link
+        activeClass="active"
+        to='mieten'
+        id='link1'
+        spy={true}
+        smooth={true}
+        offset={-100}
+        duration={150}
+        // style={{ visibility: `${renderVisibility}` }}
+        className="nav-links"
+        onClick={hide}
+        onSetActive={handleFrame1}
+      >
+        Mieten
+      </Link>
+    ) : (
+      <NavLink to="/">
+        <div className="nav-links">Mieten</div>
+      </NavLink>
+    );
+
+  const linkForMenuService =
+    mylocation.pathname === "/" ? (
+      <Link
+        activeClass="active"
+        to="service"
+        id="link2"
+        spy={true}
+        smooth={true}
+        offset={-100}
+        duration={150}
+        className="nav-links"
+        onClick={handleClick}
+        onSetActive={handleFrame2}
+        // style={{ visibility: `${renderVisibility}` }}
+      >
+        Service
+      </Link>
+    ) : (
+      <NavLink to="/">
+        <div className="nav-links">Service</div>
+      </NavLink>
+    );
+
   return (
     <nav className="NavbarItems">
       <IconContext.Provider value={{ color: "black", className: "menu-icon" }}>
@@ -152,7 +199,7 @@ const NavbarNew = () => {
         >
           Mieten
         </Link>
-
+        {/* {linkForMenuMieten} */}
         <Link
           activeClass="active"
           to="service"
@@ -168,7 +215,7 @@ const NavbarNew = () => {
         >
           Service
         </Link>
-
+        {/* {linkForMenuService} */}
         <Link
           activeClass="active"
           to="kontakt"
@@ -199,17 +246,17 @@ const NavbarNew = () => {
       </div>
       <ul className="social-icons">
         <li>
-          <a href="https://www.facebook.com/stagebulli">
+          <a href="https://www.facebook.com/stagebulli" target="_blank">
             <FaFacebook />
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/stagebulli/">
+          <a href="https://www.instagram.com/stagebulli/" target="_blank">
             <GrInstagram />
           </a>
         </li>
         <li>
-          <a href="https://de.linkedin.com/in/felix-franke">
+          <a href="https://de.linkedin.com/in/felix-franke" target="_blank">
             <FaLinkedin />
           </a>
         </li>
