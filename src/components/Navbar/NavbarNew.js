@@ -6,7 +6,7 @@ import Logo from "../../images/Logo.png";
 import { NavLink, useLocation } from "react-router-dom";
 import { IconContext } from "react-icons";
 import "./NavbarNew.css";
-import minutesToSeconds from "date-fns/minutesToSeconds";
+// import minutesToSeconds from "date-fns/minutesToSeconds";
 
 const NavbarNew = () => {
   const [clicked, setClicked] = useState(false);
