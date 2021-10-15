@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React from "react";
 import image from "../images/Story_Felix.jpg";
 import bullistory from "../images/bullistory.jpg"
 import birddogsLogo from "../images/Logo_Birddogs.png";
@@ -6,9 +6,6 @@ import hildebrandtLogo from "../images/Hildebrandt_Logo.png";
 import YouTube from "react-youtube";
 
 const Story = () => {
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  });
 
   return (
     <div>
@@ -36,7 +33,7 @@ const Story = () => {
             freue mich auf alles, was da noch kommt. Begleitet mich doch auf
             dieser Reise und lasst uns gemeinsam neue Kapitel schreiben.
           </p>
-          <img src={image} alt="" className="col-12 col-lg-6 mt-5 story-img" />
+          <img src={image} alt="" className="col-12 col-lg-6 my-5 story-img" />
         </div>
         <hr />
         <div className="row">
@@ -46,7 +43,7 @@ const Story = () => {
         </div>
         <hr />
         <div className="row story-article">
-          <img src={bullistory} alt="" className="col-12 col-lg-6 mt-5 story-img" />
+          <img src={bullistory} alt="" className="col-12 col-lg-6 my-5 story-img" />
           <p className="col-12 col-lg-6">
             Moin zusammen, <br />
             <br />

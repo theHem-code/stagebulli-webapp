@@ -1,23 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import birddogs from "../images/birddogs.png";
 import djs from "../images/djs.png";
-import bullioke from "../images/bullioke.png";
+import bullioke from "../images/bullioke.jpg";
 
 import ModalVideo from "react-modal-video";
 
 const Artists = () => {
   const [isOpen, setOpen] = useState(false);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div>
       <div className="container artists-container">
         <div className="row artist-header">
           <div className="col-12">
-            <h1>Entertainmentideen</h1>
+            <h1>Entertainment-Ideen</h1>
           </div>
         </div>
         <hr></hr>
@@ -82,7 +79,7 @@ const Artists = () => {
             {/* </a> */}
           </div>
           <div className="col-12 col-lg-4 notification">
-            <ModalVideo
+            {/* <ModalVideo
               channel="youtube"
               autoplay
               isOpen={isOpen}
@@ -92,7 +89,7 @@ const Artists = () => {
             <button className="btn-video" onClick={() => setOpen(true)}>
               WATCH VIDEO
               <div className="button-line-btn"></div>
-            </button>
+            </button> */}
             <div className="card-artists">
               <img src={djs} alt="" />
               <div className="artist-all">
@@ -136,7 +133,7 @@ const Artists = () => {
             </div>
           </div>
           <div className="col-12 col-lg-4 notification">
-            <ModalVideo
+            {/* <ModalVideo
               channel="youtube"
               autoplay
               isOpen={isOpen}
@@ -146,15 +143,15 @@ const Artists = () => {
             <button className="btn-video" onClick={() => setOpen(true)}>
               WATCH VIDEO
               <div className="button-line-btn"></div>
-            </button>
+            </button> */}
             <div className="card-artists">
               <img src={bullioke} alt="" />
               <div className="artist-all">
                 <div className="desc-artists">
-                  <h3>BULLIOKE</h3>
+                  <h3>BULLI-OKE</h3>
                   <p style={{ fontWeight: "300" }}>
                     <span style={{ fontWeight: "600", paddingBottom: "20px" }}>
-                      "Werde zum Rockstar <br />
+                      "Werde zum Karaoke-Rockstar <br />
                       auf der Bulli-Bühne!"
                     </span>
                     <br />
@@ -162,7 +159,7 @@ const Artists = () => {
                     Singalong und Partystimmung mit Deinen Kollegen und
                     Freunden.
                     <br />
-                    Unterstützt wirst Du von einem unser Karaoke-DJs und
+                    Unterstützt wirst Du von einem unser KJs und
                     professioneller Technik.
                   </p>
                 </div>

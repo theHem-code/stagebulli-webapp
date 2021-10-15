@@ -115,59 +115,8 @@ const NavbarNew = () => {
     ) : (
       <NavLink to="/">
         <div className="logo-wrapper">
-          <img
-            src={Logo}
-            alt="Logo"
-            className="logo"
-            // style={{ visibility: `${logoVisible}` }}
-          />
+          <img src={Logo} alt="Logo" className="logo" />
         </div>
-      </NavLink>
-    );
-
-  const linkForMenuMieten =
-    mylocation.pathname === "/" ? (
-      <Link
-        activeClass="active"
-        to='mieten'
-        id='link1'
-        spy={true}
-        smooth={true}
-        offset={-100}
-        duration={150}
-        // style={{ visibility: `${renderVisibility}` }}
-        className="nav-links"
-        onClick={hide}
-        onSetActive={handleFrame1}
-      >
-        Mieten
-      </Link>
-    ) : (
-      <NavLink to="/">
-        <div className="nav-links">Mieten</div>
-      </NavLink>
-    );
-
-  const linkForMenuService =
-    mylocation.pathname === "/" ? (
-      <Link
-        activeClass="active"
-        to="service"
-        id="link2"
-        spy={true}
-        smooth={true}
-        offset={-100}
-        duration={150}
-        className="nav-links"
-        onClick={handleClick}
-        onSetActive={handleFrame2}
-        // style={{ visibility: `${renderVisibility}` }}
-      >
-        Service
-      </Link>
-    ) : (
-      <NavLink to="/">
-        <div className="nav-links">Service</div>
       </NavLink>
     );
 
@@ -199,7 +148,6 @@ const NavbarNew = () => {
         >
           Mieten
         </Link>
-        {/* {linkForMenuMieten} */}
         <Link
           activeClass="active"
           to="service"
@@ -215,7 +163,6 @@ const NavbarNew = () => {
         >
           Service
         </Link>
-        {/* {linkForMenuService} */}
         <Link
           activeClass="active"
           to="kontakt"
@@ -231,12 +178,6 @@ const NavbarNew = () => {
         >
           Kontakt
         </Link>
-        {/* <Bulliframe
-          displayBulli={displayBulli}
-          renderVisibility={renderVisibility}
-          setFrame={setFrame}
-          location={location}
-        /> */}
         <div
           id="frame"
           className="hidden"
@@ -246,17 +187,29 @@ const NavbarNew = () => {
       </div>
       <ul className="social-icons">
         <li>
-          <a href="https://www.facebook.com/stagebulli" target="_blank">
+          <a
+            href="https://www.facebook.com/stagebulli"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaFacebook />
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/stagebulli/" target="_blank">
+          <a
+            href="https://www.instagram.com/stagebulli/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <GrInstagram />
           </a>
         </li>
         <li>
-          <a href="https://de.linkedin.com/in/felix-franke" target="_blank">
+          <a
+            href="https://de.linkedin.com/in/felix-franke"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaLinkedin />
           </a>
         </li>

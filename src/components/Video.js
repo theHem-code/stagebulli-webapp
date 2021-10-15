@@ -9,7 +9,6 @@ const handleRezise = () => {
     setIsMobile(true)
   } else {
     setIsMobile(false)
-    console.log("big")
   }
 }
 

@@ -15,7 +15,7 @@ const Service = () => {
         </div>
         <div className="button-artists">
           {/* <div className="button-line-top"></div> */}
-          <NavLink to="/kuenstlervorschlaege">Entertainmentideen</NavLink>
+          <NavLink to="/kuenstlervorschlaege">Entertainment-Ideen</NavLink>
           <div className="button-line-artist"></div>
         </div>
       </div>

@@ -8,11 +8,13 @@ import Datenschutz from "../pages/Datenschutz";
 import Impressum from "../pages/Impressum";
 import NavbarNew from "./Navbar/NavbarNew";
 import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
 
 const App = () => {
   return (
     <div>
       <Router>
+        <ScrollToTop />
         <NavbarNew />
         <Switch>
           <Route exact path="/">

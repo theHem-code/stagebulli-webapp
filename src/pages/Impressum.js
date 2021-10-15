@@ -1,9 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 const Impressum = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div>

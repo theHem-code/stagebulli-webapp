@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 
@@ -29,16 +29,13 @@ const desc = [
   "radioeins Kunstprojekt #KEINBERLINOHNEKULTUR @Tegel Airport, Artist: Min t, Photo by Marc Vorwerk",
   "radioeins Kunstprojekt #KEINBERLINOHNEKULTUR @Tegel Airport, Artist: Min t, Photo by Marc Vorwerk",
   "radioeins Kunstprojekt #KEINBERLINOHNEKULTUR @Tegel Airport, Artist: Min t, Photo by Marc Vorwerk",
-  "radioeins Kunstprojekt #KEINBERLINOHNEKULTUR @Tegel Airport, Artist: Min t, Photo by Marc Vorwerk"
+  "radioeins Kunstprojekt #KEINBERLINOHNEKULTUR @Tegel Airport, Artist: Min t, Photo by Markus Werner"
 ];
 
 const Impressions = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  });
 
   return (
     <div>
