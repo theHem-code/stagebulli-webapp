@@ -21,7 +21,7 @@ const Start = () => {
       </CookieConsent>
       <div className="container">
         <section className="row header-start">
-          <div className="col-12 mb-3">
+          <div className="col-12">
             <h4>
               Vom PickUp
               <br />
