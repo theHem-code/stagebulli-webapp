@@ -24,7 +24,7 @@ const Video = () => {
       <video
         className="video"
         preload={isMobile ? "none" : "auto"}
-        // autoPlay
+        autoPlay
         loop="loop"
         muted="muted"
         playsInline
