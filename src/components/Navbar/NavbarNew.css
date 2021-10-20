@@ -87,37 +87,6 @@ ul {
   transition: left .2s;
   left: 64.2%;
 }
-/* 
-a:nth-child(1){
-  width: 300px;
-  
-}
-a:nth-child(1).active~.animation {
-  width: 126px;
-  left: 105px;
-  opacity: 1;
-}
-
-a:nth-child(2){
-  width: 300px;
-}
-a:nth-child(2).active~.animation {
-  width: 126px;
-  left: 405px;
-  opacity: 1;
-}
-
-a:nth-child(3){
-  width: 300px;
-}
-a:nth-child(3).active~.animation {
-  width: 126px;
-  left: 704px;
-  opacity: 1;
-} */
-
-
-
 
 .nav-links:hover {
   color: #212121;
@@ -126,7 +95,6 @@ a:nth-child(3).active~.animation {
 
 .menu-icon {
   display: none;
-  /* font-size: 25px; */
 }
 
 .social-icons {
@@ -211,7 +179,7 @@ a:nth-child(3).active~.animation {
   }
 
   #frame {
-    opacity: 0;
+    opacity: 0 !important;
   }
 
   .social-icons li {
@@ -228,9 +196,9 @@ a:nth-child(3).active~.animation {
     
   }
 
-  #frame {
+  /* #frame {
     opacity: 0;
-  }
+  } */
 
   .menu-icon {
     display: block;

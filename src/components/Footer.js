@@ -14,25 +14,6 @@ const Footer = () => {
           </Link>
           <Link to="/datenschutz">Datenschutz</Link>
         </ul>
-        {/* <div className="social">
-          <ul className="icons">
-            <li>
-              <a href="https://www.facebook.com/stagebulli">
-                <FaFacebook />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/stagebulli/">
-                <GrInstagram />
-              </a>
-            </li>
-            <li>
-              <a href="https://de.linkedin.com/in/felix-franke">
-                <FaLinkedin />
-              </a>
-            </li>
-          </ul>
-        </div> */}
       </div>
     </section>
   );

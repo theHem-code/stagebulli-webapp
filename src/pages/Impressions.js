@@ -39,7 +39,7 @@ const Impressions = () => {
 
   return (
     <div>
-      <main>
+      {/* <main> */}
         <div className="container impressions-container">
           <div className="row header">
             <h1 className="col-12">Impressionen</h1>
@@ -85,7 +85,7 @@ const Impressions = () => {
             )}
           </div>
         </div>
-      </main>
+      {/* </main> */}
     </div>
   );
 };

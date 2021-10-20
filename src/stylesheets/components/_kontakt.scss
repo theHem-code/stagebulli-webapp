@@ -147,3 +147,12 @@
     margin-bottom: 100px;
   }
 }
+
+@media screen and (max-width: 700px) {
+  #kontakt{
+    width: 400px;
+  }
+  .MuiGrid-spacing-xs-2{
+    width: 400px !important;
+  }
+}
