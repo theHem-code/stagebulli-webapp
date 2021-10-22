@@ -1,4 +1,4 @@
-import React/*, { useState, useEffect }*/ from "react";
+import React /*, { useState, useEffect }*/ from "react";
 
 const Video = () => {
   // const [isMobile, setIsMobile] = useState(false);
@@ -16,8 +16,6 @@ const Video = () => {
   //   window.addEventListener("resize", handleRezise);
   // });
 
-  const video =
-    "https://res.cloudinary.com/www-stagebulli-de/video/upload/v1634588716/stagebulli/StageBulli_PromoMay21.mp4_1_t7cgcb.mp4";
   return (
     <div className="video">
       {/* <video
@@ -35,13 +33,27 @@ const Video = () => {
       >
         <source src={video} type="video/mp4" />
       </video> */}
-      <div style={{padding:"56.25% 0 0 0", position:"relative", marginTop:"8rem"}}>
+
+      <div
+        style={{
+          padding: "56.25% 0 0 0",
+          position: "relative",
+          marginTop: "8rem",
+        }}
+      >
         <iframe
+          title="stagebulli_video"
           src="https://player.vimeo.com/video/637793816?h=368d0778e6&autoplay=1&muted=1&loop=1&color=f15025&title=0&byline=0&portrait=0"
-          style={{position:"absolute", top:"0", left:"0", width:"100%", height:"100%"}}
-          frameborder="0"
+          style={{
+            position: "absolute",
+            top: "0",
+            left: "0",
+            width: "100%",
+            height: "100%",
+          }}
+          frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
       <script src="https://player.vimeo.com/api/player.js"></script>
