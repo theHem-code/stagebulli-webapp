@@ -104,13 +104,22 @@ ul {
   justify-content: space-around;
   font-size: 20px;
 }
-.social-icons a {
-  transition: 0.1s;
+.social-icons li {
+  transition: 0.2s;
   
 }
+.social-icons a {
+  transition: 0.2s;
+}
+
 .social-icons a:hover {
+  transform: translateY(-5px);
   color: #f15025;
   cursor: pointer;
+}
+
+.social-icons li:hover {
+  transform: translateY(-5px);
 }
 
 /* Styling Hamburger Icon

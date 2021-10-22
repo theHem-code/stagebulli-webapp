@@ -1,30 +1,27 @@
-import React, { useState, useEffect } from "react";
-// import YouTube from "./YoutubeEmbed";
+import React/*, { useState, useEffect }*/ from "react";
 
 const Video = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
-  const handleRezise = () => {
-    if (window.innerWidth < 720) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-      console.log("big");
-    }
-  };
+  // const handleRezise = () => {
+  //   if (window.innerWidth < 720) {
+  //     setIsMobile(true);
+  //   } else {
+  //     setIsMobile(false);
+  //     console.log("big");
+  //   }
+  // };
 
-  useEffect(() => {
-    window.addEventListener("resize", handleRezise);
-  });
+  // useEffect(() => {
+  //   window.addEventListener("resize", handleRezise);
+  // });
 
   const video =
     "https://res.cloudinary.com/www-stagebulli-de/video/upload/v1634588716/stagebulli/StageBulli_PromoMay21.mp4_1_t7cgcb.mp4";
   return (
     <div className="video">
       <video
-        className="video"
-        preload={isMobile ? "none" : "auto"}
-        autoPlay
+        // autoPlay
         loop="loop"
         muted="muted"
         playsInline
@@ -38,7 +35,6 @@ const Video = () => {
       >
         <source src={video} type="video/mp4" />
       </video>
-      {/* <YouTube videoId="5RQmIcnByak" className="service-video"/> */}
     </div>
   );
 };

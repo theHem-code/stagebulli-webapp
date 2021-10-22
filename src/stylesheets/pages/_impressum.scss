@@ -19,3 +19,8 @@
     color: $clrPry4; 
   }
   
+@media screen and (max-width: 1024px) {
+    .container{
+      text-align: center;
+    }
+  }

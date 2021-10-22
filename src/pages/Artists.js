@@ -94,7 +94,7 @@ const Artists = () => {
               <img src={djs} alt="" />
               <div className="artist-all">
                 <div className="desc-artists">
-                  <h3>DJANE / DJ</h3>
+                  <h3>DJs</h3>
                   <p style={{ fontWeight: "300" }}>
                     <span style={{ fontWeight: "600" }}>
                       "Put Your Hands Up In The Air!"

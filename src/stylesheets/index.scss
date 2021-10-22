@@ -19,7 +19,7 @@
 @import "pages/datenschutz";
 @import "pages/impressions";
 
-@import 'node_modules/react-modal-video/scss/modal-video.scss';
+@import "node_modules/react-modal-video/scss/modal-video.scss";
 
 /*
   =============== 
@@ -124,3 +124,12 @@ legend {
     line-height: 1.25;
   }
 }
+
+// @media screen and (max-width: 400px) {
+//   #root {
+//     width: 400px;
+//     margin: 0 auto;
+//     padding-left: 12px;
+//     padding-right: 12px;
+//   }
+// }

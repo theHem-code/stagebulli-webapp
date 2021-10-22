@@ -11,8 +11,23 @@ const Start = () => {
         location="bottom"
         buttonText="Alles Klar!"
         cookieName="myAwesomeCookieName2"
-        style={{ width: "350px", background: "#212121", padding: "15px", margin: "30px", letterSpacing: "1px", borderRadius: "4px" }}
-        buttonStyle={{ color: "white", fontSize: "17px", fontWeight: "600", backgroundColor: "#212121", textTransform: "uppercase", borderBottom: "4px solid white", letterSpacing: "2px" }}
+        style={{
+          width: "350px",
+          background: "#212121",
+          padding: "15px",
+          margin: "30px",
+          letterSpacing: "1px",
+          borderRadius: "4px",
+        }}
+        buttonStyle={{
+          color: "white",
+          fontSize: "17px",
+          fontWeight: "600",
+          backgroundColor: "#212121",
+          textTransform: "uppercase",
+          borderBottom: "4px solid white",
+          letterSpacing: "2px",
+        }}
         expires={150}
         overlay={true}
       >
