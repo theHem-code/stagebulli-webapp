@@ -3,6 +3,7 @@ import image from "../images/Story_Felix.jpg";
 import bullistory from "../images/bullistory.jpg"
 import birddogsLogo from "../images/Logo_Birddogs.png";
 import hildebrandtLogo from "../images/Hildebrandt_Logo.png";
+import ojalaLogo from "../images/Ojala_Logo.png";
 import YouTube from "react-youtube";
 
 const Story = () => {
@@ -72,24 +73,36 @@ const Story = () => {
                 href="https://www.birddogs-music.de/"
                 target="_blank"
                 rel="noreferrer"
-                className="col-12 col-lg-6 partner-logo"
+                className="col-12 col-lg-4 partner-logo"
               >
                 <img
                   src={birddogsLogo}
                   alt=""
-                  className="col-12 col-lg-6 partner-logo"
+                  className="col-12 col-lg-4 partner-logo"
                 />
               </a>
               <a
                 href="https://hildebrandt-veranstaltungstechnik.de/"
                 target="_blank"
                 rel="noreferrer"
-                className="col-12 col-lg-6 partner-logo"
+                className="col-12 col-lg-4 partner-logo"
               >
                 <img
                   src={hildebrandtLogo}
                   alt=""
-                  className="col-12 col-lg-6 partner-logo"
+                  className="col-12 col-lg-4 partner-logo"
+                />
+              </a>
+              <a
+                href="https://ojala.de"
+                target="_blank"
+                rel="noreferrer"
+                className="col-12 col-lg-4 partner-logo"
+              >
+                <img
+                  src={ojalaLogo}
+                  alt=""
+                  className="col-12 col-lg-4 partner-logo"
                 />
               </a>
             </div>
