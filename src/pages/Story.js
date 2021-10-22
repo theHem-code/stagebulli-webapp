@@ -51,12 +51,12 @@ const Story = () => {
             ich bin der Stage Bulli aka Bond Bulli :-) <br />
             <br />
             1979 als einer der letzten T2 Breitpritschen in Hannover vom Band
-            gelaufen und nach Südafrika verschifft. Hier haben sich Sonne und
-            Good Vibes tief in meine DNA eingebrannt bis es dann vor ca. 10
+            gelaufen und nach Südafrika verschifft. Dort haben sich Sonne und
+            Good Vibes tief in meine DNA eingebrannt bis es dann vor circa 10
             Jahren wieder zurück nach Deutschland ging.
             <br />
             <br />
-            Hier war ich u.a. als Filmauto im Einsatz, meiner größter Erfolg das
+            Hier war ich unter anderem als Filmauto im Einsatz, mein größter Erfolg war das
             Mitwirken beim letzten James Bond Film „Keine Zeit zu Sterben“. 2020
             ging es dann vom schönen Bayern nach Berlin, wo ich nun endlich
             meine wahre Bestimmung gefunden habe ;-)

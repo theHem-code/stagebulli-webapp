@@ -341,7 +341,7 @@ const Kontakt = (validatesOnChange = false) => {
             <Grid item xs={12}>
               <CssTextField
                 className={classes.margin}
-                label="Wie kann der Stage Bulli dir helfen?"
+                label="Wie können wir dir zum Erfolg verhelfen?"
                 variant="outlined"
                 id="custom-css-outlined-input outlined-multiline-static outlined-full-width"
                 multiline
