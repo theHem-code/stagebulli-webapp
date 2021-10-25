@@ -156,10 +156,10 @@ const Artists = () => {
                     </span>
                     <br />
                     <br />
-                    Singalong und Partystimmung mit Deinen Kollegen und
+                    Singalong und Partystimmung mit deinen Kollegen und
                     Freunden.
                     <br />
-                    Unterstützt wirst Du von einem unser KJs und
+                    Unterstützt wirst du von einem unserer KJs und
                     professioneller Technik.
                   </p>
                 </div>

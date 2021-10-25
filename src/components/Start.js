@@ -2,12 +2,12 @@ import React from "react";
 import Banner from "../images/StartBanner.jpg";
 import { NavLink } from "react-router-dom";
 
-import CookieConsent from "react-cookie-consent";
+// import CookieConsent from "react-cookie-consent";
 
 const Start = () => {
   return (
     <main id="start" className="container-start">
-      <CookieConsent
+      {/* <CookieConsent
         location="bottom"
         buttonText="Alles Klar!"
         cookieName="myAwesomeCookieName2"
@@ -33,7 +33,7 @@ const Start = () => {
       >
         Diese Website nutzt sogenannte Cookies. Wenn Sie die Website weiter
         nutzen, stimmen Sie der Verwendung von Cookies zu.{" "}
-      </CookieConsent>
+      </CookieConsent> */}
       <div className="container">
         <section className="row header-start">
           <div className="col-12">
