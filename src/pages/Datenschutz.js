@@ -15,8 +15,8 @@ const Datenschutz = () => {
           <br />
           <div>
             <h3>1. DATENERFASSUNG AUF UNSERER WEBSITE</h3>
-            <h5>COOKIES</h5>
-            <p>
+            {/* <h5>COOKIES</h5> */}
+            {/* <p>
               Die Internetseiten verwenden teilweise so genannte Cookies.
               Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten
               keine Viren. Cookies dienen dazu, unser Angebot
@@ -43,7 +43,7 @@ const Datenschutz = () => {
               Dienste. Soweit andere Cookies (z.B. Cookies zur Analyse Ihres
               Surfverhaltens) gespeichert werden, werden diese in dieser
               Datenschutzerklärung gesondert behandelt.
-            </p>
+            </p> */}
             <h5>SERVER-LOG-DATEIEN</h5>
             <p>
               Der Provider der Seiten erhebt und speichert automatisch

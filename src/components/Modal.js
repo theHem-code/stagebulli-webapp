@@ -16,7 +16,7 @@ export default function BasicModal() {
             </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>Wir melden uns schnellstmöglich bei Dir.</p>
+          <p>Wir melden uns schnellstmöglich bei dir.</p>
           </Modal.Body>
         <Modal.Footer>
           <div className="button-modal" onClick={handleClose}>
