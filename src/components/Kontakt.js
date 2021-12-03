@@ -1,54 +1,55 @@
-import React, { useState, useRef } from "react";
-import emailjs from "emailjs-com";
+import React, { useState, useRef } from 'react';
+import emailjs from 'emailjs-com';
 
-import { makeStyles } from "@material-ui/core/styles";
-import { withStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import Checkbox from "@material-ui/core/Checkbox";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
+import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import Checkbox from '@material-ui/core/Checkbox';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import ArrowRightIcon from '../icons/arrow-right-icon';
 
-import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 import {
   KeyboardDatePicker,
   MuiPickersUtilsProvider,
-} from "@material-ui/pickers";
-import Grid from "@material-ui/core/Grid";
-import DateFnsUtils from "@date-io/date-fns";
-import BasicModal from "./Modal";
+} from '@material-ui/pickers';
+import Grid from '@material-ui/core/Grid';
+import DateFnsUtils from '@date-io/date-fns';
+import BasicModal from './Modal';
 
 const OrangeCheckbox = withStyles({
   root: {
-    color: "#f15025",
-    "&$checked": {
-      color: "#f15025",
+    color: '#f15025',
+    '&$checked': {
+      color: '#f15025',
     },
   },
   checked: {},
-})((props) => <Checkbox color="default" {...props} />);
+})((props) => <Checkbox color='default' {...props} />);
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    "& > *": {
+    '& > *': {
       margin: theme.spacing(1),
-      width: "80ch",
+      width: '80ch',
     },
   },
   formControl: {
     margin: theme.spacing(0),
-    width: "100%",
-    "&:focus-visible": {
-      borderColor: "#f15025",
+    width: '100%',
+    '&:focus-visible': {
+      borderColor: '#f15025',
     },
   },
   // inputLabel: {
   //   color: "red"
   // },
   select: {
-    "&:Mui-focused": {
-      borderColor: "#f15025",
+    '&:Mui-focused': {
+      borderColor: '#f15025',
     },
   },
   selectEmpty: {
@@ -58,36 +59,36 @@ const useStyles = makeStyles((theme) => ({
 
 const CssTextField = withStyles({
   root: {
-    "& label.Mui-focused": {
-      color: "#f15025",
+    '& label.Mui-focused': {
+      color: '#f15025',
     },
-    "& .MuiInput-underline:after": {
-      borderBottomColor: "#f15025",
+    '& .MuiInput-underline:after': {
+      borderBottomColor: '#f15025',
     },
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "primary",
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'primary',
       },
-      "&.Mui-focused fieldset": {
-        borderColor: "#f15025",
+      '&.Mui-focused fieldset': {
+        borderColor: '#f15025',
       },
     },
   },
 })(TextField);
 
 const initialValues = {
-  vorname: "",
-  nachname: "",
-  firma: "",
-  email: "",
-  telefon: "",
-  teilnehmer: " - ",
+  vorname: '',
+  nachname: '',
+  firma: '',
+  email: '',
+  telefon: '',
+  teilnehmer: ' - ',
   datum: new Date(),
-  info: "",
+  info: '',
 };
 
 const Kontakt = (validatesOnChange = false) => {
-  const [participans, setParticipans] = useState("");
+  const [participans, setParticipans] = useState('');
   const [selectedDate, handleDateChange] = useState(new Date());
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState({});
@@ -126,7 +127,7 @@ const Kontakt = (validatesOnChange = false) => {
       checkedB: false,
       checkedC: false,
     });
-    setParticipans("");
+    setParticipans('');
     handleDateChange(new Date());
   };
 
@@ -135,10 +136,10 @@ const Kontakt = (validatesOnChange = false) => {
     if (validates()) {
       emailjs
         .sendForm(
-          "Gmail",
-          "template_565gdoy",
+          'Gmail',
+          'template_565gdoy',
           form.current,
-          "user_LkqF3nBSC3biR9i4iRxRm"
+          'user_LkqF3nBSC3biR9i4iRxRm'
         )
         .then(
           (result) => {
@@ -150,7 +151,7 @@ const Kontakt = (validatesOnChange = false) => {
         );
     } else {
       window.alert(
-        "Leider konnte Ihre Anfrage nicht verarbeitet werden. Versuchen Sie es erneut."
+        'Leider konnte Ihre Anfrage nicht verarbeitet werden. Versuchen Sie es erneut.'
       );
     }
     resetForm();
@@ -161,67 +162,73 @@ const Kontakt = (validatesOnChange = false) => {
   };
 
   const validates = (fieldValues = values) => {
-    const re = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+    // const re = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+    const re = /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/;
     const temp = { ...errors };
-    if ("vorname" in fieldValues)
-      temp.vorname = values.vorname ? "" : "Pflichtfeld.";
-    if ("nachname" in fieldValues)
-      temp.nachname = values.nachname ? "" : "Pflichtfeld.";
-    if ("email" in fieldValues)
-      temp.email = re.test(values.email) ? "" : "Email ist ungültig.";
+    if ('vorname' in fieldValues)
+      temp.vorname = values.vorname ? '' : 'Pflichtfeld.';
+    if ('nachname' in fieldValues)
+      temp.nachname = values.nachname ? '' : 'Pflichtfeld.';
+    if ('email' in fieldValues)
+      temp.email = re.test(values.email) ? '' : 'Email ist ungültig.';
     setErrors({
       ...temp,
     });
     if (fieldValues === values)
-      return Object.values(temp).every((x) => x === "");
+      return Object.values(temp).every((x) => x === '');
   };
 
   const classes = useStyles();
 
   return (
-    <main id="kontakt" style={{ height: "100%" }} className="container">
-      <section className="row header">
-        <h4 className="col-12">Was darf's sein?</h4>
+    <main id='kontakt' style={{ height: '100%' }} className='container'>
+      <section className='row header'>
+        <h4 className='col-12'>Was darf's sein?</h4>
+        <p className='mt-5'>
+          ASP: Felix Franke <br />
+          Fon +49 174 27 39 523 <br />
+          <a href='mailto:mail@stagebulli.de'>mail@stagebulli.de</a>
+        </p>
       </section>
 
       <form ref={form} onSubmit={sendEmail}>
-        <div className="formwrapper">
+        <div className='formwrapper'>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={4}>
               <FormControlLabel
-                label="Stage Bulli"
+                label='Stage Bulli'
                 control={
                   <OrangeCheckbox
                     checked={state.checkedA}
                     onChange={handleChange}
-                    name="checkedA"
-                    value={state.checkedA ? "✅" : "🚫"}
+                    name='checkedA'
+                    value={state.checkedA ? '✅' : '🚫'}
                   />
                 }
               />
             </Grid>
             <Grid item xs={12} sm={4}>
               <FormControlLabel
-                label="+ Technikpaket"
+                label='+ Technikpaket'
                 control={
                   <OrangeCheckbox
                     checked={state.checkedB}
                     onChange={handleChange}
-                    name="checkedB"
-                    value={state.checkedB ? "✅" : "🚫"}
+                    name='checkedB'
+                    value={state.checkedB ? '✅' : '🚫'}
                   />
                 }
               />
             </Grid>
             <Grid item xs={12} sm={4}>
               <FormControlLabel
-                label="+ Entertainmentpaket"
+                label='+ Entertainmentpaket'
                 control={
                   <OrangeCheckbox
                     checked={state.checkedC}
                     onChange={handleChange}
-                    name="checkedC"
-                    value={state.checkedC ? "✅" : "🚫"}
+                    name='checkedC'
+                    value={state.checkedC ? '✅' : '🚫'}
                   />
                 }
               />
@@ -231,9 +238,9 @@ const Kontakt = (validatesOnChange = false) => {
               <CssTextField
                 fullWidth
                 className={classes.margin}
-                variant="outlined"
-                label="Vorname"
-                name="vorname"
+                variant='outlined'
+                label='Vorname'
+                name='vorname'
                 value={values.vorname}
                 onChange={handleInput}
                 error={errors.vorname}
@@ -243,9 +250,9 @@ const Kontakt = (validatesOnChange = false) => {
             <Grid item xs={12} md={6}>
               <CssTextField
                 className={classes.margin}
-                label="Nachname"
-                name="nachname"
-                variant="outlined"
+                label='Nachname'
+                name='nachname'
+                variant='outlined'
                 fullWidth
                 value={values.nachname}
                 onChange={handleInput}
@@ -256,9 +263,9 @@ const Kontakt = (validatesOnChange = false) => {
             <Grid item xs={12}>
               <CssTextField
                 className={classes.margin}
-                label="Firma"
-                name="firma"
-                variant="outlined"
+                label='Firma'
+                name='firma'
+                variant='outlined'
                 fullWidth
                 value={values.firma}
                 onChange={handleInput}
@@ -266,26 +273,26 @@ const Kontakt = (validatesOnChange = false) => {
                 helperText={errors.firma}
               />
             </Grid>
-            <div style={{ height: "100px" }}></div>
+            <div style={{ height: '100px' }}></div>
             <Grid item xs={12} md={6}>
               <CssTextField
                 className={classes.margin}
-                label="Email"
-                name="email"
-                variant="outlined"
+                label='Email'
+                name='email'
+                variant='outlined'
                 fullWidth
                 value={values.email}
                 onChange={handleInput}
                 error={errors.email}
                 helperText={errors.email}
-              />{" "}
+              />{' '}
             </Grid>
             <Grid item xs={12} md={6}>
               <CssTextField
                 className={classes.margin}
-                label="Telefonnummer"
-                name="telefon"
-                variant="outlined"
+                label='Telefonnummer'
+                name='telefon'
+                variant='outlined'
                 fullWidth
                 value={values.telefon}
                 onChange={handleInput}
@@ -295,73 +302,77 @@ const Kontakt = (validatesOnChange = false) => {
             </Grid>
             {/* Teilnehmerzahl */}
             <Grid item xs={12} md={6}>
-              <FormControl variant="outlined" className={classes.formControl}>
+              <FormControl variant='outlined' className={classes.formControl}>
                 <InputLabel
-                  id="demo-simple-select-outlined-label"
-                  name="teilnehmer"
+                  id='demo-simple-select-outlined-label'
+                  name='teilnehmer'
                   className={classes.inputLabel}
                 >
                   Erwartete Teilnehmerzahl
                 </InputLabel>
                 <Select
-                  labelId="demo-simple-select-outlined-label"
-                  id="demo-simple-select-outlined"
+                  labelId='demo-simple-select-outlined-label'
+                  id='demo-simple-select-outlined'
                   value={participans}
                   onChange={handleCount}
-                  label="Erwartete Teilnehmerzahl"
-                  name="teilnehmer"
+                  label='Erwartete Teilnehmerzahl'
+                  name='teilnehmer'
                   className={classes.select}
                 >
                   <MenuItem value={10}> </MenuItem>
                   <MenuItem value={20}> – </MenuItem>
-                  <MenuItem value={"bis zu 100"}>bis zu 100</MenuItem>
-                  <MenuItem value={"100 - 200"}>100 - 200</MenuItem>
-                  <MenuItem value={"200 - 500"}>200 - 500</MenuItem>
-                  <MenuItem value={"mehr als 500"}>mehr als 500</MenuItem>
+                  <MenuItem value={'bis zu 100'}>bis zu 100</MenuItem>
+                  <MenuItem value={'100 - 200'}>100 - 200</MenuItem>
+                  <MenuItem value={'200 - 500'}>200 - 500</MenuItem>
+                  <MenuItem value={'mehr als 500'}>mehr als 500</MenuItem>
                 </Select>
               </FormControl>
             </Grid>
-            <div style={{ height: "100px" }}></div>
+            <div style={{ height: '100px' }}></div>
             <Grid item xs={12} md={6}>
               <MuiPickersUtilsProvider utils={DateFnsUtils}>
                 <KeyboardDatePicker
                   autoOk
-                  variant="inline"
-                  inputVariant="outlined"
-                  label="Veranstaltungsdatum"
+                  variant='inline'
+                  inputVariant='outlined'
+                  label='Veranstaltungsdatum'
                   fullWidth
-                  format="dd/MM/yyyy"
+                  format='dd/MM/yyyy'
                   value={selectedDate}
-                  InputAdornmentProps={{ position: "start" }}
+                  InputAdornmentProps={{ position: 'start' }}
                   onChange={(date) => handleDateChange(date)}
-                  name="datum"
+                  name='datum'
                 />
               </MuiPickersUtilsProvider>
             </Grid>
             <Grid item xs={12}>
               <CssTextField
                 className={classes.margin}
-                label="Wie können wir dir zum Erfolg verhelfen?"
-                variant="outlined"
-                id="custom-css-outlined-input outlined-multiline-static outlined-full-width"
+                label='Wie können wir dir zum Erfolg verhelfen?'
+                variant='outlined'
+                id='custom-css-outlined-input outlined-multiline-static outlined-full-width'
                 multiline
                 rows={4}
                 fullWidth
-                name="info"
+                name='info'
                 value={values.info}
                 onChange={handleInput}
               />
             </Grid>
           </Grid>
-          <div className="button-senden">
+          <div className='button-senden'>
             <input
-              type="submit"
-              className="senden"
-              value="Senden"
+              type='submit'
+              className='senden'
+              value='Senden'
               onClick={handleModal}
             ></input>
+            <span className='arrowIcon'>
+              <ArrowRightIcon />
+            </span>
+
             {showModal && <BasicModal />}
-            <div className="button-line"></div>
+            {/* <div className='button-line'></div> */}
           </div>
         </div>
       </form>

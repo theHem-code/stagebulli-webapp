@@ -5,6 +5,19 @@
   margin-top: 100px;
 }
 
+.header a {
+  color: $clrPry4;
+  text-transform: none;
+  font-size: 14px;
+  margin-top: 5px;
+  letter-spacing: 0.1rem;
+}
+.header p {
+  letter-spacing: 0.05rem !important;
+  line-height: 22px;
+  font-size: 14px;
+}
+
 .MuiInputLabel-outlined {
   z-index: 0 !important;
 }
@@ -17,22 +30,30 @@
 }
 
 .button-senden {
+  display: flex;
+  align-items: center;
+  background: #e8e8e8;
+  text-transform: uppercase;
+  color: $clrPara;
+  border-radius: 3rem;
   margin: 0 auto;
   width: max-content;
-  margin-top: 40px;
-  margin-bottom: 290px;
+  margin-top: 80px;
   cursor: pointer;
-  text-decoration: none;
-  color: $clrPara;
-  text-transform: uppercase;
+  transition: $transition;
+  padding: 15px 25px;
   letter-spacing: $spacing;
   font-weight: 600;
   font-size: 1.2rem;
-  transition: $transition;
+  border: none;
   input {
     transition: 0.2s;
     font-weight: 700;
     letter-spacing: $spacing;
+  }
+  span{
+    transition: $transition;
+
   }
 }
 
@@ -52,7 +73,7 @@
   transition: $transition;
   p {
     color: $clrPara;
-    font-family: "Jost", "Open Sans", sans-serif;
+    font-family: 'Jost', 'Open Sans', sans-serif;
     transition: $transition;
   }
 }
@@ -71,7 +92,7 @@
 .senden {
   text-decoration: none;
   color: $clrPara;
-  background-color: $mainBg;
+  background-color: transparent;
   text-transform: uppercase;
   letter-spacing: $spacing;
   font-weight: 600;
@@ -79,26 +100,32 @@
   border: none;
 }
 
-.button-line {
-  width: 80%;
-  height: 4px;
-  margin-top: 0.5rem;
-  background: $clrHead;
-  margin-left: auto;
-  border-radius: 4px;
-
-  margin-right: auto;
-  transition: 0.4s cubic-bezier(0.2, 1.5, 0.2, 1.5);
-}
+// .button-line {
+//   width: 80%;
+//   height: 4px;
+//   margin-top: 0.5rem;
+//   background: $clrHead;
+//   margin-left: auto;
+//   border-radius: 4px;
+//   margin-right: auto;
+//   transition: 0.4s cubic-bezier(0.2, 1.5, 0.2, 1.5);
+// }
 
 .button-senden:hover {
-  transform: translateY(-5px);
-  input {
-    color: $clrPry4;
-  }
+  // transform: translateY(-5px);
+  background: $clrPry4;
+  color: white;
   .button-line {
     width: 40%;
     background-color: $clrPry4;
+  }
+  .senden {
+    color: white;
+  }
+  .arrowIcon {
+    // transition: $transition;
+    color: white;
+    transform: translateX(7px);
   }
 }
 
@@ -124,10 +151,14 @@
 .MuiFormLabel-root.Mui-focused {
   color: $clrPara !important;
 }
-.MuiOutlinedInput-root.Mui-focused
-.MuiOutlinedInput-notchedOutline {
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
   border-color: $clrPara !important;
 }
+
+.MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1 {
+  font-family: 'Open Sans', sans-serif;
+}
+
 ////////////////////////////////
 
 @media screen and (max-width: 860px) {

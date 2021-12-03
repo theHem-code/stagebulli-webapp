@@ -1,0 +1,52 @@
+.button {
+  display: flex;
+  align-items: center;
+  background: #e8e8e8;
+  color: $clrPara;
+  border-radius: 4rem;
+  margin: 0 auto;
+  width: max-content;
+  margin-top: 80px;
+  cursor: pointer;
+  transition: $transition;
+  padding: 15px 25px;
+  a {
+    display: block;
+  }
+  a span {
+    vertical-align: middle;
+    transition: $transition;
+  }
+}
+
+.arrowIcon {
+  margin-left: 0.3rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+.button:hover {
+  background-position-x: 100%;
+  background: $clrPry4;
+  box-shadow: $light-shadow;
+  a {
+    color: white;
+  }
+  .arrowIcon {
+    // transition: $transition;
+    color: white;
+    transform: translateX(7px);
+  }
+}
+
+.story {
+  bottom: 2rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+}

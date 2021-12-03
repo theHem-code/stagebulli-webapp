@@ -18,9 +18,9 @@ const Impressum = () => {
           <br />
           <br />
           <p>
-            <a href="mailto:mail@birddogs-music.de">mail@birddogs-music.de</a>
+            <a href="mailto:mail@stagebulli.de">mail@stagebulli.de</a>
             <br />
-            <a href="https://www.birddogs-music.de/">www.birddogs-music.de</a>
+            <a href="https://www.stagebulli.de/">www.stagebulli.de</a>
           </p>
           <p>
             Für diese Internetpräsenz verantwortlich: <br />
@@ -55,13 +55,13 @@ const Impressum = () => {
         </div>
         <div className="row mb-5">
           <p>
-           Photos by Alexander Mundt, David Ziems, Marko Dietrich, Dominik Wilzok, Marc Vorwerk & Markus Werner
+           <span>Photos by</span> Alexander Mundt, David Ziems, Marko Dietrich, Dominik Wilzok, Marc Vorwerk & Markus Werner
           </p>
           <p>
-           Video by Alexander Mundt
+          <span>Video by</span> Alexander Mundt
           </p>
           <p>
-           Stage Bulli Logo designed by Ojala Werke.
+          <span>Stage Bulli</span> Logo designed by Ojala Werke.
           </p>
         </div>
       </div>

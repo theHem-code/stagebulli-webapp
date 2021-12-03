@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "../images/StartBanner.jpg";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
+import Button from "./Button"
 
 // import CookieConsent from "react-cookie-consent";
 
@@ -51,10 +52,11 @@ const Start = () => {
           backgroundImage: `linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(${Banner})`,
         }}
       >
-        <div className="button-story">
+        <Button title="Unsere Story" link="/unserestory" story="story"/>
+        {/* <div className="button-story">
           <NavLink to="/unserestory">Unsere Story</NavLink>
           <div className="button-line-start"></div>
-        </div>
+        </div> */}
       </div>
     </main>
   );

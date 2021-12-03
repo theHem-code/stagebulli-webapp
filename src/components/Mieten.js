@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import Button from './Button'
+// import { NavLink } from "react-router-dom";
 import events from "../images/events.jpg";
 import celebrations from "../images/wedding.jpg";
 import corporate from "../images/corporate.jpg";
@@ -45,10 +46,11 @@ const Mieten = () => {
           </div>
         </div>
       </div>
-      <div className="button-impressionen">
-        <NavLink to="/impressionen">Impressionen</NavLink>
+      <Button title="Impressionen" link="/impressionen" />
+      {/* <div className="button-impressionen">
+        <NavLink to="/impressionen"><span>Impressionen</span></NavLink>
         <div className="button-line-mieten"></div>
-      </div>
+      </div> */}
     </div>
   );
 };
