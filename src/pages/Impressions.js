@@ -14,7 +14,9 @@ const images = [
   "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_10_O1ajKDI4y.jpg?updatedAt=1634249418300",
   "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_11_mpCkYPRTo.jpg?updatedAt=1634249439489",
   "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_12_4Y1i_4OCem.jpg?updatedAt=1634249429629",
-  "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_13_7-PqP5rEO.jpg?updatedAt=1634249434749"
+  "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_13_7-PqP5rEO.jpg?updatedAt=1634249434749",
+  "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_11.jpg?updatedAt=1640030984785",
+  "https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_12.jpg?updatedAt=1640031004034"
 ];
 
 const desc = [
@@ -29,7 +31,9 @@ const desc = [
   "radioeins Kunstprojekt #KEINBERLINOHNEKULTUR @Tegel Airport, Artist: Min t, Photo by Marc Vorwerk",
   "radioeins Kunstprojekt #KEINBERLINOHNEKULTUR @Tegel Airport, Artist: Min t, Photo by Marc Vorwerk",
   "radioeins Kunstprojekt #KEINBERLINOHNEKULTUR @Tegel Airport, Artist: Min t, Photo by Marc Vorwerk",
-  "radioeins Kunstprojekt #KEINBERLINOHNEKULTUR @Tegel Airport, Artist: Min t, Photo by Markus Werner"
+  "radioeins Kunstprojekt #KEINBERLINOHNEKULTUR @Tegel Airport, Artist: Min t, Photo by Markus Werner",
+  "BESTIVAL 2021 @Motorwerk, Artist: Birddogs, Photo by ©visitBerlin, Mike Auerbach",
+  "BESTIVAL 2021 @Motorwerk, Artist: Birddogs, Photo by ©visitBerlin, Mike Auerbach"
 ];
 
 const Impressions = () => {
