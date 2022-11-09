@@ -18,22 +18,6 @@ const Video = () => {
 
   return (
     <div className="video">
-      {/* <video
-        // autoPlay
-        loop="loop"
-        muted="muted"
-        playsInline
-        style={{
-          objectFit: "cover",
-          width: "100%",
-          height: "100%",
-          marginTop: "150px",
-        }}
-        poster="https://ik.imagekit.io/zpqur0hl7qs/Stagebulli/Foto_8_D1E0UT_up.jpg?updatedAt=1634249425924"
-      >
-        <source src={video} type="video/mp4" />
-      </video> */}
-
       <div
         style={{
           padding: "56.25% 0 0 0",

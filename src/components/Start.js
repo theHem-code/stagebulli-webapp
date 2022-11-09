@@ -39,19 +39,18 @@ const Start = () => {
         <section className="row header-start">
           <div className="col-12">
             <h4>
-              Vom PickUp
-              <br />
-              zur PopUp-Stage
+              Vom Bulli zur Bühne
             </h4>
           </div>
-        </section>
+      </section>
       </div>
       <div
         className="banner"
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(${Banner})`,
         }}
-      >
+        >
+      
         <Button title="Unsere Story" link="/unserestory" story="story"/>
         {/* <div className="button-story">
           <NavLink to="/unserestory">Unsere Story</NavLink>

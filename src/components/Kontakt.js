@@ -164,6 +164,7 @@ const Kontakt = (validatesOnChange = false) => {
   const validates = (fieldValues = values) => {
     // const re = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
     const re = /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/;
+    // const re = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
     const temp = { ...errors };
     if ('vorname' in fieldValues)
       temp.vorname = values.vorname ? '' : 'Pflichtfeld.';

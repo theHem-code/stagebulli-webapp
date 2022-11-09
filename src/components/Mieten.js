@@ -21,7 +21,7 @@ const Mieten = () => {
           <div className="desc">
             <h3>Corporate</h3>
             <p>
-              Gemeinsam mit Kunden <br />& Mitarbeitern feiern.
+            Vorfreude! Kunden & Mitarbeiter <br />mit etwas Besonderem überraschen.
             </p>
           </div>
         </div>
@@ -30,18 +30,18 @@ const Mieten = () => {
           <div className="desc">
             <h3>Events</h3>
             <p>
-              Publikumsmagnet auf Festivals,
-              <br /> Messen & Roadshows.
+            Unser All-In-One-Paket
+            <br />verwandelt jeden Ort in ein Festival.
             </p>
           </div>
         </div>
         <div className="col-sm-12 card">
           <img src={celebrations} alt="celebrations" />
           <div className="desc">
-            <h3>Celebrations</h3>
+            <h3>Weddings</h3>
             <p>
-              Entertainment für <br />
-              besondere Momente.
+            Musik verbindet.<br />
+            Gönn' dir Momente für die Ewigkeit.
             </p>
           </div>
         </div>
