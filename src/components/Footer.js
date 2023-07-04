@@ -13,9 +13,9 @@ const Footer = () => {
           {/* <Link className="copyright" to="/">
             © 2022 Stage Bulli
           </Link> */}
-        <div style={{ textAlign: "center"}}>
-          <img src={Lizenz} alt="VW Lizenz Logo" style={{height: "100px", marginTop: "10px"}} />
-        </div>
+          <div style={{ textAlign: "center"}}>
+            <img src={Lizenz} alt="VW Lizenz Logo" style={{height: "100px", marginTop: "10px"}} />
+          </div>
           <Link to="/datenschutz">Datenschutz</Link>
         </ul>
       </div>

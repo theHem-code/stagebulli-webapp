@@ -187,7 +187,7 @@ const Kontakt = (validatesOnChange = false) => {
         <h4 className='col-12'>Was darf's sein?</h4>
         <p className='mt-5'>
           ASP: Felix Franke <br />
-          <a href='tel:+491603010137' style={{ color: 'inherit', fontWeight: 'inherit' }}>Fon +49 163 301 01 37</a><br/>
+          <a href='tel:+491633010137' style={{ color: 'inherit', fontWeight: 'inherit' }}>Fon +49 163 301 01 37</a><br/>
           <a href='mailto:mail@stagebulli.de'>mail@stagebulli.de</a>
         </p>
       </section>
