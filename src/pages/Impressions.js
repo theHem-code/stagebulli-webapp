@@ -86,7 +86,7 @@ const Impressions = () => {
               />
             )}
           </div>
-        <div
+        {/* <div
         style={{
           padding: "56.25% 0 0 0",
           position: "relative",
@@ -111,9 +111,8 @@ const Impressions = () => {
           allowFullScreen
           ></iframe>
       
-      </div>
+      </div> */}
       <script src="https://player.vimeo.com/api/player.js"></script>
-      {/* </main> */}
     </div>
           </div>
   );
