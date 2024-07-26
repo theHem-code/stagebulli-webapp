@@ -12,8 +12,9 @@ const Impressum = () => {
         <div className="row details mt-5">
           <h3>
             BIRDDOGS GBR <br />
-            GORMANNSTR. 14 <br />
-            10119 BERLIN
+            FRANKE & HEMSING <br />
+            MARTIN-BUBER-STR. 25 <br />
+            14163 BERLIN
           </h3>
           <br />
           <br />
